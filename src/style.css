@@ -297,6 +297,7 @@ header {
   flex: 1;
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: center;
   min-height: 500px;
 }
@@ -304,34 +305,22 @@ header {
 .hero-image-wrapper {
   position: relative;
   width: 100%;
-  max-width: 500px;
-  border-radius: 50%;
-  mix-blend-mode: multiply;
-  overflow: hidden;
+  max-width: 520px;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-orange-bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 450px;
-  height: 450px;
-  background: var(--primary-orange);
-  border-radius: 50%;
-  z-index: 1;
+  display: none;
 }
 
 .hero-image {
   width: 100%;
-  max-width: 450px;
-  position: relative;
-  z-index: 2;
+  max-width: 520px;
   display: block;
-  margin: 0 auto;
-  object-fit: cover;
-  object-position: center;
-  margin-top: auto;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 20px 40px rgba(255, 102, 17, 0.1));
 }
 
 /* Decorative elements */
@@ -1447,16 +1436,11 @@ footer {
   }
 
   .hero-visual {
-    min-height: 450px;
-  }
-
-  .hero-orange-bg {
-    width: 280px;
-    height: 280px;
+    min-height: 400px;
   }
 
   .hero-image {
-    max-width: 280px;
+    max-width: 380px;
   }
 
   /* Reposition stats for mobile to avoid overlap */
