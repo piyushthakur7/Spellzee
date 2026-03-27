@@ -212,39 +212,59 @@ export default function Home() {
 
       <section className="results-section section-padding" id="results">
         <div className="container">
-          <span className="section-badge section-badge-dark">Real Results</span>
-          <h2 className="section-heading results-heading">What Children <em className="text-orange underline-orange">Achieve</em> in 45 Days</h2>
-          <div className="results-grid">
+          <span className="section-badge section-badge-dark" style={{display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "16px", padding: "8px 16px", borderRadius: "16px", fontSize: "12px", fontWeight: "700", background: "rgba(255, 102, 17, 0.15)", color: "var(--primary-orange)"}}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10"/><path d="M5 4c0 3 3 7 7 7s7-4 7-7"/><path d="M5 4h14"/></svg>
+            Real Results
+          </span>
+          <h2 className="section-heading results-heading" style={{marginBottom: "8px", fontSize: "36px", fontWeight: "700", lineHeight: "1.2"}}>What Children <span className="text-orange">Achieve</span> in 45 Days</h2>
+          <p className="results-subtext" style={{color: "rgba(255,255,255,0.7)", fontSize: "14px", fontWeight: "400", marginBottom: "48px", lineHeight: "1.5"}}>Measurable outcomes every parent can see — tracked and verified across 1000+ students.</p>
+          <div className="results-grid" style={{marginBottom: "32px", gap: "24px", display: "grid", gridTemplateColumns: "repeat(4, 1fr)"}}>
             {[
               { n: "97%", h: "Reads Short Vowel Words" },
-              { n: "25+", h: "Writes Simple Sentences" },
-              { n: "98%", h: "Reads Decodable Stories" },
-              { n: "1000+", h: "Builds Real Confidence" },
+              { n: "25+", h: "Reads Short Vowel Words" },
+              { n: "98%", h: "Reads Short Vowel Words" },
+              { n: "1000+", h: "Reads Short Vowel Words" },
+              { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>, h: "Reads Short Vowel Words" },
+              { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="2" x2="22" y2="6"/><path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"/></svg>, h: "Writes Simple Sentences" },
+              { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.5 2v6h-6M2.13 15.57a9 9 0 1 0 15.22-4.24L21.5 8"/><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>, h: "Reads Decodable Stories" },
+              { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2l.5-.5c1.19-.11 2.45-.66 3.33-1.53 1.14-1.12 1.34-2.8.5-4C10.74 12.33 9.77 12 8.5 12c-1.27 0-2.24.33-3.33 1.47-.87.88-1.42 2.14-1.53 3.33l-.5.5z"/><path d="M5 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/><path d="m15.5 8.5 2-2"/><path d="M12 5h-1"/><path d="M19 12v-1"/><path d="m18.5 5.5-1 1"/></svg>, h: "Builds Real Confidence" },
             ].map((r, i) => (
-              <div key={i} className="result-card">
-                <div className="result-number">{r.n}</div>
-                <h4>{r.h}</h4>
+              <div key={i} className="result-card" style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "160px", background: "#1A1A1A", borderRadius: "16px", padding: "24px"}}>
+                {r.n ? (
+                  <div className="result-number" style={{fontSize: "32px", fontWeight: "700", color: "var(--primary-orange)", marginBottom: "16px", lineHeight: "1"}}>{r.n}</div>
+                ) : (
+                  <div style={{width: "48px", height: "48px", background: "var(--primary-orange)", borderRadius: "12px", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 16px", color: "white"}}>
+                    {r.icon}
+                  </div>
+                )}
+                <h4 style={{fontSize: "14px", fontWeight: "500", textAlign: "center", color: "#fff", margin: 0, lineHeight: "1.5"}}>{r.h}</h4>
               </div>
             ))}
           </div>
           
-          <div className="before-after-grid">
-            <div className="result-card before-after-card">
-              <h4 style={{textAlign:"center", marginBottom: "20px"}}>Before 45 Days</h4>
-              <ul className="ba-list">
+          <div className="before-after-grid" style={{marginTop: "32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px"}}>
+            <div className="result-card before-after-card" style={{alignItems: "center", padding: "48px 40px", background: "#1A1A1A", borderRadius: "24px"}}>
+              <div style={{width: "64px", height: "64px", background: "rgba(255, 102, 17, 0.1)", borderRadius: "32px", border: "1px dashed var(--primary-orange)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 32px", color: "var(--primary-orange)"}}>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+              </div>
+              <h4 style={{textAlign:"center", marginBottom: "32px", fontSize: "18px", color: "#fff", fontWeight: "600", lineHeight: "1.5"}}>Before 45 Days Reading<br/>Challenge</h4>
+              <ul className="ba-list" style={{display: "flex", flexDirection: "column", gap: "16px", color: "rgba(255,255,255,0.8)", fontWeight: "500", fontSize: "15px", listStyleType: "disc", paddingLeft: "16px", margin: "0 auto", textAlign: "left", lineHeight: "1.5"}}>
                 <li>Can't differentiate between vowel sounds</li>
                 <li>Struggles to blend letters into words</li>
                 <li>Feeling shy to Read</li>
                 <li>Avoids English</li>
               </ul>
             </div>
-            <div className="result-card before-after-card">
-              <h4 style={{textAlign:"center", marginBottom: "20px"}}>After Spellzee</h4>
-              <ul className="ba-list">
+            <div className="result-card before-after-card" style={{alignItems: "center", padding: "48px 40px", background: "#1A1A1A", borderRadius: "24px"}}>
+              <div style={{width: "64px", height: "64px", background: "var(--primary-orange)", borderRadius: "32px", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 32px", color: "white", boxShadow: "0 8px 24px rgba(255, 102, 17, 0.3)"}}>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <h4 style={{textAlign:"center", marginBottom: "32px", fontSize: "18px", color: "#fff", fontWeight: "600", lineHeight: "1.5"}}>After Spellzee's 45 Days<br/>Reading Challenge</h4>
+              <ul className="ba-list" style={{display: "flex", flexDirection: "column", gap: "16px", color: "rgba(255,255,255,0.8)", fontWeight: "500", fontSize: "15px", listStyleType: "disc", paddingLeft: "16px", margin: "0 auto", textAlign: "left", lineHeight: "1.5"}}>
+                <li>Can't differentiate between vowel sounds</li>
                 <li>Recognise all 5 vowel sounds easily</li>
                 <li>Read full sentences with confidence</li>
                 <li>Read everyday things like signs & menus</li>
-                <li>100% Reading Improvement</li>
               </ul>
             </div>
           </div>
@@ -254,33 +274,41 @@ export default function Home() {
       <section className="activities-section section-padding">
         <div className="container">
           <span className="section-badge section-badge-orange">Sample Activities</span>
-          <h2 className="section-heading">What Your Child Will <span className="text-orange">Read & Write</span></h2>
-          <div className="worksheet-carousel">
-            <div className="worksheet-track">
+          <h2 className="section-heading" style={{marginBottom: "8px", fontSize: "36px", fontWeight: "700", lineHeight: "1.2"}}>What Your Child Will <span className="text-orange">Read & Write</span></h2>
+          <p className="section-subtext" style={{color: "#4A4A4A", fontSize: "16px", fontWeight: "400", marginBottom: "24px", maxWidth: "100%", lineHeight: "1.5"}}>Hands-on worksheets used in every group session — phonics made playful.</p>
+          <div className="pdf-badge" style={{display: "inline-flex", alignItems: "center", gap: "8px", padding: "8px 20px", borderRadius: "20px", background: "rgba(255,102,17,0.1)", color: "var(--primary-orange)", fontWeight: "600", fontSize: "14px", marginBottom: "40px", cursor: "pointer"}}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Printable PDFs
+          </div>
+          <div className="worksheet-carousel" style={{marginBottom: "64px"}}>
+            <div className="worksheet-track" style={{display: "flex", gap: "24px", overflowX: "auto", paddingBottom: "24px", paddingRight: "40px"}}>
               {[
-                { h: "Ending Sounds", sub: "k, x", p: "Circle the correct ending sound" },
-                { h: "Word Building", sub: "a", p: "/k/ → /ka/ → /kat/ = cat", c: "ws-green" },
-                { h: "Word Building", sub: "e", p: "/b/ → /be/ → /bed/ = bed", c: "ws-blue" },
-                { h: "Word Family", sub: "at", p: "hat, bat, rat, cat, mat", c: "ws-pink" },
+                { color: "#54C670" },
+                { color: "#EF5B9E" },
+                { color: "#F7BE54" },
+                { color: "#E53E5C" },
+                { color: "#EF5B9E" },
               ].map((w, i) => (
-                <div key={i} className="worksheet-card">
-                  <div className={`ws-header ${w.c || ''}`}>{w.h}</div>
-                  <div className="ws-body">
-                    <h3>{w.sub}</h3>
-                    <p>{w.p}</p>
-                  </div>
+                <div key={i} className="worksheet-card" style={{minWidth: "280px", height: "380px", borderRadius: "12px", border: `2px solid ${w.color}`, padding: "8px", background: "#fff", display: "flex", overflow: "hidden", flexShrink: 0}}>
+                  <img src="/images/worksheet-sample.png" alt="Worksheet Sample" style={{width: "100%", height: "100%", objectFit: "cover", borderRadius: "6px"}} />
                 </div>
               ))}
             </div>
           </div>
         </div>
-        <div className="word-ribbon">
-          <div className="word-ribbon-track">
-            {["GO", "GOT", "GOAT", "FLOAT", "CAT", "CHAT", "CATCH"].map((w, i) => (
-              <span key={i} className="word-chip">{w}</span>
+        <div className="word-ribbon" style={{background: "#fff", padding: "48px 0", borderTop: "1px solid #EAEAEA"}}>
+          <div className="word-ribbon-track" style={{display: "flex", gap: "24px", animation: "scrollLeft 30s linear infinite", padding: "0 24px"}}>
+            {["GO", "GOT", "GOAT", "FLOAT", "FLOATING"].map((w, i) => (
+              <div key={i} className="word-chip-container" style={{position: "relative", paddingTop: "8px"}}>
+                <div style={{position: "absolute", top: "0", right: "0", background: "red", color: "white", fontSize: "10px", fontWeight: "700", padding: "2px 6px", borderRadius: "8px", transform: "translate(25%, -25%)", zIndex: 2}}>+</div>
+                <span className="word-chip" style={{display: "flex", alignItems: "center", justifyContent: "center", padding: "0 32px", height: "72px", border: "1px solid rgba(235,103,154,0.3)", borderTop: "3px solid #EB679A", borderRadius: "12px", fontSize: "28px", fontWeight: "700", color: "#1A1A1A", background: "#fff", boxShadow: "0 8px 16px rgba(235,103,154,0.1)", minWidth: "140px"}}>{w}</span>
+              </div>
             ))}
-            {["GO", "GOT", "GOAT", "FLOAT", "CAT", "CHAT", "CATCH"].map((w, i) => (
-              <span key={i+"-dup2"} className="word-chip">{w}</span>
+            {["GO", "GOT", "GOAT", "FLOAT", "FLOATING"].map((w, i) => (
+              <div key={i+"-dup"} className="word-chip-container" style={{position: "relative", paddingTop: "8px"}}>
+                <div style={{position: "absolute", top: "0", right: "0", background: "red", color: "white", fontSize: "10px", fontWeight: "700", padding: "2px 6px", borderRadius: "8px", transform: "translate(25%, -25%)", zIndex: 2}}>+</div>
+                <span className="word-chip" style={{display: "flex", alignItems: "center", justifyContent: "center", padding: "0 32px", height: "72px", border: "1px solid rgba(235,103,154,0.3)", borderTop: "3px solid #EB679A", borderRadius: "12px", fontSize: "28px", fontWeight: "700", color: "#1A1A1A", background: "#fff", boxShadow: "0 8px 16px rgba(235,103,154,0.1)", minWidth: "140px"}}>{w}</span>
+              </div>
             ))}
           </div>
         </div>
@@ -288,36 +316,87 @@ export default function Home() {
 
       <section className="reviews-section section-padding" id="review">
         <div className="container">
-          <span className="section-badge section-badge-dark">Parent Reviews</span>
-          <h2 className="section-heading results-heading">Trusted by <span className="text-orange">1000+ Parents</span></h2>
+          <span className="section-badge" style={{background: "rgba(255,102,17,0.1)", color: "var(--primary-orange)", display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "16px", padding: "8px 16px", borderRadius: "16px", fontSize: "12px", fontWeight: "700"}}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            Parent Reviews
+          </span>
+          <h2 className="section-heading results-heading" style={{marginBottom: "8px", color: "white", fontSize: "36px", fontWeight: "700", lineHeight: "1.2"}}>Trusted by <span className="text-orange">1000+ Parents</span></h2>
+          <p className="results-subtext" style={{color: "rgba(255,255,255,0.7)", fontSize: "14px", fontWeight: "400", marginBottom: "48px", lineHeight: "1.5"}}>Real parents. Real reading progress. Across Globe.</p>
           
-          <div className="rating-breakdown">
-            <div className="rating-left">
-              <div className="rating-big">4.9</div>
-              <div className="rating-stars">★★★★★</div>
-              <div className="rating-count">512 reviews</div>
+          <div className="rating-breakdown" style={{background: "#1F150D", borderRadius: "16px", padding: "40px", display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "48px"}}>
+            <div className="rating-left" style={{textAlign: "center", width: "160px"}}>
+              <div className="rating-big" style={{fontSize: "72px", fontWeight: "800", color: "var(--primary-orange)", lineHeight: "1"}}>4.9</div>
+              <div className="rating-stars" style={{color: "#FFA500", fontSize: "24px", margin: "8px 0 4px", letterSpacing: "2px"}}>★★★★★</div>
+              <div className="rating-count" style={{fontSize: "14px", fontWeight: "500", color: "rgba(255,255,255,0.7)"}}>512 reviews</div>
             </div>
-            <div className="rating-bars">
+            <div className="rating-bars" style={{flexGrow: 1, margin: "0 48px", maxWidth: "400px"}}>
               {[91, 7, 2, 0, 0].map((p, i) => (
-                <div key={i} className="bar-row">
-                  <span>{5-i}</span><span className="star-sm">★</span>
-                  <div className="bar-bg"><div className="bar-fill" style={{width: `${p}%`}}></div></div>
-                  <span>{p}%</span>
+                <div key={i} className="bar-row" style={{display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px", fontSize: "14px", fontWeight: "500", color: "rgba(255,255,255,0.7)"}}>
+                  <span style={{width: "8px", textAlign: "right"}}>{5-i}</span><span style={{color: "#FFA500", fontSize: "16px"}}>★</span>
+                  <div className="bar-bg" style={{flexGrow: 1, height: "8px", background: "rgba(255,255,255,0.05)", borderRadius: "4px", overflow: "hidden"}}><div className="bar-fill" style={{width: `${p}%`, height: "100%", background: "var(--primary-orange)", borderRadius: "4px"}}></div></div>
+                  <span style={{width: "36px"}}>{p}%</span>
                 </div>
               ))}
             </div>
+            <div className="rating-stats" style={{display: "flex", flexDirection: "column", gap: "24px", textAlign: "left", fontSize: "14px", fontWeight: "500", color: "rgba(255,255,255,0.7)"}}>
+              <div style={{display: "flex", alignItems: "center", gap: "16px"}}><span className="text-orange" style={{fontSize: "20px", fontWeight: "700", width: "52px"}}>1000+</span> Parents</div>
+              <div style={{display: "flex", alignItems: "center", gap: "16px"}}><span className="text-orange" style={{fontSize: "20px", fontWeight: "700", width: "52px"}}>95%</span> Recommend</div>
+              <div style={{display: "flex", alignItems: "center", gap: "16px"}}><span className="text-orange" style={{fontSize: "20px", fontWeight: "700", width: "52px"}}>45d</span> Program</div>
+            </div>
           </div>
 
-          <div className="reviews-grid">
+          <div className="reviews-grid" style={{display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px"}}>
             {[
-              { n: "Priya Sharma", t: "My daughter could barely read 3-letter words. After 3 weeks she reads full sentences. Magical!" },
-              { n: "Muthu Anushya", t: "My daughter enjoys the classes. Her skills have improved a lot. Steady progress in writing." },
-              { n: "Vanmathi Raja", t: "Spellzee was my last hope, and it worked. My son now never gets bored of reading." },
+              { n: "Priya Sharma", loc: "Mother - Chennai", t: "My daughter could barely read 3-letter words. Within 3 weeks of Spellzee group classes she reads full sentences. The phonics method is magical!", v: false },
+              { n: "Muthu Anushya", loc: "Mother - Qatar", t: "My daughter enjoys the English classes and her skills have improved a lot. She is doing very well now, and we can see her making steady progress in her writing.", v: false },
+              { n: "Vanmathi Raja", loc: "Mother - Coimbatore", t: "After trying so many options, Spellzee was my last hope, and it worked. My son struggled with reading and never wanted to attend classes, but now he never gets bored.", v: false },
+              { n: "Meera Krishnan", loc: "Mother - Madurai", t: "My son went from refusing to read to reading full sentences in just 3 weeks — and now he actually enjoys picking up books on his own!", v: true },
+              { n: "Sarika Menon", loc: "Mother - Madurai", t: "Badge rewards kept my son going. He never missed a class and even reads restaurant menus now — all from the group program!", v: true },
+              { n: "Kavitha Nair", loc: "Mother of twins - Trichy", t: "Enrolled both twins in the same group batch — both can now read & write independently. School teachers noticed the improvement!", v: true },
             ].map((r, i) => (
-              <div key={i} className="review-card">
-                <div className="review-stars">★★★★★</div>
-                <p>"{r.t}"</p>
-                <div className="reviewer"><strong>{r.n}</strong></div>
+              <div key={i} className="review-card" style={{background: r.v ? "linear-gradient(180deg, #381503 0%, #1F150D 100%)" : "#1F150D", padding: "32px", borderRadius: "16px", display: "flex", flexDirection: "column"}}>
+                {r.v ? (
+                  <div style={{display: "flex", justifyContent: "center", padding: "16px 0 32px 0"}}>
+                    <div style={{width: "48px", height: "48px", background: "var(--primary-orange)", borderRadius: "24px", display: "flex", alignItems: "center", justifyContent: "center", color: "white", cursor: "pointer", boxShadow: "0 0 0 8px rgba(255,102,17,0.2)"}}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" style={{marginLeft: "4px"}}><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="review-stars" style={{color: "#FFA500", fontSize: "16px", marginBottom: "24px", letterSpacing: "1px"}}>★★★★★</div>
+                )}
+                
+                {r.v && (
+                  <div className="reviewer" style={{marginBottom: "20px", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "2px"}}>
+                    <strong style={{fontSize: "15px", color: "#fff", fontWeight: "600"}}>{r.n}</strong>
+                    <span style={{fontSize: "13px", color: "rgba(255,255,255,0.6)", fontWeight: "400"}}>{r.loc}</span>
+                  </div>
+                )}
+                
+                <p style={{fontSize: "15px", lineHeight: "1.6", color: r.v ? "rgba(255,255,255,0.8)" : "#fff", marginBottom: r.v ? "0" : "32px", flexGrow: 1, fontWeight: "400"}}>"{r.t}"</p>
+                
+                {!r.v && (
+                  <div className="reviewer" style={{marginTop: "auto", display: "flex", alignItems: "center", gap: "12px"}}>
+                    <img src={`https://ui-avatars.com/api/?name=${r.n.replace(" ","+")}&background=FF6611&color=fff&rounded=true&size=40`} alt={r.n} style={{width: "48px", height: "48px", borderRadius: "24px"}} />
+                    <div style={{display: "flex", flexDirection: "column", gap: "2px"}}>
+                      <strong style={{color: "#fff", fontSize: "14px", fontWeight: "600"}}>{r.n}</strong>
+                      <span style={{fontSize: "12px", color: "rgba(255,255,255,0.6)", fontWeight: "400"}}>{r.loc}</span>
+                    </div>
+                    <div className="verified-badge" style={{display: "flex", alignItems: "center", gap: "4px", marginLeft: "auto", background: "white", color: "#008744", padding: "6px 12px", borderRadius: "20px", fontSize: "11px", fontWeight: "700", textTransform: "uppercase"}}>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      Verified
+                    </div>
+                  </div>
+                )}
+                
+                {r.v && (
+                  <div style={{marginTop: "32px", display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "24px", borderTop: "1px solid rgba(255,255,255,0.05)"}}>
+                    <div className="review-stars" style={{color: "#FFA500", margin: 0, fontSize: "14px", letterSpacing: "1px"}}>★★★★★</div>
+                    <div className="verified-badge" style={{display: "flex", alignItems: "center", gap: "4px", background: "white", color: "#008744", padding: "6px 12px", borderRadius: "20px", fontSize: "11px", fontWeight: "700", textTransform: "uppercase", margin: 0}}>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      Verified
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
