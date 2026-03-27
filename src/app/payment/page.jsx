@@ -17,6 +17,75 @@ export default function PaymentPage() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  const loadRazorpayScript = () => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = "https://checkout.razorpay.com/v1/checkout.js";
+      script.onload = () => resolve(true);
+      script.onerror = () => resolve(false);
+      document.body.appendChild(script);
+    });
+  };
+
+  const handlePayment = async (e) => {
+    e.preventDefault();
+
+    if (!formData.parentName || !formData.whatsapp) {
+      alert("Please fill in your first name and WhatsApp number.");
+      return;
+    }
+
+    const res = await loadRazorpayScript();
+    if (!res) {
+      alert("Razorpay SDK failed to load. Please check your connection.");
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/razorpay', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ amount: 4500 }) // Total price
+      });
+
+      const data = await response.json();
+      
+      if (!response.ok || !data.orderId) {
+        alert("Server error. Please try again.");
+        return;
+      }
+
+      const options = {
+        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || "YOUR_KEY_ID",
+        amount: 4500 * 100, // in paise
+        currency: "INR",
+        name: "Spellzee",
+        description: "45 Days Reading Challenge",
+        image: "/images/spellzee-logo.png",
+        order_id: data.orderId,
+        handler: function (response) {
+          alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
+          // Verify payment here via your backend if needed
+        },
+        prefill: {
+          name: `${formData.parentName} ${formData.parentLastName}`.trim(),
+          contact: formData.whatsapp,
+        },
+        theme: {
+          color: "#f67825", // match branding
+        },
+      };
+
+      const paymentObject = new window.Razorpay(options);
+      paymentObject.open();
+    } catch (error) {
+      console.error("Payment integration error:", error);
+      alert("Something went wrong with the payment process.");
+    }
+  };
+
   return (
     <div className="payment-page-container">
       <header className="payment-header">
@@ -59,7 +128,7 @@ export default function PaymentPage() {
         <div className="payment-right">
           <div className="form-container">
             <h3>Parent Details</h3>
-            <form onSubmit={(e) => e.preventDefault()}>
+            <form onSubmit={handlePayment}>
               <div className="form-row">
                 <div className="form-group">
                   <label>First Name</label>
