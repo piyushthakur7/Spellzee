@@ -47,10 +47,13 @@ export default function Home() {
               <span className="big-number">45</span>
               <span className="days-text">Days</span>
             </h1>
-            <h2 className="hero-subtitle text-orange">Reading Challenge</h2>
+            <h2 className="hero-subtitle">
+              <span className="text-orange" style={{display: 'block'}}>Reading</span>
+              <span style={{color: '#111', display: 'block'}}>Challenge</span>
+            </h2>
             <p className="hero-desc">Your child will <strong className="text-orange">READ & WRITE ENGLISH CONFIDENTLY</strong> — a proven phonics method trusted by 1000+ Parents across India.</p>
             <div className="hero-buttons">
-              <a href="https://wa.me/919361102618" className="btn btn-orange">Enroll Now</a>
+              <a href="/payment" className="btn btn-orange">Enroll Now</a>
               <button className="btn btn-outline-peach">Limited Time offer</button>
             </div>
           </div>
@@ -330,7 +333,7 @@ export default function Home() {
             <h3>₹100 per class</h3>
             <p>45 Live Classes = <strong>₹4,500 Total</strong></p>
             <div className="pricing-highlight">2-Class Risk-free | 100% Refund Guaranteed</div>
-            <a href="https://wa.me/919361102618" className="btn btn-orange" style={{width: "100%", marginTop: "30px"}}>Secure Your Spot</a>
+            <a href="/payment" className="btn btn-orange" style={{width: "100%", marginTop: "30px"}}>Secure Your Spot</a>
           </div>
 
           <div className="faq-list">
