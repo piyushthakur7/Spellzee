@@ -1,10 +1,10 @@
 .checkout-container {
   display: flex;
   min-height: 100vh;
-  background-color: #fdeddf; 
-  background-image: url('/images/mountain-bg.svg'); /* If exists */
-  background-size: cover;
-  background-position: bottom;
+  background-color: #fcece0; 
+  background-image: url('/images/payment-bg.png'); /* The uploaded background image */
+  background-size: 100% auto;
+  background-position: bottom center;
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
@@ -14,31 +14,17 @@
   z-index: 1;
 }
 
-/* Fallback background layer in case mountain image not available */
-.checkout-container::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60%;
-  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23facfab" fill-opacity="0.5" d="M0,160L48,165.3C96,171,192,181,288,170.7C384,160,480,128,576,133.3C672,139,768,181,864,197.3C960,213,1056,203,1152,192C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
-  background-size: cover;
-  z-index: -1;
-  pointer-events: none;
-}
-
 .checkout-wrapper {
   display: flex;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1240px;
   z-index: 2;
-  gap: 60px;
+  gap: 100px;
   align-items: flex-start;
 }
 
 .checkout-left {
-  flex: 0 0 300px;
+  flex: 0 0 340px;
   display: flex;
   flex-direction: column;
 }
@@ -796,5 +782,96 @@
   box-shadow: 0 10px 40px rgba(255,102,17,0.2);
   position: relative;
   overflow: hidden;
+}
+
+/* ========================================= */
+/* Responsive Styles for ALL Devices */
+/* ========================================= */
+
+@media (max-width: 1200px) {
+  .checkout-wrapper { gap: 60px; max-width: 100%; }
+  .checkout-container { padding: 40px 20px; }
+}
+
+@media (max-width: 1024px) {
+  /* Tablet layout: Stack left info and right payment modal */
+  .checkout-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .checkout-left {
+    width: 100%;
+    flex: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .logo-section { width: 100%; justify-content: center; margin-bottom: 0; }
+  .challenge-title { width: 100%; justify-content: center; margin-bottom: 0; }
+  .price-card { margin-bottom: 0; flex: 1; min-width: 250px; max-width: 350px; }
+  .user-card { flex: 1; min-width: 250px; max-width: 350px; }
+  
+  .checkout-right {
+    width: 100%;
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Smaller screens: Sidebar wraps horizontally, cards take full width */
+  .payment-body {
+    flex-direction: column;
+    padding: 0 20px 24px;
+    gap: 16px;
+  }
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 6px;
+  }
+  .sidebar::-webkit-scrollbar { height: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: rgba(255,102,17,0.3); border-radius: 4px; }
+  .sidebar-item {
+    min-width: max-content;
+    padding: 12px 18px;
+    flex: 1;
+    justify-content: center;
+  }
+  .sidebar-logos { display: none; }
+  .content-area { padding: 20px; min-height: auto; }
+  
+  .checkout-left {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .price-card, .user-card { max-width: 100%; width: 100%; text-align: left; }
+  .success-header-title { justify-content: center; }
+  .social-links { justify-content: center; }
+  .success-orange-box { height: 350px; }
+  .country-box { min-height: 400px; max-width: 90%; }
+}
+
+@media (max-width: 480px) {
+  /* Very small screens: Phones, Z Fold, iPhone SE */
+  .checkout-container { padding: 20px; }
+  .checkout-wrapper { gap: 24px; }
+  .checkout-box-header { padding: 18px; }
+  .header-title { font-size: 16px; }
+  .sidebar { gap: 6px; }
+  .sidebar-item { padding: 10px 14px; font-size: 13px; }
+  .radio-circle { margin-right: 6px; }
+  .tab-title { margin-bottom: 16px; }
+  .modal-box { padding: 20px; width: 95%; max-width: none; margin: 10px; }
+  .mc-number { font-size: 14px; letter-spacing: 1px; }
+  .mock-card { padding: 16px; margin-bottom: 20px; border-radius: 12px; }
+  .mc-top { margin-bottom: 20px; font-size: 16px; }
+  .mc-isa { font-size: 16px; }
+  .exit-icon { width: 40px; height: 40px; margin-bottom: 12px; }
 }
 
