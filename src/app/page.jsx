@@ -336,14 +336,14 @@ export default function Home() {
           <p className="results-subtext" style={{color: "rgba(255,255,255,0.7)", fontSize: "14px", fontWeight: "400", marginBottom: "48px", lineHeight: "1.5"}}>Measurable outcomes every parent can see — tracked and verified across 1000+ students.</p>
           <div className="results-grid">
             {[
-              { n: "97%", h: "Reads Short Vowel Words" },
-              { n: "25+", h: "Reads Short Vowel Words" },
-              { n: "98%", h: "Reads Short Vowel Words" },
-              { n: "1000+", h: "Reads Short Vowel Words" },
-              { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>, h: "Reads Short Vowel Words" },
-              { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="2" x2="22" y2="6"/><path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"/></svg>, h: "Writes Simple Sentences" },
-              { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.5 2v6h-6M2.13 15.57a9 9 0 1 0 15.22-4.24L21.5 8"/><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>, h: "Reads Decodable Stories" },
-              { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2l.5-.5c1.19-.11 2.45-.66 3.33-1.53 1.14-1.12 1.34-2.8.5-4C10.74 12.33 9.77 12 8.5 12c-1.27 0-2.24.33-3.33 1.47-.87.88-1.42 2.14-1.53 3.33l-.5.5z"/><path d="M5 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/><path d="m15.5 8.5 2-2"/><path d="M12 5h-1"/><path d="M19 12v-1"/><path d="m18.5 5.5-1 1"/></svg>, h: "Builds Real Confidence" },
+              { n: "97%", h: "Reads 3-letter words by Day 20" },
+              { n: "25+", h: "Engaging Phonic stories" },
+              { n: "98%", h: "Visible progress in 2 weeks" },
+              { n: "1000+", h: "Batch-wise proven results" },
+              { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/><path d="M6 8h2"/><path d="M6 12h2"/><path d="M16 8h2"/><path d="M16 12h2"/></svg>, h: "Reads Short Vowel Words" },
+              { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/><path d="M15 5l4 4"/></svg>, h: "Writes Simple Sentences" },
+              { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><path d="M7 13a5 5 0 0 1 10 0"/><path d="M4 13h16v8H4z"/><path d="M12 13v8"/><path d="M7 17h2"/><path d="M15 17h2"/><path d="M3 5l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/><path d="M20 3l.5 1.5L22 5l-1.5.5L20 7l-.5-1.5L18 5l1.5-.5z"/><path d="M2 19l.5 1.5L4 21l-1.5.5L2 23l-.5-1.5L0 21l1.5-.5z"/></svg>, h: "Reads Decodable Stories" },
+              { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2l.5-.5c1.19-.11 2.45-.66 3.33-1.53 1.14-1.12 1.34-2.8.5-4C10.74 12.33 9.77 12 8.5 12c-1.27 0-2.24.33-3.33 1.47-.87.88-1.42 2.14-1.53 3.33l-.5.5z"/><path d="M12 12a2 2 0 1 0 4-4 2 2 0 0 0-4 4z"/><path d="m15.5 8.5 2-2"/></svg>, h: "Builds Real Confidence" },
             ].map((r, i) => (
               <div key={i} className="result-stat-card">
                 {r.n ? (
@@ -359,7 +359,7 @@ export default function Home() {
           <div className="before-after-grid">
             <div className="ba-card">
               <div className="ba-icon-bg ba-icon-before">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
               </div>
               <h4>Before 45 Days Reading Challenge</h4>
               <ul className="ba-list">
@@ -371,14 +371,14 @@ export default function Home() {
             </div>
             <div className="ba-card">
               <div className="ba-icon-bg ba-icon-after">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/><path d="M21 21v-8M17 21v-4M13 21v-6M9 21v-3M5 21v-5"/></svg>
               </div>
               <h4>After Spellzee's 45 Days Reading Challenge</h4>
               <ul className="ba-list">
+                <li>Can't differentiate between vowel sounds</li>
                 <li>Recognise all 5 vowel sounds easily</li>
                 <li>Read full sentences with confidence</li>
                 <li>Read everyday things like signs & menus</li>
-                <li>Confident & Independent Learner</li>
               </ul>
             </div>
           </div>
@@ -395,33 +395,84 @@ export default function Home() {
             Printable PDFs
           </div>
           <div className="worksheet-carousel" style={{marginBottom: "64px"}}>
-            <div className="worksheet-track" style={{display: "flex", gap: "24px", overflowX: "auto", paddingBottom: "24px", paddingRight: "40px"}}>
+            <div className="worksheet-track" style={{display: "flex", gap: "24px", overflowX: "auto", paddingBottom: "24px", paddingRight: "40px", paddingLeft: "16px"}}>
               {[
-                { color: "#54C670" },
-                { color: "#EF5B9E" },
-                { color: "#F7BE54" },
-                { color: "#E53E5C" },
-                { color: "#EF5B9E" },
+                { file: "worksheet-1.png", color: "#EF5B9E" },
+                { file: "worksheet-2.png", color: "#54C670" },
+                { file: "worksheet-3.png", color: "#E53E5C" },
+                { file: "worksheet-4.png", color: "#F7BE54" },
+                { file: "worksheet-5.png", color: "#EF5B9E" },
+                { file: "worksheet-6.png", color: "#E53E5C" },
               ].map((w, i) => (
-                <div key={i} className="worksheet-card" style={{minWidth: "280px", height: "380px", borderRadius: "12px", border: `2px solid ${w.color}`, padding: "8px", background: "#fff", display: "flex", overflow: "hidden", flexShrink: 0}}>
-                  <img src="/images/worksheet-sample.png" alt="Worksheet Sample" style={{width: "100%", height: "100%", objectFit: "cover", borderRadius: "6px"}} />
+                <div key={i} className="worksheet-card" style={{minWidth: "280px", height: "380px", borderRadius: "16px", border: `1.5px solid ${w.color}`, background: "#fff", display: "flex", overflow: "hidden", flexShrink: 0, boxShadow: "0 8px 32px rgba(0,0,0,0.06)"}}>
+                  <img src={`/images/${w.file}`} alt="Worksheet Sample" style={{width: "100%", height: "100%", objectFit: "cover"}} />
                 </div>
               ))}
             </div>
           </div>
         </div>
         <div className="word-ribbon" style={{background: "#fff", padding: "48px 0", borderTop: "1px solid #EAEAEA"}}>
-          <div className="word-ribbon-track" style={{display: "flex", gap: "24px", animation: "scrollLeft 30s linear infinite", padding: "0 24px"}}>
+          <div className="word-ribbon-track" style={{display: "flex", gap: "32px", animation: "scrollLeft 30s linear infinite", padding: "0 24px", paddingBottom: "32px"}}>
             {["GO", "GOT", "GOAT", "FLOAT", "FLOATING"].map((w, i) => (
-              <div key={i} className="word-chip-container" style={{position: "relative", paddingTop: "8px"}}>
-                <div style={{position: "absolute", top: "0", right: "0", background: "red", color: "white", fontSize: "10px", fontWeight: "700", padding: "2px 6px", borderRadius: "8px", transform: "translate(25%, -25%)", zIndex: 2}}>+</div>
-                <span className="word-chip" style={{display: "flex", alignItems: "center", justifyContent: "center", padding: "0 32px", height: "72px", border: "1px solid rgba(235,103,154,0.3)", borderTop: "3px solid #EB679A", borderRadius: "12px", fontSize: "28px", fontWeight: "700", color: "#1A1A1A", background: "#fff", boxShadow: "0 8px 16px rgba(235,103,154,0.1)", minWidth: "140px"}}>{w}</span>
+              <div key={i} className="word-flashcard" style={{
+                background: "#fff",
+                borderRadius: "16px",
+                padding: "20px",
+                paddingTop: "24px",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
+                display: "flex",
+                flexDirection: "column",
+                minWidth: "240px",
+                flexShrink: 0
+              }}>
+                <div style={{display: "flex", justifyContent: "flex-end", marginBottom: "8px", paddingRight: "4px"}}>
+                  <img src="/images/spellzee-logo.png" alt="Spellzee" style={{height: "16px", opacity: 0.9}} />
+                </div>
+                <div style={{
+                  border: "2.5px solid #DE3163",
+                  borderRadius: "8px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  height: "100px",
+                  fontSize: "44px",
+                  fontWeight: "600",
+                  color: "#111",
+                  letterSpacing: "1px"
+                }}>
+                  {w}
+                </div>
               </div>
             ))}
             {["GO", "GOT", "GOAT", "FLOAT", "FLOATING"].map((w, i) => (
-              <div key={i+"-dup"} className="word-chip-container" style={{position: "relative", paddingTop: "8px"}}>
-                <div style={{position: "absolute", top: "0", right: "0", background: "red", color: "white", fontSize: "10px", fontWeight: "700", padding: "2px 6px", borderRadius: "8px", transform: "translate(25%, -25%)", zIndex: 2}}>+</div>
-                <span className="word-chip" style={{display: "flex", alignItems: "center", justifyContent: "center", padding: "0 32px", height: "72px", border: "1px solid rgba(235,103,154,0.3)", borderTop: "3px solid #EB679A", borderRadius: "12px", fontSize: "28px", fontWeight: "700", color: "#1A1A1A", background: "#fff", boxShadow: "0 8px 16px rgba(235,103,154,0.1)", minWidth: "140px"}}>{w}</span>
+               <div key={i+"-dup"} className="word-flashcard" style={{
+                background: "#fff",
+                borderRadius: "16px",
+                padding: "20px",
+                paddingTop: "24px",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
+                display: "flex",
+                flexDirection: "column",
+                minWidth: "240px",
+                flexShrink: 0
+              }}>
+                <div style={{display: "flex", justifyContent: "flex-end", marginBottom: "8px", paddingRight: "4px"}}>
+                  <img src="/images/spellzee-logo.png" alt="Spellzee" style={{height: "16px", opacity: 0.9}} />
+                </div>
+                <div style={{
+                  border: "2.5px solid #DE3163",
+                  borderRadius: "8px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  height: "100px",
+                  fontSize: "44px",
+                  fontWeight: "600",
+                  color: "#111",
+                  letterSpacing: "1px"
+                }}>
+                  {w}
+                </div>
               </div>
             ))}
           </div>
@@ -430,8 +481,10 @@ export default function Home() {
 
       <section className="reviews-section section-padding" id="review">
         <div className="container">
-          <span className="section-badge" style={{background: "rgba(255,102,17,0.1)", color: "var(--primary-orange)", display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "16px", padding: "8px 16px", borderRadius: "16px", fontSize: "12px", fontWeight: "700"}}>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <span className="section-badge" style={{background: "#2A180D", color: "#FF5A00", display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "16px", padding: "8px 16px", borderRadius: "100px", fontSize: "14px", fontWeight: "600", border: 'none'}}>
+            <div style={{background: "#FF5A00", width: "20px", height: "20px", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "50%"}}>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="white" stroke="none"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
             Parent Reviews
           </span>
           <h2 className="section-heading results-heading" style={{marginBottom: "8px", color: "white", fontSize: "36px", fontWeight: "700", lineHeight: "1.2"}}>Trusted by <span className="text-orange">1000+ Parents</span></h2>
@@ -445,68 +498,79 @@ export default function Home() {
             </div>
             <div className="rating-bars" style={{flexGrow: 1, margin: "0 48px", maxWidth: "400px"}}>
               {[91, 7, 2, 0, 0].map((p, i) => (
-                <div key={i} className="bar-row" style={{display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px", fontSize: "14px", fontWeight: "500", color: "rgba(255,255,255,0.7)"}}>
-                  <span style={{width: "8px", textAlign: "right"}}>{5-i}</span><span style={{color: "#FFA500", fontSize: "16px"}}>★</span>
-                  <div className="bar-bg" style={{flexGrow: 1, height: "8px", background: "rgba(255,255,255,0.05)", borderRadius: "4px", overflow: "hidden"}}><div className="bar-fill" style={{width: `${p}%`, height: "100%", background: "var(--primary-orange)", borderRadius: "4px"}}></div></div>
-                  <span style={{width: "36px"}}>{p}%</span>
+                <div key={i} className="bar-row" style={{display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px", fontSize: "13px", fontWeight: "500", color: "rgba(255,255,255,0.6)"}}>
+                  <span style={{width: "10px", textAlign: "right"}}>{5-i}</span><span style={{color: "#FFA500", fontSize: "14px"}}>★</span>
+                  <div className="bar-bg" style={{flexGrow: 1, height: "10px", background: "#D9D9D9", borderRadius: "52px", overflow: "hidden", border: "none"}}><div className="bar-fill" style={{width: `${p}%`, height: "100%", background: "var(--primary-orange)", borderRadius: "52px"}}></div></div>
+                  <span style={{width: "30px", textAlign: "right"}}>{p}%</span>
                 </div>
               ))}
             </div>
-            <div className="rating-stats" style={{display: "flex", flexDirection: "column", gap: "24px", textAlign: "left", fontSize: "14px", fontWeight: "500", color: "rgba(255,255,255,0.7)"}}>
-              <div style={{display: "flex", alignItems: "center", gap: "16px"}}><span className="text-orange" style={{fontSize: "20px", fontWeight: "700", width: "52px"}}>1000+</span> Parents</div>
-              <div style={{display: "flex", alignItems: "center", gap: "16px"}}><span className="text-orange" style={{fontSize: "20px", fontWeight: "700", width: "52px"}}>95%</span> Recommend</div>
-              <div style={{display: "flex", alignItems: "center", gap: "16px"}}><span className="text-orange" style={{fontSize: "20px", fontWeight: "700", width: "52px"}}>45d</span> Program</div>
+            <div className="rating-stats" style={{display: "flex", flexDirection: "column", gap: "24px", textAlign: "center", fontSize: "12px", fontWeight: "500", color: "rgba(255,255,255,0.7)", width: "120px"}}>
+              <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "0"}}>
+                <span className="text-orange" style={{fontSize: "20px", fontWeight: "700"}}>1000+</span>
+                <span>Parents</span>
+              </div>
+              <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "0"}}>
+                <span className="text-orange" style={{fontSize: "20px", fontWeight: "700"}}>98%</span>
+                <span>Recommend</span>
+              </div>
+              <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "0"}}>
+                <span className="text-orange" style={{fontSize: "20px", fontWeight: "700"}}>45d</span>
+                <span>Program</span>
+              </div>
             </div>
           </div>
 
           <div className="reviews-grid" style={{display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px"}}>
             {[
-              { n: "Priya Sharma", loc: "Mother - Chennai", t: "My daughter could barely read 3-letter words. Within 3 weeks of Spellzee group classes she reads full sentences. The phonics method is magical!", v: false },
-              { n: "Muthu Anushya", loc: "Mother - Qatar", t: "My daughter enjoys the English classes and her skills have improved a lot. She is doing very well now, and we can see her making steady progress in her writing.", v: false },
-              { n: "Vanmathi Raja", loc: "Mother - Coimbatore", t: "After trying so many options, Spellzee was my last hope, and it worked. My son struggled with reading and never wanted to attend classes, but now he never gets bored.", v: false },
-              { n: "Meera Krishnan", loc: "Mother - Madurai", t: "My son went from refusing to read to reading full sentences in just 3 weeks — and now he actually enjoys picking up books on his own!", v: true },
-              { n: "Sarika Menon", loc: "Mother - Madurai", t: "Badge rewards kept my son going. He never missed a class and even reads restaurant menus now — all from the group program!", v: true },
-              { n: "Kavitha Nair", loc: "Mother of twins - Trichy", t: "Enrolled both twins in the same group batch — both can now read & write independently. School teachers noticed the improvement!", v: true },
+              { n: "Priya Sharma", loc: "Mother - Chennai", t: "My daughter could barely read 3-letter words. After 3 weeks of Spellzee group classes she reads full sentences. The phonics method is magical!", v: false, d: null },
+              { n: "Muthu Anushya", loc: "Mother - Qatar", t: "My daughter enjoys the English classes and her skills have improved a lot. She is doing very well now, and we can see her making steady progress in her writing.", v: false, d: null },
+              { n: "Vanmathi Raja", loc: "Mother - Coimbatore", t: "After trying so many options, Spellzee was my last hope, and it worked. My son struggled with reading and never wanted to attend classes, but now he never gets bored.", v: false, d: null },
+              { n: "Meera Krishnan", loc: "Mother - Madurai", t: "My son went from refusing to read to reading full sentences in just 3 weeks — and now he actually enjoys picking up books on his own!", v: true, d: "1:14" },
+              { n: "Sunita Menon", loc: "Mother - Madurai", t: "Badge rewards kept my son going. He never missed a class and even reads restaurant menus now — all from the group program!", v: true, d: "1:14" },
+              { n: "Kavitha Nair", loc: "Mother of twins - Trichy", t: "Enrolled both twins in the same group batch — both can now read & write independently. School teachers noticed the improvement!", v: true, d: "1:14" },
             ].map((r, i) => (
-              <div key={i} className="review-card" style={{background: r.v ? "linear-gradient(180deg, #381503 0%, #1F150D 100%)" : "#1F150D", padding: "32px", borderRadius: "16px", display: "flex", flexDirection: "column"}}>
+              <div key={i} className="review-card" style={{background: "#1F150D", padding: "24px", borderRadius: "16px", display: "flex", flexDirection: "column"}}>
                 {r.v ? (
-                  <div style={{display: "flex", justifyContent: "center", padding: "16px 0 32px 0"}}>
-                    <div style={{width: "48px", height: "48px", background: "var(--primary-orange)", borderRadius: "24px", display: "flex", alignItems: "center", justifyContent: "center", color: "white", cursor: "pointer", boxShadow: "0 0 0 8px rgba(255,102,17,0.2)"}}>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" style={{marginLeft: "4px"}}><path d="M8 5v14l11-7z"/></svg>
+                  <div className="video-thumbnail" style={{position: "relative", width: "100%", height: "200px", background: "linear-gradient(180deg, #512003 0%, #2A0F00 100%)", borderRadius: "12px", marginBottom: "24px", display: "flex", flexDirection: "column", overflow: "hidden"}}>
+                    <div style={{flexGrow: 1, display: "flex", alignItems: "center", justifyContent: "center"}}>
+                      <div style={{width: "48px", height: "48px", background: "var(--primary-orange)", borderRadius: "24px", display: "flex", alignItems: "center", justifyContent: "center", color: "white", cursor: "pointer", boxShadow: "0 0 0 6px rgba(255,102,17,0.2)"}}>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" style={{marginLeft: "4px"}}><path d="M8 5v14l11-7z"/></svg>
+                      </div>
+                    </div>
+                    <div style={{display: "flex", justifyContent: "space-between", alignItems: "flex-end", padding: "16px", paddingTop: "32px", background: "linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%)"}}>
+                      <div className="reviewer" style={{display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "2px", textAlign: "left"}}>
+                        <strong style={{fontSize: "14px", color: "#fff", fontWeight: "600"}}>{r.n}</strong>
+                        <span style={{fontSize: "12px", color: "rgba(255,255,255,0.8)", fontWeight: "400"}}>{r.loc}</span>
+                      </div>
+                      {r.d && (
+                        <div style={{fontSize: "12px", color: "rgba(255,255,255,0.8)", fontWeight: "500", marginBottom: "2px"}}>{r.d}</div>
+                      )}
                     </div>
                   </div>
                 ) : (
                   <div className="review-stars" style={{color: "#FFA500", fontSize: "16px", marginBottom: "24px", letterSpacing: "1px"}}>★★★★★</div>
                 )}
                 
-                {r.v && (
-                  <div className="reviewer" style={{marginBottom: "20px", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "2px"}}>
-                    <strong style={{fontSize: "15px", color: "#fff", fontWeight: "600"}}>{r.n}</strong>
-                    <span style={{fontSize: "13px", color: "rgba(255,255,255,0.6)", fontWeight: "400"}}>{r.loc}</span>
-                  </div>
-                )}
+                <p style={{fontSize: "14px", lineHeight: "1.6", color: "rgba(255,255,255,0.8)", marginBottom: "24px", flexGrow: 1, fontWeight: "400"}}>"{r.t}"</p>
                 
-                <p style={{fontSize: "15px", lineHeight: "1.6", color: r.v ? "rgba(255,255,255,0.8)" : "#fff", marginBottom: r.v ? "0" : "32px", flexGrow: 1, fontWeight: "400"}}>"{r.t}"</p>
-                
-                {!r.v && (
+                {!r.v ? (
                   <div className="reviewer" style={{marginTop: "auto", display: "flex", alignItems: "center", gap: "12px"}}>
-                    <img src={`https://ui-avatars.com/api/?name=${r.n.replace(" ","+")}&background=FF6611&color=fff&rounded=true&size=40`} alt={r.n} style={{width: "48px", height: "48px", borderRadius: "24px"}} />
+                    <img src={`/images/reviews/${r.n.split(" ")[0].toLowerCase()}.png`} onError={(e) => { e.target.src = `https://ui-avatars.com/api/?name=${r.n.replace(" ","+")}&background=FF6611&color=fff&rounded=true&size=40`; }} alt={r.n} style={{width: "40px", height: "40px", borderRadius: "20px", objectFit: "cover"}} />
                     <div style={{display: "flex", flexDirection: "column", gap: "2px"}}>
                       <strong style={{color: "#fff", fontSize: "14px", fontWeight: "600"}}>{r.n}</strong>
                       <span style={{fontSize: "12px", color: "rgba(255,255,255,0.6)", fontWeight: "400"}}>{r.loc}</span>
                     </div>
-                    <div className="verified-badge" style={{display: "flex", alignItems: "center", gap: "4px", marginLeft: "auto", background: "white", color: "#008744", padding: "6px 12px", borderRadius: "20px", fontSize: "11px", fontWeight: "700", textTransform: "uppercase"}}>
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <div className="verified-badge" style={{display: "flex", alignItems: "center", gap: "6px", marginLeft: "auto", background: "white", color: "#25D366", padding: "6px 12px", borderRadius: "20px", fontSize: "11px", fontWeight: "700", textTransform: "capitalize"}}>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="#25D366"/><path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       Verified
                     </div>
                   </div>
-                )}
-                
-                {r.v && (
-                  <div style={{marginTop: "32px", display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "24px", borderTop: "1px solid rgba(255,255,255,0.05)"}}>
+                ) : (
+                  <div style={{marginTop: "auto", display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "0"}}>
                     <div className="review-stars" style={{color: "#FFA500", margin: 0, fontSize: "14px", letterSpacing: "1px"}}>★★★★★</div>
-                    <div className="verified-badge" style={{display: "flex", alignItems: "center", gap: "4px", background: "white", color: "#008744", padding: "6px 12px", borderRadius: "20px", fontSize: "11px", fontWeight: "700", textTransform: "uppercase", margin: 0}}>
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <div className="verified-badge" style={{display: "flex", alignItems: "center", gap: "6px", background: "white", color: "#25D366", padding: "6px 12px", borderRadius: "20px", fontSize: "11px", fontWeight: "700", textTransform: "capitalize", margin: 0}}>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="#25D366"/><path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       Verified
                     </div>
                   </div>
@@ -611,29 +675,61 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
-        <div className="container footer-grid">
+      <footer style={{ background: '#000', color: '#fff', padding: '60px 0 30px' }}>
+        <div className="container footer-grid" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr', gap: '40px', marginBottom: '60px' }}>
           <div>
-            <div className="logo-group footer-logo">
+            <div className="logo-group footer-logo" style={{ marginBottom: '20px' }}>
               <div className="logo-first" aria-label="Spellzee Icon"></div>
               <div className="logo-second" aria-label="Spellzee Logo"></div>
             </div>
-            <p style={{color: "#aaa", fontSize: "14px"}}>A phonics-based reading & writing program for children aged 4-8. Small group batches, ACTD certified teachers.</p>
+            <p style={{ color: '#fff', fontSize: '14px', lineHeight: '1.6', marginBottom: '24px', maxWidth: '300px' }}>
+              A phonics-based reading & writing program for children aged 4-8. Small group batches • ACTD-Certified Teachers • IIT-Madras Incubated.
+            </p>
+            <div className="social-icons" style={{ display: 'flex', gap: '12px' }}>
+              <a href="#" style={{ background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)', width: '32px', height: '32px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.805.249 2.227.412.558.217.957.477 1.377.896.42.42.68.819.897 1.377.163.422.358 1.057.412 2.227.059 1.266.071 1.646.071 4.85s-.012 3.584-.07 4.85c-.056 1.17-.251 1.805-.413 2.227-.218.558-.478.957-.897 1.377-.42.42-.819.68-1.378.897-.422.163-1.057.358-2.227.412-1.267.059-1.647.071-4.85.071s-3.584-.012-4.85-.07c-1.17-.054-1.805-.249-2.227-.412-.558-.217-.957-.477-1.377-.896-.42-.42-.68-.819-.897-1.377-.163-.422-.358-1.057-.412-2.227-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.17.249-1.805.412-2.227.217-.558.477-.957.896-1.377.42-.42.819-.68 1.377-.897.422-.163 1.057-.358 2.227-.412 1.266-.059 1.646-.071 4.85-.071zm0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.259-2.911.556-.788.306-1.458.715-2.125 1.383-.67.667-1.076 1.336-1.383 2.125-.298.763-.499 1.634-.556 2.911-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.058 1.277.259 2.148.556 2.911.306.788.715 1.458 1.383 2.125.667.67 1.336 1.076 2.125 1.383.763.297 1.634.498 2.911.556 1.28.059 1.688.073 4.948.073s3.667-.014 4.947-.072c1.277-.058 2.148-.259 2.911-.556.788-.306 1.458-.715 2.125-1.383.671-.667 1.077-1.336 1.383-2.125.297-.763.498-1.634.556-2.911.06-1.28.073-1.688.073-4.948s-.014-3.667-.072-4.947c-.057-1.277-.259-2.148-.556-2.911-.306-.788-.715-1.458-1.383-2.125-.668-.67-1.337-1.076-2.125-1.383-.763-.298-1.634-.499-2.911-.556-1.281-.059-1.689-.073-4.948-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="#" style={{ backgroundColor: '#0077b5', width: '32px', height: '32px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+              </a>
+              <a href="#" style={{ backgroundColor: '#1877f2', width: '32px', height: '32px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+            </div>
           </div>
           <div className="footer-links">
-            <h4>Program</h4>
-            <ul>
-              <li><a href="#">45 Days Reading Challenge</a></li>
-              <li><a href="#">Curriculum Overview</a></li>
+            <h4 style={{ fontFamily: "'Baloo 2', cursive", fontSize: '20px', marginBottom: '20px', color: '#fff' }}>Program</h4>
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <li><a href="#" style={{ color: '#fff', fontSize: '14px', transition: '0.3s' }}>45 Days Reading Challenge</a></li>
+              <li><a href="#" style={{ color: '#fff', fontSize: '14px', transition: '0.3s' }}>Curriculum Overview</a></li>
+              <li><a href="#" style={{ color: '#fff', fontSize: '14px', transition: '0.3s' }}>How We Teach</a></li>
+              <li><a href="#" style={{ color: '#fff', fontSize: '14px', transition: '0.3s' }}>Sample Worksheets</a></li>
+              <li><a href="#" style={{ color: '#fff', fontSize: '14px', transition: '0.3s' }}>Parent Reviews</a></li>
             </ul>
           </div>
           <div className="footer-links">
-            <h4>Get in Touch</h4>
-            <p style={{color: "#aaa", fontSize: "14px"}}>+91 9361102618<br/>support@spellzee.com</p>
+            <h4 style={{ fontFamily: "'Baloo 2', cursive", fontSize: '20px', marginBottom: '20px', color: '#fff' }}>Get in Touch</h4>
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#fff', fontSize: '14px' }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                +91 9361102618
+              </li>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#fff', fontSize: '14px' }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                support@spellzee.com
+              </li>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#fff', fontSize: '14px' }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Mon-Sat • 9AM - 9PM
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="container" style={{borderTop: "1px solid #222", marginTop: "40px", paddingTop: "20px", color: "#666", fontSize: "12px"}}>
-            &copy; 2026 Spellzee Edutech. All rights reserved.
+        <div className="container" style={{ borderTop: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: '#fff', fontSize: '12px', padding: '0 20px' }}>
+          <div>© 2022 Spellzee. All rights reserved.</div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            Made with <span style={{ color: '#ff4d4d' }}>❤️</span> for young readers across India
+          </div>
         </div>
       </footer>
     </>

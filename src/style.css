@@ -1030,15 +1030,14 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 160px;
-  background: #1A1A1A;
-  border-radius: 16px;
-  padding: 24px;
+  background: #241C15;
+  border-radius: 12px;
+  padding: 32px;
   transition: var(--transition);
 }
 
 .result-stat-card:hover {
-  background: #252525;
+  background: #2A221A;
   transform: translateY(-5px);
 }
 
@@ -1046,7 +1045,7 @@ header {
   font-size: 32px;
   font-weight: 700;
   color: var(--primary-orange);
-  margin-bottom: 12px;
+  margin-bottom: 30px;
   line-height: 1;
 }
 
@@ -1058,7 +1057,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
   color: white;
 }
 
@@ -1080,9 +1079,9 @@ header {
 }
 
 .ba-card {
-  background: #1A1A1A;
-  border-radius: 24px;
-  padding: 48px 40px;
+  background: #241C15;
+  border-radius: 12px;
+  padding: 40px 46px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1090,7 +1089,7 @@ header {
 }
 
 .ba-card:hover {
-  background: #222222;
+  background: #2A221A;
 }
 
 .ba-icon-bg {
@@ -1100,18 +1099,16 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 }
 
 .ba-icon-before {
-  background: rgba(255, 90, 0, 0.1);
-  border: 1px dashed var(--primary-orange);
-  color: var(--primary-orange);
+  background: var(--primary-orange);
+  color: #fff;
 }
 
 .ba-icon-after {
   background: var(--primary-orange);
-  box-shadow: 0 8px 24px rgba(255, 90, 0, 0.3);
   color: #fff;
 }
 
@@ -1121,7 +1118,7 @@ header {
   color: #fff;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   line-height: 1.4;
 }
 
