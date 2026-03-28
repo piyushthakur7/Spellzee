@@ -139,44 +139,96 @@ header {
 
 .nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.logo {
+.logo-group {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--text-dark);
+  gap: 0;
+  flex-shrink: 0;
 }
 
-.logo img {
-  height: 42px;
+.logo-first {
+  width: 38.458px;
+  height: 42.982px;
+  aspect-ratio: 17/19;
+  background: url('/images/spellzee-logo-sprite.png') transparent 0px -14.373px / 217.75px auto no-repeat;
 }
 
-.logo span {
-  background: linear-gradient(135deg, #FF6611, #FF3300);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.logo-second {
+  width: 176px;
+  height: 62px;
+  aspect-ratio: 88/31;
+  background: url('/images/spellzee-logo-sprite.png') transparent -41.749px -0.05px / 217.75px auto no-repeat;
 }
 
 .nav-links {
   display: flex;
-  gap: 35px;
+  gap: 40px;
   align-items: center;
 }
 
 .nav-links a {
+  color: #000;
+  font-family: "Baloo 2", cursive;
+  font-size: 24px;
+  font-style: normal;
   font-weight: 700;
-  color: var(--black);
-  font-size: 18px;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  transition: color 0.2s;
 }
 
-.nav-links a:hover {
-  color: var(--primary-orange);
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #FF6611;
+  transition: width 0.3s;
+}
+
+.nav-links a.active::after,
+.nav-links a:hover::after {
+  width: 60%;
+  left: 20%;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #000;
+}
+
+.whatsapp-btn {
+  display: flex;
+  padding: 16px 36px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 500px;
+  background: #25D366;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
 }
 
 .mobile-menu-btn {
@@ -220,63 +272,69 @@ header {
 .hero-badges {
   display: flex;
   gap: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .badge {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 18px;
-  border-radius: 50px;
+  gap: 4px;
+  padding: 6px 16px;
+  border-radius: 65px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: "Baloo 2", cursive;
+  line-height: 160%;
 }
 
 .badge-summer {
   background: #FFE6D5;
-  color: var(--primary-orange);
+  color: #000;
+  padding: 6px 18px 6px 10px;
+  border-radius: 50px;
 }
 
 .badge-summer svg {
-  stroke: var(--primary-orange);
+  width: 24px;
+  height: 24px;
 }
 
 .badge-age {
-  background: var(--black);
-  color: var(--white);
-  border: none;
+  height: 36px;
+  background: #000;
+  color: #FFF8F8;
 }
 
 .hero-h1 {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  line-height: 1;
-  margin-bottom: 20px;
+  display: block;
+  margin-bottom: 40px;
 }
 
 .big-number {
-  font-size: 110px;
+  color: #FF5A00;
+  font-family: "Baloo 2", cursive;
+  font-size: 128px;
+  font-style: normal;
   font-weight: 800;
-  color: var(--primary-orange);
-  font-family: 'Baloo 2', cursive;
-  line-height: 0.9;
+  line-height: 1;
 }
 
 .days-text {
+  color: #000;
+  font-family: "Baloo 2", cursive;
   font-size: 48px;
-  font-weight: 800;
-  color: var(--black);
-  font-family: 'Baloo 2', cursive;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 10px;
 }
 
 .hero-subtitle {
-  font-size: 52px;
+  font-size: 64px;
   font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 0px;
-  margin-top: -5px;
+  line-height: 1;
+  margin-bottom: 24px;
+  margin-top: -10px;
 }
 
 .hero-desc {
@@ -392,18 +450,18 @@ header {
 }
 
 .stat-words {
-  top: 15%;
-  left: -15%;
+  top: 10%;
+  left: 5%;
 }
 
 .stat-price {
-  top: 40%;
-  right: -25%;
+  top: 20%;
+  right: 0%;
 }
 
 .stat-stories {
-  bottom: 25%;
-  left: -10%;
+  top: 45%;
+  left: -5%;
 }
 
 /* ===== Feature Ribbon ===== */
@@ -1527,6 +1585,42 @@ footer {
   }
 }
 
+
+.hero-info-cards {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.hero-info-card {
+  flex: 1;
+  background-color: #1A1A1A;
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+.hero-info-card .card-icon {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.hero-info-card .card-text h4 {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.hero-info-card .card-text p {
+  font-size: 12px;
+  color: #ccc;
+}
+
+@media (max-width: 600px) {
+  .hero-info-cards {
+    flex-direction: column;
+  }
+}
 
 /* ===== Payment Page ===== */
 .payment-page-container {
