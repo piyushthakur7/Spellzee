@@ -296,17 +296,26 @@ export default function Home() {
 
       <section className="teaching-section section-padding">
         <div className="container">
-          <span className="section-badge section-badge-orange">OUR TEACHING METHOD</span>
-          <h2 className="section-heading">How We <span className="text-orange">Teach ?</span></h2>
+          <div className="teaching-header-container">
+            <div className="teaching-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF5A00" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: "6px"}}><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 3v5h5M16 13H8M16 17H8M10 9H8"/></svg>
+              OUR TEACHING METHOD
+            </div>
+            <h2 className="section-heading" style={{fontSize: "44px", fontWeight: "800", marginBottom: "16px"}}>How We <span className="text-orange">Teach ?</span></h2>
+            <p className="teaching-subtext">Every session is engaging, structured, and effective &#x2012; even for the youngest learners in a<br/>group setting.</p>
+          </div>
           <div className="teaching-grid">
             {[
-              { title: "Listen, Repeat & Recognise", tag: "Auditory Learning", text: "Every class begins with audio-first phonics - children hear the sound, repeat it aloud, and match it to the letter. This builds strong ear-to-eye connections before any writing begins." },
-              { title: "Trace, Write & Build", tag: "Kinaesthetic Learning", text: "Structured worksheets guide children from tracing letters to independently writing words. The phonics pyramid method breaks words into sounds step by step for faster decoding and confident reading" },
-              { title: "Group Activities & Peer Learning", tag: "Social Learning", text: "Small group batches mean children learn alongside peers at the same level. Group reading, partner activities, and friendly competitions keep energy high every session and boost active participation" },
-              { title: "Reward, Track & Celebrate", tag: "Achievement & Recognition", text: "Children receive a completion certificate at the end of the program. In-class competitions keep every session fun and competitive — motivating kids to give their best every day and celebrate their learning success." },
+              { title: "Listen, Repeat & Recognise", tag: "Auditory Learning", text: "Every class begins with audio-first phonics &ndash; children hear the sound, repeat it aloud, and match it to the letter. This builds strong ear-to-eye connections before any writing begins.", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF5A00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/><path d="M12 14v4"/><path d="M8 12v6"/><path d="M16 12v6"/></svg> },
+              { title: "Trace, Write & Build", tag: "Kinaesthetic Learning", text: "Structured worksheets guide children from tracing letters to independently writing words. The phonics pyramid method breaks words into sounds step by step for faster decoding and confident reading", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF5A00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> },
+              { title: "Group Activities & Peer Learning", tag: "Social Learning", text: "Small group batches mean children learn alongside peers at the same level. Group reading, partner activities, and friendly competitions keep energy high every session and boost active participation", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF5A00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> },
+              { title: "Reward, Track & Celebrate", tag: "Achievement & Recognition", text: "Children receive a completion certificate at the end of the program. In-class competitions keep every session fun and competitive &mdash; motivating kids to give their best every day and celebrate their learning success.", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF5A00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg> },
             ].map((card, i) => (
               <div key={i} className="teaching-card">
-                <div>
+                <div className="teaching-icon-wrapper">
+                  {card.icon}
+                </div>
+                <div className="teaching-card-content">
                   <h4>{card.title}</h4>
                   <p>{card.text}</p>
                   <span className="teaching-tag">{card.tag}</span>

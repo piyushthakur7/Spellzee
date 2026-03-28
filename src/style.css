@@ -869,6 +869,120 @@ header {
 .note-curriculum-container .text-orange {
   color: #FF5A00;
 }
+
+/* ===== Teaching Section ===== */
+.teaching-section {
+  background-color: #FDE2D0;
+  padding: 80px 0;
+}
+
+.teaching-badge {
+  display: inline-flex;
+  padding: 6px 16px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 65px;
+  background: #FFFFFF;
+  color: #000;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 160%;
+  margin-bottom: 24px;
+}
+
+.teaching-subtext {
+  color: #4A4A4A;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; 
+  margin-bottom: 48px;
+}
+
+.teaching-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.teaching-card {
+  display: flex;
+  padding: 32px;
+  align-items: flex-start;
+  gap: 24px;
+  border-radius: 16px;
+  background: #FFF;
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teaching-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 12px 32px 0px rgba(255, 90, 0, 0.08);
+}
+
+.teaching-icon-wrapper {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1.5px solid #FF813A;
+  background: rgba(255, 90, 0, 0.05);
+  flex-shrink: 0;
+}
+
+.teaching-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.teaching-card h4 {
+  color: #000;
+  font-family: "Baloo 2", cursive;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 130%;
+  margin-bottom: 12px;
+}
+
+.teaching-card p {
+  color: #4A4A4A;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+  margin-bottom: 24px;
+}
+
+.teaching-tag {
+  display: inline-flex;
+  padding: 6px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background: #FDE2CC;
+  color: #111;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+@media (max-width: 900px) {
+  .teaching-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .note-section {
   padding: 40px 0;
   background: var(--white);
