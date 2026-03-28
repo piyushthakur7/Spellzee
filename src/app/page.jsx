@@ -39,7 +39,7 @@ export default function Home() {
             <div className="hero-badges">
               <span className="badge badge-summer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <g clip-path="url(#clip0_7844_4712)">
+                  <g clipPath="url(#clip0_7844_4712)">
                     <path d="M11.7395 0H11.9875H12.2792C12.4286 0.0700172 12.7245 0.208205 12.8172 0.333602C13.0598 0.661959 13.2585 1.09987 13.4401 1.46565L14.1705 2.92964L14.6933 3.97315C14.7757 4.13754 14.9214 4.40798 14.9807 4.57193C14.9955 4.61351 15.0091 4.65551 15.0214 4.69786C15.675 4.40013 16.634 4.12884 17.3403 3.88345C18.0226 3.64643 18.8056 3.3709 19.5023 3.21506C19.6992 3.171 19.9169 3.1872 20.1076 3.25852C20.3808 3.35822 20.6026 3.56318 20.7235 3.8276C20.8149 4.03003 20.8356 4.27123 20.7964 4.49069C20.7155 4.9429 20.5243 5.37417 20.3887 5.81191C20.0606 6.78572 19.7514 7.7674 19.4047 8.73466C19.378 8.80917 19.3374 8.9014 19.2999 8.9704C20.6592 9.54605 22.0348 10.3459 23.3709 10.9899C23.7537 11.1745 23.8144 11.3605 24 11.6977V12.282C23.7014 12.8734 23.5418 12.9473 22.9361 13.2347C21.7285 13.8076 20.537 14.4744 19.3235 15.0305C19.6506 15.9672 19.969 16.907 20.2786 17.8496C20.4725 18.4299 20.9865 19.6064 20.7321 20.1544C20.5987 20.4354 20.3604 20.6529 20.0682 20.76C19.5459 20.948 18.393 20.4364 17.8331 20.2547L16.0273 19.6566C15.7688 19.5702 15.2591 19.4152 15.0266 19.3049C14.8595 19.7669 14.3058 20.8081 14.0589 21.3027L13.4178 22.5859C13.1554 23.1102 12.9577 23.6892 12.3995 23.9487C12.3602 23.9667 12.3204 23.9838 12.2803 24H11.9917H11.7432C11.5761 23.9006 11.3343 23.8366 11.1983 23.6498C10.8649 23.1915 10.5787 22.5402 10.3224 22.0284C9.8618 21.1206 9.40915 20.2088 8.96454 19.2931C8.91021 19.3226 8.85408 19.3486 8.79649 19.371C8.62559 19.4369 8.43844 19.5021 8.26191 19.5567C6.98248 19.952 5.72154 20.4596 4.42723 20.7942C4.26028 20.8373 3.98245 20.7731 3.828 20.703C3.56025 20.5837 3.35332 20.3596 3.25566 20.0832C3.08367 19.5968 3.36935 18.9395 3.52777 18.4629L3.99466 17.0636L4.41279 15.8134C4.49405 15.5712 4.58824 15.2584 4.69385 15.0316C3.7204 14.5241 2.71575 14.0499 1.73617 13.5498C1.31041 13.3325 0.78874 13.1089 0.397481 12.8414C0.209344 12.7127 0.0871648 12.4434 0 12.2348V11.77C0.112181 11.6 0.118748 11.3566 0.329283 11.2004C0.815224 10.8396 1.4029 10.5938 1.94632 10.3226C2.85825 9.86063 3.77545 9.40917 4.69777 8.96831C4.67416 8.92214 4.653 8.87477 4.63437 8.8264C4.57781 8.67684 4.52025 8.50015 4.47262 8.34436C4.06669 7.01665 3.52113 5.70787 3.19894 4.36008C3.16479 4.2172 3.23067 3.95395 3.29109 3.82088C3.40983 3.55819 3.63098 3.35562 3.90302 3.26034C4.40791 3.08109 5.10073 3.38721 5.5928 3.5558C6.00895 3.69804 6.42595 3.8378 6.8438 3.97502L8.20943 4.42971C8.4173 4.49913 8.78334 4.61041 8.96391 4.69702C9.0852 4.49391 9.32358 3.96356 9.4433 3.72312L10.5647 1.47339C10.7443 1.11295 10.9516 0.637256 11.2013 0.327527C11.3236 0.175739 11.5768 0.088533 11.7395 0Z" fill="#FF5A00"/>
                     <path d="M11.7395 0H11.9875C12.0166 0.576884 11.9997 1.27672 11.9998 1.86302L12 5.4532L11.9974 18.5473L12 22.0762C12 22.6705 12.0202 23.4207 11.9917 24H11.7432C11.5761 23.9006 11.3343 23.8366 11.1983 23.6498C10.8649 23.1915 10.5787 22.5402 10.3224 22.0284C9.8618 21.1206 9.40915 20.2088 8.96454 19.2931C8.91021 19.3226 8.85408 19.3486 8.79649 19.371C8.62559 19.4369 8.43844 19.5021 8.26191 19.5567C6.98248 19.952 5.72154 20.4596 4.42723 20.7942C4.26028 20.8373 3.98245 20.7731 3.828 20.703C3.56025 20.5837 3.35332 20.3596 3.25566 20.0832C3.08367 19.5968 3.36935 18.9395 3.52777 18.4629L3.99466 17.0636L4.41279 15.8134C4.49405 15.5712 4.58824 15.2584 4.69385 15.0316C3.7204 14.5241 2.71575 14.0499 1.73617 13.5498C1.31041 13.3325 0.78874 13.1089 0.397481 12.8414C0.209344 12.7127 0.0871648 12.4434 0 12.2348V11.77C0.112181 11.6 0.118748 11.3566 0.329283 11.2004C0.815224 10.8396 1.4029 10.5938 1.94632 10.3226C2.85825 9.86063 3.77545 9.40917 4.69777 8.96831C4.67416 8.92214 4.653 8.87477 4.63437 8.8264C4.57781 8.67684 4.52025 8.50015 4.47262 8.34436C4.06669 7.01665 3.52113 5.70787 3.19894 4.36008C3.16479 4.2172 3.23067 3.95395 3.29109 3.82088C3.40983 3.55819 3.63098 3.35562 3.90302 3.26034C4.40791 3.08109 5.10073 3.38721 5.5928 3.5558C6.00895 3.69804 6.42595 3.8378 6.8438 3.97502L8.20943 4.42971C8.4173 4.49913 8.78334 4.61041 8.96391 4.69702C9.0852 4.49391 9.32358 3.96356 9.4433 3.72312L10.5647 1.47339C10.7443 1.11295 10.9516 0.637256 11.2013 0.327527C11.3236 0.175739 11.5768 0.088533 11.7395 0Z" fill="#FF5A00"/>
                     <path d="M11.9933 18.5472C10.2808 18.4595 8.917 18.0248 7.61186 16.8487C6.32768 15.6926 5.55715 14.0724 5.47068 12.3466C5.37576 10.6121 5.97719 8.91154 7.14145 7.62236C8.47582 6.14952 10.0546 5.54678 11.9959 5.45312L11.9933 18.5472Z" fill="#FFBB61"/>
@@ -92,22 +92,36 @@ export default function Home() {
             </div>
             
             <div className="floating-stat stat-words">
-              <div className="stat-icon stat-icon-orange">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <div className="stat-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="14" width="7" height="7" rx="1" stroke="#FF6611" strokeWidth="1.5" />
+                  <rect x="14" y="14" width="7" height="7" rx="1" stroke="#FF6611" strokeWidth="1.5" />
+                  <rect x="8.5" y="3" width="7" height="7" rx="1" stroke="#FF6611" strokeWidth="1.5" />
+                  <text x="5.5" y="19.5" font-family="Arial" font-size="5" font-weight="bold" fill="#FF6611">C</text>
+                  <text x="16.5" y="19.5" font-family="Arial" font-size="5" font-weight="bold" fill="#FF6611">B</text>
+                  <text x="11" y="8.5" font-family="Arial" font-size="5" font-weight="bold" fill="#FF6611">A</text>
+                </svg>
               </div>
               <span className="stat-number">1000+ Words</span>
             </div>
             
-            <div className="floating-stat stat-price">
-              <div className="stat-icon stat-icon-orange">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            <div className="floating-stat stat-class">
+              <div className="stat-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF6611" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="5" width="20" height="14" rx="2" />
+                  <line x1="2" y1="10" x2="22" y2="10" />
+                  <path d="M7 15h.01M17 15h.01" />
+                </svg>
               </div>
               <span className="stat-number">₹100 Per Class</span>
             </div>
             
             <div className="floating-stat stat-stories">
-              <div className="stat-icon stat-icon-orange">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              <div className="stat-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF6611" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                </svg>
               </div>
               <span className="stat-number">25+ Stories</span>
             </div>
@@ -138,32 +152,72 @@ export default function Home() {
           <div className="trust-card-wrapper">
             <h2 className="trust-heading"><span className="text-orange">Trusted by</span> Parents. Backed by Experts.</h2>
             <div className="trust-grid">
+              {/* IIT-Madras */}
               <div className="trust-item">
-                <div className="trust-icon-img">IIT-Madras</div>
-                <h4 className="text-orange">Incubated Company</h4>
-                <p>Verified</p>
-                <span className="trust-badge">Verified</span>
+                <div className="trust-item-logo">
+                  <div style={{width: '60px', height: '60px', borderRadius: '50%', border: '1px solid #ddd', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff', padding: '2px', textAlign: 'center'}}>
+                    <div style={{width: '50px', height: '50px', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                      <svg viewBox="0 0 100 100" width="50" height="50">
+                        <circle cx="50" cy="50" r="48" fill="none" stroke="#ddd" strokeWidth="1" />
+                        <path d="M20 70C20 70 35 50 50 50C65 50 80 70 80 70M20 50C20 50 35 30 50 30C65 30 80 50 80 50" stroke="#FF5A00" strokeWidth="2" fill="none" />
+                        <text x="50" y="92" fontSize="8" fontWeight="bold" textAnchor="middle" fill="#666">ITM</text>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div className="trust-item-label">IIT-Madras</div>
+                <h4 style={{fontSize: '20px', fontWeight: '700', color: '#000', margin: '4px 0'}}>Incubated Company</h4>
+                <div className="trust-badge-pill verified">
+                  <div className="badge-icon-rosette">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.5 12c0-1.07-.46-2.03-1.19-2.73.15-1.05-.11-2.14-.78-3.04-.67-.9-1.63-1.5-2.74-1.69-.37-1.11-1.14-2.04-2.18-2.61-1.04-.57-2.22-.64-3.32-.21-1.1-.43-2.28-.36-3.32.21-1.04.57-1.81 1.5-2.18 2.61-1.11.19-2.07.79-2.74 1.69-.67.9-.93 1.99-.78 3.04-.73.7-1.19 1.66-1.19 2.73s.46 2.03 1.19 2.73c-.15 1.05.11 2.14.78 3.04.67.9 1.63 1.5 2.74 1.69.37 1.11 1.14 2.04 2.18 2.61a3.99 3.99 0 0 0 3.32-.21c1.1.43 2.28.36 3.32-.21 1.04-.57 1.81-1.5 2.18-2.61 1.11-.19 2.07-.79 2.74-1.69.67-.9.93-1.99.78-3.04.73-.7 1.19-1.66 1.19-2.73zM10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                  </div>
+                  Verified
+                </div>
               </div>
-              <div className="trust-divider"></div>
+
+              {/* ACTD */}
               <div className="trust-item">
-                <div className="trust-icon-img">ACTD Accredited</div>
-                <h4 className="text-orange">Certified Teachers Methods</h4>
-                <p>Accredited</p>
-                <span className="trust-badge">Accredited</span>
+                <div className="trust-item-logo">
+                  <img src="/images/actd-logo.png" alt="ACTD Accredited" style={{height: '60px', objectFit: 'contain'}} />
+                </div>
+                <div className="trust-item-label">ACTD Accredited</div>
+                <h4 style={{fontSize: '20px', fontWeight: '700', color: '#000', margin: '4px 0'}}>Certified Teachers Methods</h4>
+                <div className="trust-badge-pill accredited">
+                  <div className="badge-icon-rosette">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.5 12c0-1.07-.46-2.03-1.19-2.73.15-1.05-.11-2.14-.78-3.04-.67-.9-1.63-1.5-2.74-1.69-.37-1.11-1.14-2.04-2.18-2.61-1.04-.57-2.22-.64-3.32-.21-1.1-.43-2.28-.36-3.32.21-1.04.57-1.81 1.5-2.18 2.61-1.11.19-2.07.79-2.74 1.69-.67.9-.93 1.99-.78 3.04-.73.7-1.19 1.66-1.19 2.73s.46 2.03 1.19 2.73c-.15 1.05.11 2.14.78 3.04.67.9 1.63 1.5 2.74 1.69.37 1.11 1.14 2.04 2.18 2.61a3.99 3.99 0 0 0 3.32-.21c1.1.43 2.28.36 3.32-.21 1.04-.57 1.81-1.5 2.18-2.61 1.11-.19 2.07-.79 2.74-1.69.67-.9.93-1.99.78-3.04.73-.7 1.19-1.66 1.19-2.73zM10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                  </div>
+                  Accredited
+                </div>
               </div>
-              <div className="trust-divider"></div>
+
+              {/* Happy Parents */}
               <div className="trust-item">
-                <div className="trust-icon-big"><span className="text-orange">10,000+</span></div>
-                <h4>Happy Parents</h4>
-                <p>Across India</p>
-                <span className="trust-badge">Approved</span>
+                <div className="trust-item-logo" style={{height: '60px', display: 'flex', alignItems: 'center'}}>
+                  <div className="trust-item-label" style={{margin: 0}}>10,000+</div>
+                </div>
+                <h4 style={{fontSize: '20px', fontWeight: '700', color: '#000', margin: '4px 0'}}>Happy Parents</h4>
+                <p style={{fontSize: '14px', color: '#666', marginBottom: '8px'}}>Across India</p>
+                <div className="trust-badge-pill approved">
+                  <div className="badge-icon-rosette">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.5 12c0-1.07-.46-2.03-1.19-2.73.15-1.05-.11-2.14-.78-3.04-.67-.9-1.63-1.5-2.74-1.69-.37-1.11-1.14-2.04-2.18-2.61-1.04-.57-2.22-.64-3.32-.21-1.1-.43-2.28-.36-3.32.21-1.04.57-1.81 1.5-2.18 2.61-1.11.19-2.07.79-2.74 1.69-.67.9-.93 1.99-.78 3.04-.73.7-1.19 1.66-1.19 2.73s.46 2.03 1.19 2.73c-.15 1.05.11 2.14.78 3.04.67.9 1.63 1.5 2.74 1.69.37 1.11 1.14 2.04 2.18 2.61a3.99 3.99 0 0 0 3.32-.21c1.1.43 2.28.36 3.32-.21 1.04-.57 1.81-1.5 2.18-2.61 1.11-.19 2.07-.79 2.74-1.69.67-.9.93-1.99.78-3.04.73-.7 1.19-1.66 1.19-2.73zM10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                  </div>
+                  Approved
+                </div>
               </div>
-              <div className="trust-divider"></div>
+
+              {/* Rating */}
               <div className="trust-item">
-                <div className="trust-icon-big"><span className="text-orange">4.9</span> ★</div>
-                <h4>Parent Rating</h4>
-                <p>Based on 512 Reviews</p>
-                <span className="trust-badge">Rated</span>
+                <div className="trust-item-logo" style={{height: '60px', display: 'flex', alignItems: 'center'}}>
+                  <div className="trust-item-label" style={{margin: 0}}>4.9 <span style={{fontSize: '24px'}}>★</span></div>
+                </div>
+                <h4 style={{fontSize: '20px', fontWeight: '700', color: '#000', margin: '4px 0'}}>Parent Rating</h4>
+                <p style={{fontSize: '14px', color: '#666', marginBottom: '8px'}}>Based on 512 Reviews</p>
+                <div className="trust-badge-pill rated">
+                  <div className="badge-icon-rosette">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.5 12c0-1.07-.46-2.03-1.19-2.73.15-1.05-.11-2.14-.78-3.04-.67-.9-1.63-1.5-2.74-1.69-.37-1.11-1.14-2.04-2.18-2.61-1.04-.57-2.22-.64-3.32-.21-1.1-.43-2.28-.36-3.32.21-1.04.57-1.81 1.5-2.18 2.61-1.11.19-2.07.79-2.74 1.69-.67.9-.93 1.99-.78 3.04-.73.7-1.19 1.66-1.19 2.73s.46 2.03 1.19 2.73c-.15 1.05.11 2.14.78 3.04.67.9 1.63 1.5 2.74 1.69.37 1.11 1.14 2.04 2.18 2.61a3.99 3.99 0 0 0 3.32-.21c1.1.43 2.28.36 3.32-.21 1.04-.57 1.81-1.5 2.18-2.61 1.11-.19 2.07-.79 2.74-1.69.67-.9.93-1.99.78-3.04.73-.7 1.19-1.66 1.19-2.73zM10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                  </div>
+                  Rated
+                </div>
               </div>
             </div>
           </div>
@@ -172,9 +226,16 @@ export default function Home() {
 
       <section className="difference-section section-padding">
         <div className="container">
-          <span className="section-badge">The Spellzee Difference</span>
-          <h2 className="section-heading">Why 1000+ Parents <span className="text-orange">Choose Spellzee</span></h2>
-          <p className="section-subtext">Not just another English class. A structured phonics system that actually works — in 45 days.</p>
+          <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '24px', marginBottom: '48px'}}>
+            <span className="section-badge">
+              <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.99999 0L9.91421 5.88833L15.6077 6.04027L11.1636 9.61559L12.78 15.3524L7.99999 12.16L3.21999 15.3524L4.83636 9.61559L0.392275 6.04027L6.08578 5.88833L7.99999 0Z" fill="#FF5A00"/>
+              </svg>
+              The Spellzee Difference
+            </span>
+            <h2 className="section-heading" style={{margin: 0}}>Why 1000+ Parents <span className="text-orange">Choose Spellzee</span></h2>
+            <p className="section-subtext" style={{margin: 0}}>Not just another English class. A structured phonics system that actually works — in 45 days.</p>
+          </div>
           <div className="difference-grid">
             <div className="diff-card">
               <h3>Why Most Kids Struggle</h3>
@@ -198,19 +259,37 @@ export default function Home() {
               <h2 className="section-heading">What Your Child Learns - <span className="text-orange">5 Phases</span></h2>
               <div className="curriculum-grid">
                 {[
-                  { title: "3-Letter Words", desc: "Short vowel sounds – Read 3-letter words Write from dictation Spelling confidence", phase: "Phase 1" },
-                  { title: "CVC Words", desc: "Phonics pyramid blending Read 20+ CVC words Write from dictation", phase: "Phase 2" },
-                  { title: "CCVC Words", desc: "Consonant cluster blending Read flag, clap, drip Write clusters from picture", phase: "Phase 3" },
-                  { title: "Word Families", desc: "–at, -an, -et, -en patterns –Read & write word groups –Ending k & x sounds", phase: "Phase 4" },
-                  { title: "Stories + Sentences", desc: "Read 10+ decodable stories Write full sentences Final evaluation", phase: "Phase 5" },
+                  { title: "3-Letter Words", desc: "Short vowel sounds – Read 3-letter words Write from dictation Spelling confidence", phase: "Phase 1", icon: "" },
+                  { title: "CVC Words", desc: "Phonics pyramid blending Read 20+ CVC words Write from dictation", phase: "Phase 2", icon: "/images/curriculum/phase-2.png" },
+                  { title: "CCVC Words", desc: "Consonant cluster blending Read flag, clap, drip Write clusters from picture", phase: "Phase 3", icon: "/images/curriculum/phase-3.png" },
+                  { title: "Word Families", desc: "–at, -an, -et, -en patterns –Read & write word groups –Ending k & x sounds", phase: "Phase 4", icon: "/images/curriculum/phase-4.png" },
+                  { title: "Stories + Sentences", desc: "Read 10+ decodable stories Write full sentences Final evaluation", phase: "Phase 5", icon: "/images/curriculum/phase-5.png" },
                 ].map((item, i) => (
                   <div key={i} className="curriculum-card">
+                    <div className="curriculum-icon-box">
+                      {item.icon ? (
+                        <img src={item.icon} alt={item.title} />
+                      ) : (
+                        <div className="placeholder-icon" style={{width: '32px', height: '32px', border: '2px dashed #fff', borderRadius: '4px'}}></div>
+                      )}
+                    </div>
                     <h4>{item.title}</h4>
                     <p>{item.desc}</p>
-                    <div className="phase-divider"></div>
-                    <div className="phase-label"><span className="phase-bar"></span> {item.phase}</div>
+                    <div className="phase-footer">
+                      <div className="phase-separator"></div>
+                      <div className="phase-info">
+                        <span className="phase-side-bar"></span>
+                        <span className="phase-name">{item.phase}</span>
+                      </div>
+                    </div>
                   </div>
                 ))}
+              </div>
+              <div className="note-curriculum-container">
+                <img src="/images/pin-icon.png" alt="Note" className="note-pin-icon" />
+                <p>
+                  Note for Parents: This is a <span className="text-orange">Phonics Basics program</span>, not a complete advanced phonics course. Children master the core foundations — short vowels, CVC words, word families, and sentence writing. Advanced topics (blends, digraphs, long vowels) are in our next-level programs.
+                </p>
               </div>
           </div>
       </section>
@@ -246,7 +325,7 @@ export default function Home() {
           </span>
           <h2 className="section-heading results-heading" style={{marginBottom: "8px", fontSize: "36px", fontWeight: "700", lineHeight: "1.2"}}>What Children <span className="text-orange">Achieve</span> in 45 Days</h2>
           <p className="results-subtext" style={{color: "rgba(255,255,255,0.7)", fontSize: "14px", fontWeight: "400", marginBottom: "48px", lineHeight: "1.5"}}>Measurable outcomes every parent can see — tracked and verified across 1000+ students.</p>
-          <div className="results-grid" style={{marginBottom: "32px", gap: "24px", display: "grid", gridTemplateColumns: "repeat(4, 1fr)"}}>
+          <div className="results-grid">
             {[
               { n: "97%", h: "Reads Short Vowel Words" },
               { n: "25+", h: "Reads Short Vowel Words" },
@@ -257,42 +336,40 @@ export default function Home() {
               { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.5 2v6h-6M2.13 15.57a9 9 0 1 0 15.22-4.24L21.5 8"/><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>, h: "Reads Decodable Stories" },
               { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2l.5-.5c1.19-.11 2.45-.66 3.33-1.53 1.14-1.12 1.34-2.8.5-4C10.74 12.33 9.77 12 8.5 12c-1.27 0-2.24.33-3.33 1.47-.87.88-1.42 2.14-1.53 3.33l-.5.5z"/><path d="M5 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/><path d="m15.5 8.5 2-2"/><path d="M12 5h-1"/><path d="M19 12v-1"/><path d="m18.5 5.5-1 1"/></svg>, h: "Builds Real Confidence" },
             ].map((r, i) => (
-              <div key={i} className="result-card" style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "160px", background: "#1A1A1A", borderRadius: "16px", padding: "24px"}}>
+              <div key={i} className="result-stat-card">
                 {r.n ? (
-                  <div className="result-number" style={{fontSize: "32px", fontWeight: "700", color: "var(--primary-orange)", marginBottom: "16px", lineHeight: "1"}}>{r.n}</div>
+                  <div className="result-stat-number">{r.n}</div>
                 ) : (
-                  <div style={{width: "48px", height: "48px", background: "var(--primary-orange)", borderRadius: "12px", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 16px", color: "white"}}>
-                    {r.icon}
-                  </div>
+                  <div className="result-stat-icon">{r.icon}</div>
                 )}
-                <h4 style={{fontSize: "14px", fontWeight: "500", textAlign: "center", color: "#fff", margin: 0, lineHeight: "1.5"}}>{r.h}</h4>
+                <h4>{r.h}</h4>
               </div>
             ))}
           </div>
           
-          <div className="before-after-grid" style={{marginTop: "32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px"}}>
-            <div className="result-card before-after-card" style={{alignItems: "center", padding: "48px 40px", background: "#1A1A1A", borderRadius: "24px"}}>
-              <div style={{width: "64px", height: "64px", background: "rgba(255, 102, 17, 0.1)", borderRadius: "32px", border: "1px dashed var(--primary-orange)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 32px", color: "var(--primary-orange)"}}>
+          <div className="before-after-grid">
+            <div className="ba-card">
+              <div className="ba-icon-bg ba-icon-before">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
               </div>
-              <h4 style={{textAlign:"center", marginBottom: "32px", fontSize: "18px", color: "#fff", fontWeight: "600", lineHeight: "1.5"}}>Before 45 Days Reading<br/>Challenge</h4>
-              <ul className="ba-list" style={{display: "flex", flexDirection: "column", gap: "16px", color: "rgba(255,255,255,0.8)", fontWeight: "500", fontSize: "15px", listStyleType: "disc", paddingLeft: "16px", margin: "0 auto", textAlign: "left", lineHeight: "1.5"}}>
+              <h4>Before 45 Days Reading Challenge</h4>
+              <ul className="ba-list">
                 <li>Can't differentiate between vowel sounds</li>
                 <li>Struggles to blend letters into words</li>
                 <li>Feeling shy to Read</li>
                 <li>Avoids English</li>
               </ul>
             </div>
-            <div className="result-card before-after-card" style={{alignItems: "center", padding: "48px 40px", background: "#1A1A1A", borderRadius: "24px"}}>
-              <div style={{width: "64px", height: "64px", background: "var(--primary-orange)", borderRadius: "32px", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 32px", color: "white", boxShadow: "0 8px 24px rgba(255, 102, 17, 0.3)"}}>
+            <div className="ba-card">
+              <div className="ba-icon-bg ba-icon-after">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
               </div>
-              <h4 style={{textAlign:"center", marginBottom: "32px", fontSize: "18px", color: "#fff", fontWeight: "600", lineHeight: "1.5"}}>After Spellzee's 45 Days<br/>Reading Challenge</h4>
-              <ul className="ba-list" style={{display: "flex", flexDirection: "column", gap: "16px", color: "rgba(255,255,255,0.8)", fontWeight: "500", fontSize: "15px", listStyleType: "disc", paddingLeft: "16px", margin: "0 auto", textAlign: "left", lineHeight: "1.5"}}>
-                <li>Can't differentiate between vowel sounds</li>
+              <h4>After Spellzee's 45 Days Reading Challenge</h4>
+              <ul className="ba-list">
                 <li>Recognise all 5 vowel sounds easily</li>
                 <li>Read full sentences with confidence</li>
                 <li>Read everyday things like signs & menus</li>
+                <li>Confident & Independent Learner</li>
               </ul>
             </div>
           </div>
