@@ -364,19 +364,40 @@ header {
   position: relative;
   width: 564px;
   height: 564px;
-  background: white;
-  border-radius: 26.646px;
+  background: transparent;
+  border-radius: 0 0 40px 40px;
   overflow: hidden;
-  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.05);
   display: flex;
-  align-items: center;
+  align-items: flex-end; /* Sit child at bottom */
   justify-content: center;
+  /* Shadow only on the bottom part */
+  box-shadow: 0 40px 80px -20px rgba(255, 90, 0, 0.15);
+  /* Fade out the top of the entire container so it blends */
+  -webkit-mask-image: linear-gradient(transparent 0%, black 15%);
+  mask-image: linear-gradient(transparent 0%, black 15%);
+}
+
+.hero-orange-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, #FF5A00 0%, #FF8A40 40%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: -1;
+  opacity: 0.8;
 }
 
 .hero-image {
-  width: 100%;
+  width: auto;
   height: 100%;
-  object-fit: cover;
+  max-width: none;
+  object-fit: contain;
+  object-position: bottom center;
+  z-index: 1;
   display: block;
 }
 
@@ -2034,17 +2055,27 @@ footer {
   }
 
   .hero-visual {
-    min-height: 400px;
-    margin-top: 20px;
+    min-height: 480px;
+    margin-top: 40px;
+    justify-content: center;
+  }
+
+  .hero-image-wrapper {
+    width: 320px;
+    height: 380px;
+    border-radius: 0 0 24px 24px;
+    mask-image: linear-gradient(transparent 0%, black 10%);
   }
 
   .hero-orange-bg {
-    width: 240px;
-    height: 240px;
+    width: 280px;
+    height: 280px;
   }
 
   .hero-image {
-    max-width: 240px;
+    width: auto;
+    height: 100%;
+    max-width: 100%;
   }
 
   .stat-words { top: -5%; left: 0; }
