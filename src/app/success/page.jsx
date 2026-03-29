@@ -3,15 +3,13 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import confetti from 'canvas-confetti';
-import '../checkout/checkout.css'; // Reuse checkout styles
+import '../checkout/checkout.css';
 
 export default function SuccessPage() {
 
   useEffect(() => {
-    // Fire confetti continuously from inside the orange box
     const end = Date.now() + 15 * 1000;
     
-    // We try to constrain it to the right box roughly, or randomly on screen
     const intervalId = setInterval(function() {
       if (Date.now() > end) {
         return clearInterval(intervalId);
@@ -22,7 +20,6 @@ export default function SuccessPage() {
         startVelocity: 30,
         spread: 360,
         origin: {
-          // Centered a bit to the right
           x: Math.random() * 0.4 + 0.5,
           y: Math.random() * 0.4 + 0.3
         },
@@ -31,7 +28,7 @@ export default function SuccessPage() {
       });
     }, 250);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
@@ -72,7 +69,6 @@ export default function SuccessPage() {
 
         <div className="checkout-right">
            <div className="success-orange-box">
-             {/* Confetti renders above this */}
            </div>
         </div>
       </div>

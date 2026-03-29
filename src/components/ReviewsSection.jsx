@@ -1,3 +1,5 @@
+"use client";
+
 export default function ReviewsSection() {
   return (
     <section className="reviews-section section-padding" id="review">
