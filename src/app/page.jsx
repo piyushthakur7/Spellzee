@@ -60,7 +60,7 @@ export default function Home() {
               <span className="days-text">Days</span>
               <div className="hero-subtitle">
                 <span className="text-orange">Reading </span>
-                <span style={{color: '#111'}}>Challenge</span>
+                <span style={{color: 'var(--text-body)'}}>Challenge</span>
               </div>
             </h1>
             <p className="hero-desc">Your child will <strong className="text-orange">READ & WRITE ENGLISH CONFIDENTLY</strong> — a proven phonics method trusted by 1000+ Parents across India.</p>
@@ -155,7 +155,7 @@ export default function Home() {
               {/* IIT-Madras */}
               <div className="trust-item">
                 <div className="trust-item-logo">
-                  <div style={{width: '60px', height: '60px', borderRadius: '50%', border: '1px solid #ddd', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff', padding: '2px', textAlign: 'center'}}>
+                  <div style={{width: '60px', height: '60px', borderRadius: '50%', border: '1px solid var(--border-light)', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--card-bg)', padding: '2px', textAlign: 'center'}}>
                     <div style={{width: '50px', height: '50px', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                       <svg viewBox="0 0 100 100" width="50" height="50">
                         <circle cx="50" cy="50" r="48" fill="none" stroke="#ddd" strokeWidth="1" />
@@ -166,7 +166,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="trust-item-label">IIT-Madras</div>
-                <h4 style={{fontSize: '20px', fontWeight: '700', color: '#000', margin: '4px 0'}}>Incubated Company</h4>
+                <h4 style={{fontSize: '20px', fontWeight: '700', color: 'var(--text-body)', margin: '4px 0'}}>Incubated Company</h4>
                 <div className="trust-badge-pill verified">
                   <div className="badge-icon-rosette">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.5 12c0-1.07-.46-2.03-1.19-2.73.15-1.05-.11-2.14-.78-3.04-.67-.9-1.63-1.5-2.74-1.69-.37-1.11-1.14-2.04-2.18-2.61-1.04-.57-2.22-.64-3.32-.21-1.1-.43-2.28-.36-3.32.21-1.04.57-1.81 1.5-2.18 2.61-1.11.19-2.07.79-2.74 1.69-.67.9-.93 1.99-.78 3.04-.73.7-1.19 1.66-1.19 2.73s.46 2.03 1.19 2.73c-.15 1.05.11 2.14.78 3.04.67.9 1.63 1.5 2.74 1.69.37 1.11 1.14 2.04 2.18 2.61a3.99 3.99 0 0 0 3.32-.21c1.1.43 2.28.36 3.32-.21 1.04-.57 1.81-1.5 2.18-2.61 1.11-.19 2.07-.79 2.74-1.69.67-.9.93-1.99.78-3.04.73-.7 1.19-1.66 1.19-2.73zM10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
@@ -181,7 +181,7 @@ export default function Home() {
                   <img src="/images/actd-logo.png" alt="ACTD Accredited" style={{height: '60px', objectFit: 'contain'}} />
                 </div>
                 <div className="trust-item-label">ACTD Accredited</div>
-                <h4 style={{fontSize: '20px', fontWeight: '700', color: '#000', margin: '4px 0'}}>Certified Teachers Methods</h4>
+                <h4 style={{fontSize: '20px', fontWeight: '700', color: 'var(--text-body)', margin: '4px 0'}}>Certified Teachers Methods</h4>
                 <div className="trust-badge-pill accredited">
                   <div className="badge-icon-rosette">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.5 12c0-1.07-.46-2.03-1.19-2.73.15-1.05-.11-2.14-.78-3.04-.67-.9-1.63-1.5-2.74-1.69-.37-1.11-1.14-2.04-2.18-2.61-1.04-.57-2.22-.64-3.32-.21-1.1-.43-2.28-.36-3.32.21-1.04.57-1.81 1.5-2.18 2.61-1.11.19-2.07.79-2.74 1.69-.67.9-.93 1.99-.78 3.04-.73.7-1.19 1.66-1.19 2.73s.46 2.03 1.19 2.73c-.15 1.05.11 2.14.78 3.04.67.9 1.63 1.5 2.74 1.69.37 1.11 1.14 2.04 2.18 2.61a3.99 3.99 0 0 0 3.32-.21c1.1.43 2.28.36 3.32-.21 1.04-.57 1.81-1.5 2.18-2.61 1.11-.19 2.07-.79 2.74-1.69.67-.9.93-1.99.78-3.04.73-.7 1.19-1.66 1.19-2.73zM10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
@@ -195,8 +195,8 @@ export default function Home() {
                 <div className="trust-item-logo" style={{height: '60px', display: 'flex', alignItems: 'center'}}>
                   <div className="trust-item-label" style={{margin: 0}}>10,000+</div>
                 </div>
-                <h4 style={{fontSize: '20px', fontWeight: '700', color: '#000', margin: '4px 0'}}>Happy Parents</h4>
-                <p style={{fontSize: '14px', color: '#666', marginBottom: '8px'}}>Across India</p>
+                <h4 style={{fontSize: '20px', fontWeight: '700', color: 'var(--text-body)', margin: '4px 0'}}>Happy Parents</h4>
+                <p style={{fontSize: '14px', color: 'var(--text-muted)', marginBottom: '8px'}}>Across India</p>
                 <div className="trust-badge-pill approved">
                   <div className="badge-icon-rosette">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.5 12c0-1.07-.46-2.03-1.19-2.73.15-1.05-.11-2.14-.78-3.04-.67-.9-1.63-1.5-2.74-1.69-.37-1.11-1.14-2.04-2.18-2.61-1.04-.57-2.22-.64-3.32-.21-1.1-.43-2.28-.36-3.32.21-1.04.57-1.81 1.5-2.18 2.61-1.11.19-2.07.79-2.74 1.69-.67.9-.93 1.99-.78 3.04-.73.7-1.19 1.66-1.19 2.73s.46 2.03 1.19 2.73c-.15 1.05.11 2.14.78 3.04.67.9 1.63 1.5 2.74 1.69.37 1.11 1.14 2.04 2.18 2.61a3.99 3.99 0 0 0 3.32-.21c1.1.43 2.28.36 3.32-.21 1.04-.57 1.81-1.5 2.18-2.61 1.11-.19 2.07-.79 2.74-1.69.67-.9.93-1.99.78-3.04.73-.7 1.19-1.66 1.19-2.73zM10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
@@ -210,8 +210,8 @@ export default function Home() {
                 <div className="trust-item-logo" style={{height: '60px', display: 'flex', alignItems: 'center'}}>
                   <div className="trust-item-label" style={{margin: 0}}>4.9 <span style={{fontSize: '24px'}}>★</span></div>
                 </div>
-                <h4 style={{fontSize: '20px', fontWeight: '700', color: '#000', margin: '4px 0'}}>Parent Rating</h4>
-                <p style={{fontSize: '14px', color: '#666', marginBottom: '8px'}}>Based on 512 Reviews</p>
+                <h4 style={{fontSize: '20px', fontWeight: '700', color: 'var(--text-body)', margin: '4px 0'}}>Parent Rating</h4>
+                <p style={{fontSize: '14px', color: 'var(--text-muted)', marginBottom: '8px'}}>Based on 512 Reviews</p>
                 <div className="trust-badge-pill rated">
                   <div className="badge-icon-rosette">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.5 12c0-1.07-.46-2.03-1.19-2.73.15-1.05-.11-2.14-.78-3.04-.67-.9-1.63-1.5-2.74-1.69-.37-1.11-1.14-2.04-2.18-2.61-1.04-.57-2.22-.64-3.32-.21-1.1-.43-2.28-.36-3.32.21-1.04.57-1.81 1.5-2.18 2.61-1.11.19-2.07.79-2.74 1.69-.67.9-.93 1.99-.78 3.04-.73.7-1.19 1.66-1.19 2.73s.46 2.03 1.19 2.73c-.15 1.05.11 2.14.78 3.04.67.9 1.63 1.5 2.74 1.69.37 1.11 1.14 2.04 2.18 2.61a3.99 3.99 0 0 0 3.32-.21c1.1.43 2.28.36 3.32-.21 1.04-.57 1.81-1.5 2.18-2.61 1.11-.19 2.07-.79 2.74-1.69.67-.9.93-1.99.78-3.04.73-.7 1.19-1.66 1.19-2.73zM10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
@@ -270,7 +270,7 @@ export default function Home() {
                       {item.icon ? (
                         <img src={item.icon} alt={item.title} />
                       ) : (
-                        <div className="placeholder-icon" style={{width: '32px', height: '32px', border: '2px dashed #fff', borderRadius: '4px'}}></div>
+                        <div className="placeholder-icon" style={{width: '32px', height: '32px', border: '2px dashed #FFD700', borderRadius: '4px'}}></div>
                       )}
                     </div>
                     <h4>{item.title}</h4>
@@ -389,7 +389,7 @@ export default function Home() {
         <div className="container">
           <span className="section-badge section-badge-orange">Sample Activities</span>
           <h2 className="section-heading" style={{marginBottom: "8px", fontSize: "36px", fontWeight: "700", lineHeight: "1.2"}}>What Your Child Will <span className="text-orange">Read & Write</span></h2>
-          <p className="section-subtext" style={{color: "#4A4A4A", fontSize: "16px", fontWeight: "400", marginBottom: "24px", maxWidth: "100%", lineHeight: "1.5"}}>Hands-on worksheets used in every group session — phonics made playful.</p>
+          <p className="section-subtext" style={{color: "var(--text-body)", fontSize: "16px", fontWeight: "400", marginBottom: "24px", maxWidth: "100%", lineHeight: "1.5"}}>Hands-on worksheets used in every group session — phonics made playful.</p>
           <div className="pdf-badge" style={{display: "inline-flex", alignItems: "center", gap: "8px", padding: "8px 20px", borderRadius: "20px", background: "rgba(255,102,17,0.1)", color: "var(--primary-orange)", fontWeight: "600", fontSize: "14px", marginBottom: "40px", cursor: "pointer"}}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
             Printable PDFs
@@ -404,14 +404,14 @@ export default function Home() {
                 { file: "worksheet-5.png", color: "#EF5B9E" },
                 { file: "worksheet-6.png", color: "#E53E5C" },
               ].map((w, i) => (
-                <div key={i} className="worksheet-card" style={{minWidth: "280px", height: "380px", borderRadius: "16px", border: `1.5px solid ${w.color}`, background: "#fff", display: "flex", overflow: "hidden", flexShrink: 0, boxShadow: "0 8px 32px rgba(0,0,0,0.06)"}}>
+                <div key={i} className="worksheet-card" style={{minWidth: "280px", height: "380px", borderRadius: "16px", border: `1.5px solid ${w.color}`, background: "var(--card-bg)", display: "flex", overflow: "hidden", flexShrink: 0, boxShadow: "var(--card-shadow)"}}>
                   <img src={`/images/${w.file}`} alt="Worksheet Sample" style={{width: "100%", height: "100%", objectFit: "cover"}} />
                 </div>
               ))}
             </div>
           </div>
         </div>
-        <div className="word-ribbon" style={{background: "#fff", padding: "48px 0", borderTop: "1px solid #EAEAEA"}}>
+        <div className="word-ribbon" style={{background: "var(--bg-body)", padding: "48px 0", borderTop: "1px solid var(--border-light)"}}>
           <div className="word-ribbon-track" style={{display: "flex", gap: "32px", animation: "scrollLeft 30s linear infinite", padding: "0 24px", paddingBottom: "32px"}}>
             {["GO", "GOT", "GOAT", "FLOAT", "FLOATING"].map((w, i) => (
               <div key={i} className="word-flashcard" style={{
@@ -437,7 +437,7 @@ export default function Home() {
                   height: "100px",
                   fontSize: "44px",
                   fontWeight: "600",
-                  color: "#111",
+                  color: "var(--text-body)",
                   letterSpacing: "1px"
                 }}>
                   {w}
@@ -468,7 +468,7 @@ export default function Home() {
                   height: "100px",
                   fontSize: "44px",
                   fontWeight: "600",
-                  color: "#111",
+                  color: "var(--text-body)",
                   letterSpacing: "1px"
                 }}>
                   {w}
@@ -629,15 +629,15 @@ export default function Home() {
               </div>
 
               {/* Final CTA Card */}
-              <div className="pricing-final-cta-card" style={{background: "#FFF", borderRadius: "24px", padding: "32px", display: "flex", flexDirection: "column", alignItems: "center", gap: "16px", minWidth: "320px", boxShadow: "0 12px 32px rgba(0,0,0,0.1)"}}>
-                <div style={{display: "flex", alignItems: "center", gap: "8px", background: "#FEF2E8", color: "#FF5A00", padding: "6px 16px", borderRadius: "50px", fontSize: "14px", fontWeight: "700"}}>
+              <div className="pricing-final-cta-card" style={{background: "var(--card-bg)", borderRadius: "24px", padding: "32px", display: "flex", flexDirection: "column", alignItems: "center", gap: "16px", minWidth: "320px", boxShadow: "var(--card-shadow)"}}>
+                <div style={{display: "flex", alignItems: "center", gap: "8px", background: "var(--bg-peach)", color: "var(--primary-orange)", padding: "6px 16px", borderRadius: "50px", fontSize: "14px", fontWeight: "700"}}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                   Limited Seats Available
                 </div>
                 
                 <div style={{textAlign: "center"}}>
-                  <div style={{fontSize: "14px", color: "#666", fontWeight: "700", textTransform: "uppercase"}}>TOTAL</div>
-                  <div style={{fontSize: "48px", fontWeight: "800", color: "#111", fontFamily: "'Baloo 2', cursive", lineHeight: "1"}}>₹4,500</div>
+                  <div style={{fontSize: "14px", color: "var(--text-muted)", fontWeight: "700", textTransform: "uppercase"}}>TOTAL</div>
+                  <div style={{fontSize: "48px", fontWeight: "800", color: "var(--text-body)", fontFamily: "'Baloo 2', cursive", lineHeight: "1"}}>₹4,500</div>
                 </div>
 
                 <a href="/payment" className="btn pricing-cta-btn" style={{width: "100%", background: "#FF5A00", color: "#FFF", boxShadow: "0 8px 20px rgba(255, 90, 0, 0.3)"}}>Enroll Now &rarr;</a>

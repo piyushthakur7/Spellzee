@@ -1,15 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
 
 :root {
+  /* Brand Colors */
   --primary-orange: #FF5A00;
   --primary-green: #25D366;
   --secondary-orange: #FF8844;
-  --bg-peach: #FFF5EC;
-  --bg-peach-light: #FFF8F2;
-  --text-dark: #1A1A1A;
-  --text-gray: #555555;
+  
+  /* Persistent Colors (don't change in dark mode) */
   --white: #FFFFFF;
   --black: #111111;
+  --pure-black: #000000;
+  --pure-white: #ffffff;
+  
+  /* Semantic tokens - default Light Mode */
+  --bg-body: #FFFFFF;
+  --text-body: #1A1A1A;
+  --text-muted: #555555;
+  --card-bg: #FFFFFF;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --border-light: #FFEDDA;
+  --bg-peach: #FFF5EC;
+  --bg-peach-light: #FFF8F2;
+  --section-badge-bg: #FFF0E6;
+  --footer-bg: #000000;
+  --footer-text: #FFFFFF;
+  
+  /* Layout & Functional */
   --border-radius-lg: 24px;
   --border-radius-md: 16px;
   --border-radius-sm: 8px;
@@ -17,6 +34,24 @@
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   --shadow-hover: 0 20px 40px rgba(255, 102, 17, 0.15);
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-body: #0A0A0A;
+    --text-body: #F5F5F5;
+    --text-muted: #A0A0A0;
+    --card-bg: #1A1A1A;
+    --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    --header-bg: rgba(10, 10, 10, 0.9);
+    --border-light: #333333;
+    --bg-peach: #1F150D;
+    --bg-peach-light: #1A1512;
+    --section-badge-bg: #2A180D;
+    /* Footer & Ribbon stay dark in both modes usually */
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
 
 * {
   margin: 0;
@@ -30,8 +65,8 @@ html {
 
 body {
   font-family: 'DM Sans', sans-serif;
-  color: var(--text-dark);
-  background-color: var(--white);
+  color: var(--text-body);
+  background-color: var(--bg-body);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -43,7 +78,7 @@ h1, h2, h3, h4 {
 }
 
 p {
-  color: var(--text-gray);
+  color: var(--text-muted);
 }
 
 a {
@@ -105,8 +140,8 @@ ul {
 
 .btn-outline-dark {
   background-color: transparent;
-  border: 1px solid #ccc;
-  color: #333;
+  border: 1px solid var(--border-light);
+  color: var(--text-body);
   font-family: inherit;
 }
 
@@ -131,7 +166,7 @@ header {
   padding: 18px 0;
   position: sticky;
   top: 0;
-  background-color: #FFFFFF;
+  background-color: var(--header-bg);
   backdrop-filter: blur(12px);
   z-index: 1000;
   border-bottom: none;
@@ -172,7 +207,7 @@ header {
 }
 
 .nav-links a {
-  color: #000;
+  color: var(--text-body);
   font-family: "Baloo 2", cursive;
   font-size: 24px;
   font-style: normal;
@@ -205,7 +240,7 @@ header {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #000;
+  color: var(--text-body);
 }
 
 .whatsapp-btn {
@@ -245,13 +280,13 @@ header {
   display: block;
   width: 25px;
   height: 3px;
-  background: var(--text-dark);
+  background: var(--text-body);
   border-radius: 3px;
 }
 
 /* ===== Hero Section ===== */
 .hero {
-  background: #FFFFFF;
+  background: var(--bg-body);
   padding: 40px 0 80px;
   overflow: hidden;
   position: relative;
@@ -301,8 +336,8 @@ header {
 
 .badge-age {
   height: 36px;
-  background: #000;
-  color: #FFF8F8;
+  background: var(--text-body);
+  color: var(--bg-body);
 }
 
 .hero-h1 {
@@ -320,7 +355,7 @@ header {
 }
 
 .days-text {
-  color: #000;
+  color: var(--text-body);
   font-family: "Baloo 2", cursive;
   font-size: 48px;
   font-style: normal;
@@ -430,7 +465,7 @@ header {
   font-family: "Baloo 2", cursive;
   font-size: 18px;
   font-weight: 700;
-  color: #111;
+  color: var(--text-body);
 }
 
 .stat-words {
@@ -498,7 +533,7 @@ header {
 /* ===== Trust Section ===== */
 .trust-section {
   padding: 120px 0 80px;
-  background-color: var(--white);
+  background-color: var(--bg-body);
   position: relative;
 }
 
@@ -509,8 +544,8 @@ header {
   align-items: center;
   gap: 40px;
   border-radius: 23px;
-  background: #FFF;
-  box-shadow: 0 0 17.1px 0 rgba(0, 0, 0, 0.25);
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
   margin: 60px auto 0;
   position: relative;
   z-index: 20;
@@ -521,7 +556,7 @@ header {
   text-align: center;
   font-size: 32px;
   font-weight: 700;
-  color: #111;
+  color: var(--text-body);
   margin-bottom: 0;
 }
 
@@ -557,14 +592,14 @@ header {
   font-size: 18px;
   font-weight: 800;
   margin: 0;
-  color: #111;
+  color: var(--text-body);
   line-height: 1.2;
 }
 
 .trust-item p {
   font-size: 14px;
   margin: 0;
-  color: #555;
+  color: var(--text-muted);
 }
 
 .trust-badge-pill {
@@ -659,9 +694,9 @@ header {
   gap: 8px;
   padding: 6px 12px;
   border-radius: 65px;
-  background: #FFF0E6;
-  border: 1px solid #FFEDDA;
-  color: #000;
+  background: var(--section-badge-bg);
+  border: 1px solid var(--border-light);
+  color: var(--text-body);
   font-family: "DM Sans", sans-serif;
   font-size: 12px;
   font-weight: 600;
@@ -685,7 +720,7 @@ header {
   font-weight: 700;
   line-height: 160%;
   margin-bottom: 12px;
-  color: #000;
+  color: var(--text-body);
 }
 
 .section-subtext {
@@ -693,14 +728,14 @@ header {
   font-size: 16px;
   font-weight: 600;
   line-height: 160%;
-  color: #000;
+  color: var(--text-body);
   margin-bottom: 48px;
   max-width: 713px;
 }
 
 /* ===== Difference Section ===== */
 .difference-section {
-  background-color: var(--white);
+  background-color: var(--bg-body);
 }
 
 .difference-grid {
@@ -710,7 +745,7 @@ header {
 }
 
 .diff-card {
-  background: var(--white);
+  background: var(--card-bg);
   padding: 40px 30px 48px;
   border-radius: var(--border-radius-lg);
   border: 1px solid #FF8844;
@@ -742,7 +777,7 @@ header {
   font-size: 20px;
   font-weight: 800;
   line-height: 1.2;
-  color: #000;
+  color: var(--text-body);
   margin-bottom: 0;
 }
 
@@ -751,12 +786,12 @@ header {
   font-size: 15px;
   font-weight: 500;
   line-height: 1.6;
-  color: #000;
+  color: var(--text-body);
 }
 
 /* ===== Curriculum Section ===== */
 .curriculum-section {
-  background-color: #FFFFFF;
+  background-color: var(--bg-body);
 }
 
 .curriculum-grid {
@@ -766,8 +801,8 @@ header {
 }
 
 .curriculum-card {
-  background: var(--white);
-  border: 1px solid #FFEDDA;
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
   border-radius: 12px;
   padding: 32px 20px;
   text-align: center;
@@ -809,7 +844,7 @@ header {
   font-size: 18px;
   font-weight: 800;
   margin-bottom: 12px;
-  color: #000;
+  color: var(--text-body);
 }
 
 .curriculum-card p {
@@ -817,7 +852,7 @@ header {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.6;
-  color: #4A4A4A;
+  color: var(--text-muted);
   margin-bottom: 24px;
   flex-grow: 1;
 }
@@ -854,7 +889,7 @@ header {
   font-family: 'Baloo 2', cursive;
   font-size: 16px;
   font-weight: 800;
-  color: #000;
+  color: var(--text-body);
 }
 
 .note-curriculum-container {
@@ -863,8 +898,8 @@ header {
   align-items: flex-start;
   gap: 16px;
   border-radius: 8px;
-  background: #FFF5EC;
-  border: 1px solid #FFE4D0;
+  background: var(--bg-peach);
+  border: 1px solid var(--border-light);
   margin-top: 48px;
   width: 100%;
   max-width: 1195px;
@@ -873,12 +908,12 @@ header {
 .note-pin-icon {
   flex-shrink: 0;
   width: 20px;
-  color: #000;
+  color: var(--text-body);
   margin-top: 4px;
 }
 
 .note-curriculum-container p {
-  color: #5A3E28;
+  color: var(--text-muted);
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -893,7 +928,7 @@ header {
 
 /* ===== Teaching Section ===== */
 .teaching-section {
-  background-color: #FDE2D0;
+  background-color: var(--bg-peach-light);
   padding: 80px 0;
 }
 
@@ -903,9 +938,9 @@ header {
   align-items: center;
   gap: 8px;
   border-radius: 65px;
-  background: #FFFFFF;
+  background: var(--card-bg);
   border: 1px solid rgba(255, 90, 0, 0.2);
-  color: #000;
+  color: var(--text-body);
   font-family: "DM Sans", sans-serif;
   font-size: 12px;
   font-weight: 600;
@@ -914,7 +949,7 @@ header {
 }
 
 .teaching-subtext {
-  color: #4A4A4A;
+  color: var(--text-muted);
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -935,8 +970,8 @@ header {
   align-items: flex-start;
   gap: 24px;
   border-radius: 16px;
-  background: #FFF;
-  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.04);
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -967,7 +1002,7 @@ header {
 }
 
 .teaching-card h4 {
-  color: #000;
+  color: var(--text-body);
   font-family: "Baloo 2", cursive;
   font-size: 22px;
   font-style: normal;
@@ -977,7 +1012,7 @@ header {
 }
 
 .teaching-card p {
-  color: #4A4A4A;
+  color: var(--text-muted);
   font-family: "DM Sans", sans-serif;
   font-size: 15px;
   font-style: normal;
@@ -992,8 +1027,8 @@ header {
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  background: #FDE2CC;
-  color: #111;
+  background: var(--bg-peach);
+  color: var(--text-body);
   font-family: "DM Sans", sans-serif;
   font-size: 12px;
   font-weight: 600;
@@ -1029,7 +1064,7 @@ header {
 .note-box p {
   font-size: 15px;
   line-height: 1.7;
-  color: var(--text-gray);
+  color: var(--text-muted);
 }
 
 
@@ -1253,7 +1288,7 @@ header {
 
 /* ===== Sample Activities ===== */
 .activities-section {
-  background: var(--white);
+  background: var(--bg-body);
   overflow: hidden;
   padding-bottom: 0; 
 }
@@ -1290,10 +1325,10 @@ header {
 
 .worksheet-card {
   min-width: 300px;
-  background: var(--white);
+  background: var(--card-bg);
   border-radius: 12px;
-  border: 1px solid #eee;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--card-shadow);
   overflow: hidden;
   scroll-snap-align: start;
 }
@@ -1305,7 +1340,7 @@ header {
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  color: var(--text-dark);
+  color: var(--pure-black);
   font-size: 18px;
 }
 
@@ -1331,8 +1366,8 @@ header {
 
 /* Word Ribbon */
 .word-ribbon {
-  background: var(--white);
-  border-top: 1px solid #eee;
+  background: var(--bg-body);
+  border-top: 1px solid var(--border-light);
   padding: 20px 0;
   overflow: hidden;
   position: relative;
@@ -1358,8 +1393,8 @@ header {
   border-radius: 8px;
   font-size: 24px;
   font-weight: 700;
-  color: var(--text-dark);
-  background: var(--white);
+  color: var(--text-body);
+  background: var(--card-bg);
 }
 
 /* ===== Parent Reviews ===== */
@@ -1478,7 +1513,7 @@ header {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--text-gray);
+  background: var(--text-muted);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1552,7 +1587,7 @@ header {
 
 /* ===== Pricing Section ===== */
 .pricing-new-section {
-  background: #fdfcfb;
+  background: var(--bg-peach-light);
 }
 
 .pricing-orange-card {
@@ -1572,8 +1607,8 @@ header {
   position: absolute;
   top: 0;
   right: 48px;
-  background: #000;
-  color: #fff;
+  background: var(--pure-black);
+  color: var(--pure-white);
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -1620,7 +1655,7 @@ header {
 }
 
 .pricing-math-card {
-  background: #fff;
+  background: var(--card-bg);
   border-radius: 16px;
   padding: 24px;
   display: flex;
@@ -1638,7 +1673,7 @@ header {
 .pricing-math-label {
   font-size: 14px;
   font-weight: 700;
-  color: #666;
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -1650,7 +1685,7 @@ header {
 .pricing-math-value {
   font-size: 36px;
   font-weight: 800;
-  color: #111;
+  color: var(--text-body);
   font-family: 'Baloo 2', cursive;
   line-height: 1;
 }
@@ -1711,7 +1746,7 @@ header {
 .pricing-cta-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-  background: #fdfbf8;
+  background: var(--bg-peach-light);
   color: var(--primary-orange);
 }
 
@@ -1719,10 +1754,10 @@ header {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: #fff;
+  background: var(--card-bg);
   padding: 12px 24px;
   border-radius: 50px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--card-shadow);
 }
 
 .guarantee-text {
@@ -1733,13 +1768,13 @@ header {
 
 .guarantee-bold {
   font-weight: 800;
-  color: #111;
+  color: var(--text-body);
   font-size: 14px;
 }
 
 .guarantee-light {
   font-weight: 500;
-  color: #666;
+  color: var(--text-muted);
   font-size: 12px;
 }
 
@@ -1754,7 +1789,7 @@ header {
   font-family: 'Baloo 2', cursive;
   font-weight: 800;
   margin-bottom: 32px;
-  color: #111;
+  color: var(--text-body);
 }
 
 @media (max-width: 768px) {
@@ -1778,8 +1813,8 @@ header {
 }
 
 .faq-item {
-  background: var(--white);
-  border: 1px solid #eee;
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
   border-radius: var(--border-radius-md);
   overflow: hidden;
   transition: var(--transition);
@@ -1923,7 +1958,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: var(--white);
+    background: var(--bg-body);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -2119,10 +2154,10 @@ footer {
 
 .hero-info-card {
   flex: 1;
-  background-color: #1A1A1A;
+  background-color: var(--card-bg);
   padding: 16px 24px;
   border-radius: 12px;
-  border: 1px solid #333;
+  border: 1px solid var(--border-light);
 }
 
 .hero-info-card .card-icon {
@@ -2152,7 +2187,7 @@ footer {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #FFF8F2;
+  background-color: var(--bg-peach-light);
   background-image: url('/images/payment-bg.png');
   background-size: 100% auto;
   background-position: bottom center;
@@ -2161,7 +2196,7 @@ footer {
 
 .payment-header {
   padding: 24px 40px;
-  background-color: #ffffff;
+  background-color: var(--header-bg);
 }
 
 .payment-content {
@@ -2182,7 +2217,7 @@ footer {
 .payment-left h2 {
   font-size: 36px;
   margin-bottom: 40px;
-  color: #111;
+  color: var(--text-body);
   max-width: 300px;
   line-height: 1.2;
 }
@@ -2199,8 +2234,8 @@ footer {
   gap: 20px;
   padding: 24px;
   border-radius: 16px;
-  background-color: #111;
-  color: #fff;
+  background-color: var(--black);
+  color: var(--white);
 }
 
 .card-icon {
@@ -2232,10 +2267,10 @@ footer {
 }
 
 .form-container {
-  background-color: #fff;
+  background-color: var(--card-bg);
   border-radius: 24px;
   padding: 40px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  box-shadow: var(--card-shadow);
 }
 
 .form-container h3 {
@@ -2258,13 +2293,15 @@ footer {
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #333;
+  color: var(--text-body);
 }
 
 .form-group input, .form-group select {
   width: 100%;
   padding: 14px 16px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-light);
+  background: var(--card-bg);
+  color: var(--text-body);
   border-radius: 12px;
   font-size: 15px;
   font-family: inherit;
@@ -2282,13 +2319,13 @@ footer {
 }
 
 .country-code {
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
+  background-color: var(--bg-peach);
+  border: 1px solid var(--border-light);
   border-right: none;
   border-radius: 12px 0 0 12px;
   padding: 14px 16px;
   font-size: 15px;
-  color: #666;
+  color: var(--text-muted);
   font-weight: 600;
 }
 
