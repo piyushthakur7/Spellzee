@@ -1,5 +1,12 @@
+"use client";
+
+import React, { useState } from 'react';
+import EnrollmentModal from './EnrollmentModal';
+
 export default function HeroSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
+    <>
     <section className="hero">
       <div className="container hero-content">
         <div className="hero-text">
@@ -32,7 +39,7 @@ export default function HeroSection() {
           </h1>
           <p className="hero-desc">Your child will <strong className="text-orange">READ & WRITE ENGLISH CONFIDENTLY</strong> — a proven phonics method trusted by 1000+ Parents across India.</p>
           <div className="hero-buttons">
-            <a href="/payment" className="btn btn-orange">Enroll Now</a>
+            <button onClick={() => setIsModalOpen(true)} className="btn btn-orange" style={{border: 'none', cursor: 'pointer', fontFamily: 'inherit'}}>Enroll Now</button>
             <button className="btn btn-outline-peach">Limited Time offer</button>
           </div>
           
@@ -95,5 +102,7 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
+    <EnrollmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+    </>
   );
 }
