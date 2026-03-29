@@ -810,7 +810,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 400px;
+  height: 100%;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
 }
 
@@ -828,7 +828,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   flex-shrink: 0;
 }
 
@@ -843,7 +843,7 @@ header {
   font-family: 'Baloo 2', cursive;
   font-size: 18px;
   font-weight: 800;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   color: var(--text-body);
 }
 
@@ -851,9 +851,9 @@ header {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--text-muted);
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   flex-grow: 1;
 }
 
@@ -872,7 +872,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px; /* Space between orange bar and text */
+  gap: 12px;
   position: relative;
 }
 
@@ -881,8 +881,6 @@ header {
   height: 24px;
   background: var(--primary-orange);
   border-radius: 2px;
-  position: absolute;
-  left: 0;
 }
 
 .phase-name {

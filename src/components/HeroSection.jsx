@@ -44,7 +44,7 @@ export default function HeroSection() {
                 <p>Interactive • Peer Learning • More Fun!</p>
               </div>
             </div>
-            <div className="info-card hero-info-card">
+            <div className="info-card hero-info-card" style={{ display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
               <div className="card-text">
                 <h4 style={{fontSize: '24px'}}>₹4,500</h4>
                 <p>Just ₹100 / class</p>
