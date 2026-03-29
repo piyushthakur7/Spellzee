@@ -27,7 +27,7 @@ export default function Home() {
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Chat with us
           </a>
-          <button className="mobile-menu-btn" aria-label="Toggle menu" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <button className={`mobile-menu-btn ${mobileMenuOpen ? 'open' : ''}`} aria-label="Toggle menu" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             <span></span><span></span><span></span>
           </button>
         </div>
@@ -583,89 +583,111 @@ export default function Home() {
 
       <section className="pricing-new-section section-padding">
         <div className="container">
-          <div className="pricing-orange-card">
-            <div className="best-value-ribbon">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              Best Value
-            </div>
-            <div className="pricing-header">
-              <span className="pricing-offer-badge" style={{background: "#FFF", color: "var(--primary-orange)", padding: "10px 24px", boxShadow: "0 4px 15px rgba(0,0,0,0.1)"}}>
-                SUMMER SPECIAL OFFER
-              </span>
-              <h2 className="pricing-title" style={{marginTop: "8px"}}>Simple &amp; Affordable</h2>
-            </div>
-            <div className="pricing-math-row">
-              <div className="pricing-math-card">
-                <span className="pricing-math-label">PER CLASS</span>
-                <span className="pricing-math-value">₹100</span>
-              </div>
-              <div className="pricing-math-operator">×</div>
-              <div className="pricing-math-card">
-                <span className="pricing-math-label">LIVE CLASSES</span>
-                <span className="pricing-math-value">45</span>
-              </div>
-              <div className="pricing-math-operator">=</div>
-              <div className="pricing-math-card pricing-math-card-total">
-                <span className="pricing-math-total-price">₹4,500</span>
-                <span className="pricing-math-label">45 Sessions</span>
-              </div>
-            </div>
-            <div className="pricing-features-row">
-              {["45 Live Classes", "Phonics Based", "ACTD - Certified Teachers"].map((f, i) => (
-                <div key={i} className="pricing-feature-chip">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  {f}
-                </div>
-              ))}
-            </div>
-            {/* Visual Assets & CTA Card Row */}
-            <div className="pricing-cta-container" style={{display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: "48px", marginTop: "16px"}}>
+          {/* === Pricing Layout Wrapper === */}
+          <div className="pricing-layout">
+            {/* Orange Gradient Card */}
+            <div className="pricing-orange-card">
+              {/* Box for background pattern */}
+              <div className="pricing-orange-bg-pattern"></div>
               
-              {/* Educational Cards Visuals */}
-              <div className="pricing-visuals" style={{flex: "1", minWidth: "300px", display: "flex", gap: "20px", justifyContent: "center", alignItems: "center", position: "relative"}}>
-                <img src="/images/worksheet-sample.png" alt="Educational Materials" style={{width: "200px", height: "auto", borderRadius: "12px", boxShadow: "0 15px 30px rgba(0,0,0,0.2)", transform: "rotate(-8deg)", zIndex: "2"}} />
-                <img src="/images/hero-girl.png" alt="Happy Student" style={{width: "220px", height: "220px", objectFit: "cover", borderRadius: "12px", boxShadow: "0 15px 30px rgba(0,0,0,0.2)", transform: "rotate(5deg)", marginLeft: "-60px", border: "4px solid #FFF"}} />
+              {/* Summer Special Offer Badge */}
+              <div className="pricing-offer-badge">
+                SUMMER SPECIAL OFFER
               </div>
 
-              {/* Final CTA Card */}
-              <div className="pricing-final-cta-card" style={{background: "#FFF", borderRadius: "32px", padding: "40px 32px", display: "flex", flexDirection: "column", alignItems: "center", gap: "24px", minWidth: "340px", boxShadow: "0 25px 50px rgba(0,0,0,0.15)", border: "1px solid #EEE"}}>
-                <div style={{display: "flex", alignItems: "center", gap: "8px", background: "#4A1A00", color: "#FFF", padding: "12px 28px", borderRadius: "100px", fontSize: "14px", fontWeight: "800", textTransform: "uppercase", letterSpacing: "1px"}}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  Limited Seats Available
-                </div>
-                
-                <div style={{textAlign: "center", display: "flex", flexDirection: "column", gap: "4px"}}>
-                  <div style={{fontSize: "16px", color: "#666", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1.5px"}}>TOTAL</div>
-                  <div style={{fontSize: "64px", fontWeight: "800", color: "#000", fontFamily: "'Baloo 2', cursive", lineHeight: "1"}}>₹4,500</div>
-                </div>
+              {/* Title */}
+              <h2 className="pricing-title">Simple &amp; Affordable</h2>
 
-                <a href="/payment" className="btn pricing-cta-btn" style={{width: "100%", background: "#FF5A00", color: "#FFF", padding: "20px 32px", fontSize: "22px", borderRadius: "100px", display: "flex", justifyContent: "center", alignItems: "center", gap: "12px", boxShadow: "0 12px 24px rgba(255, 90, 0, 0.4)", fontWeight: "800"}}>
-                  Enroll Now
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </a>
+              {/* Math Row: ₹100 × 45 = ₹4,500 */}
+              <div className="pricing-math-row">
+                <div className="pricing-math-card">
+                  <span className="pricing-math-label">PER<br />CLASS</span>
+                  <span className="pricing-math-value">₹100</span>
+                </div>
+                <div className="pricing-math-operator">×</div>
+                <div className="pricing-math-card">
+                  <span className="pricing-math-label">LIVE<br />CLASSES</span>
+                  <span className="pricing-math-value">45</span>
+                </div>
+                <div className="pricing-math-operator">=</div>
+                <div className="pricing-math-card pricing-math-card-total">
+                  <span className="pricing-math-total-price">₹4,500</span>
+                  <span className="pricing-math-label">45 Sessions</span>
+                </div>
+              </div>
+
+              {/* Feature Bullets */}
+              <div className="pricing-features-row">
+                {["45 Live Classes", "Phonics Based", "ACTD - Certified Teachers"].map((f, i) => (
+                  <div key={i} className="pricing-feature-chip">
+                    <span className="pricing-feature-dot">•</span>
+                    {f}
+                  </div>
+                ))}
+              </div>
+
+              {/* Floating Images — positioned absolutely inside the orange card */}
+              <div className="pricing-floating-images">
+                <img src="/images/worksheet-sample.png" alt="Worksheet 1" className="pricing-float-img pricing-float-img-1" />
+                <img src="/images/worksheet-sample.png" alt="Worksheet 2" className="pricing-float-img pricing-float-img-2" />
+                <img src="/images/worksheet-sample.png" alt="Worksheet 3" className="pricing-float-img pricing-float-img-3" />
               </div>
             </div>
 
-            {/* Bottom Guarantee Bar */}
-            <div className="pricing-guarantee-bar" style={{background: "#FFF", margin: "0 -48px -60px", padding: "20px 48px", borderTop: "1px solid #EEE", display: "flex", justifyContent: "center", alignItems: "center", gap: "12px"}}>
-              <div style={{background: "#E8F9EE", padding: "4px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", border: "1.5px solid #25D366"}}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" stroke="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 15l-4-4 1.41-1.41L11 13.17l5.59-5.59L18 9l-7 7z"/></svg>
+            {/* White CTA Card — positioned absolutely overlapping the right side */}
+            <div className="pricing-cta-card">
+              {/* Best Value Tag */}
+              <div className="pricing-best-value-tag">
+                <div className="tag-inner-border">
+                  <div className="tag-hole"></div>
+                  Best Value
+                </div>
               </div>
-              <p style={{margin: 0, fontWeight: "800", fontSize: "16px", color: "#111"}}>
-                <span style={{color: "#25D366"}}>2-Class Risk-free</span> | 100% Refund Guaranteed
-              </p>
-              <p style={{margin: 0, fontSize: "14px", color: "#666", fontWeight: "600", marginLeft: "10px"}}>
-                • 100% Refund if you're not satisfied after 2 classes
-              </p>
+
+              <div className="pricing-cta-total-label">TOTAL</div>
+              <div className="pricing-cta-total-price">₹4,500</div>
+
+              {/* Limited Seats Badge */}
+              <a href="/payment" className="pricing-cta-seats-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Limited Seats Available
+              </a>
+
+              {/* Enroll Now Button */}
+              <a href="/payment" className="pricing-cta-enroll-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Enroll Now
+              </a>
             </div>
           </div>
-          <div className="faq-container">
-            <h3 className="faq-heading">Frequently Asked Questions</h3>
+
+          {/* Guarantee Bar */}
+          <div className="pricing-guarantee-bar">
+            <div className="pricing-guarantee-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366" stroke="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 15l-4-4 1.41-1.41L11 13.17l5.59-5.59L18 9l-7 7z"/></svg>
+            </div>
+            <p className="pricing-guarantee-text">
+              <span className="pricing-guarantee-highlight">2 - Class Risk- free</span>
+              <span className="pricing-guarantee-divider">|</span>
+              <span className="pricing-guarantee-bold">100% Refund Guaranteed</span>
+            </p>
+            <p className="pricing-guarantee-sub">• 100% Refund if you're not satisfied after 2 classes</p>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="faq-section-new">
+            <span className="section-badge section-badge-orange">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              Frequently Asked Questions
+            </span>
+            <h2 className="faq-heading-new">Parents <span className="text-orange">Ask. We Answer</span></h2>
+            <p className="faq-subtext">Everything you need to know before enrolling your child</p>
             <div className="faq-list">
               {[
                 { q: 'Is the ₹4,500 fee a one-time payment?', a: 'Yes, ₹4,500 is a one-time payment for the entire 45-day program. There are no hidden charges or recurring fees.' },
                 { q: 'Are classes live or recorded?', a: 'All classes are live and interactive. Children learn in small groups with a certified teacher.' },
                 { q: 'What age group is this program for?', a: 'This program is designed for children aged 4-8 years. It works for beginners as well as children who need to strengthen their reading foundation.' },
+                { q: 'What is the class schedule?', a: 'Classes are held 5 days a week (Monday to Friday), and each session is 45 minutes long. You can choose from multiple batch timings.' },
               ].map((faq, index) => (
                 <div key={index} className={`faq-item ${activeFaq === index ? 'active' : ''}`}>
                   <div className="faq-question" onClick={() => toggleFaq(index)}>
