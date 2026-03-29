@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import '../style.css';
 
 export const metadata = {
@@ -18,7 +19,47 @@ export default function RootLayout({ children }) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script
+          id="whatsapp-widget-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var url = 'https://whatsapp-chat-widget.web.app/whatsapp-chat-widget.js';
+              var script = document.createElement('script');
+              script.type = 'text/javascript';
+              script.async = true;
+              script.src = url;
+              var chatOptions = {
+                "buttonSetting":{
+                  "ctaText":"Chat with us",
+                  "positionIsBottomRight":true,
+                  "backgroundColor":"#37c968",
+                  "borderRadius":40,
+                },
+                "widgetSetting":{
+                  "companyName":"SPELLZEE",
+                  "companySubTitle":"Dream-Learn-Rule",
+                  "companyImg":"https://spellzee.in/wp-content/uploads/2022/07/spellzee-latest-logo.png",
+                  "phoneNumber":"918248751351",
+                  "welcomeText":"Hi there! How can I help you?",
+                  "userSentText":"Hello, I have a question about {{page_link}}",
+                  "showByDefault": null,
+                  "ctaText":"Start chat",
+                  "headerBackgroundColor":"#0a5f54",
+                  "borderRadius":30,
+                }
+              };
+              script.onload = function() {
+                  createWhatsappChatWidget(chatOptions);
+              };
+              var firstScriptTag = document.getElementsByTagName('script')[0];
+              firstScriptTag.parentNode.insertBefore(script, firstScriptTag);
+            `
+          }}
+        />
+      </body>
     </html>
   );
 }
