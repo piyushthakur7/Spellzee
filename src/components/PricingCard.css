@@ -1,347 +1,429 @@
-/* ===== Pricing Banner Section ===== */
-.pricing-banner {
+/* ===== Pricing Component Redesign ===== */
+.pc-wrapper {
+  padding: 60px 20px 80px;
+  background-color: var(--bg-body, #fff);
+  display: flex;
+  justify-content: center;
+}
+
+.pc-container {
   position: relative;
-  padding: 80px 0 120px;
-  overflow: visible;
+  background: #FF781E;
+  background: linear-gradient(135deg, #FF781E 0%, #FF8533 100%);
+  border-radius: 20px;
+  max-width: 1080px;
+  width: 100%;
+  padding: 45px 35px 50px 45px;
+  box-shadow: 0 15px 40px rgba(255, 120, 30, 0.15);
 }
 
-.pricing-banner-bg {
+/* Background decorative circles */
+.pc-container::before {
+  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 55%;
-  background: linear-gradient(135deg, #FF6B00 0%, #FF5A00 30%, #FF8844 70%, #FFa060 100%);
-  border-radius: 0 0 40px 40px;
-  z-index: 0;
-  overflow: hidden;
+  top: -40px;
+  right: 25%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+  pointer-events: none;
 }
 
-/* Floating decorative elements */
-.pricing-float {
+/* Top Badge */
+.pc-top-badge {
   position: absolute;
-  color: rgba(255, 255, 255, 0.15);
-  font-size: 24px;
-  animation: pricingFloatAnim 6s ease-in-out infinite;
-}
-
-.pricing-float-1 { top: 15%; left: 8%; animation-delay: 0s; font-size: 28px; }
-.pricing-float-2 { top: 30%; right: 12%; animation-delay: 1.5s; font-size: 20px; }
-.pricing-float-3 { top: 55%; left: 15%; animation-delay: 3s; font-size: 32px; }
-.pricing-float-4 { top: 20%; right: 25%; animation-delay: 4.5s; font-size: 16px; }
-
-@keyframes pricingFloatAnim {
-  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.15; }
-  50% { transform: translateY(-12px) rotate(15deg); opacity: 0.3; }
-}
-
-.pricing-banner-content {
-  position: relative;
-  z-index: 1;
-  max-width: 620px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 0 20px;
-}
-
-/* Tag */
-.pricing-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
+  top: -18px;
+  left: 45px;
+  background-color: #FF781E;
   color: #FFF;
-  padding: 8px 20px;
+  border: 2px solid #FFF;
+  padding: 8px 24px;
   border-radius: 50px;
   font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/* Title */
-.pricing-title {
-  font-family: 'Baloo 2', cursive;
-  font-size: 36px;
   font-weight: 800;
-  color: #FFF;
-  line-height: 1.3;
-  margin-bottom: 40px;
-}
-
-.pricing-title-highlight {
-  background: linear-gradient(90deg, #FFF8E1, #FFECB3);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Main Card */
-.pricing-card-main {
-  background: var(--card-bg, #FFFFFF);
-  border-radius: 24px;
-  padding: 40px 36px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(0, 0, 0, 0.06);
-  text-align: left;
-  margin-bottom: 32px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.pricing-card-main:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.15), 0 6px 20px rgba(0, 0, 0, 0.08);
-}
-
-/* Card Header */
-.pricing-card-header {
-  margin-bottom: 24px;
-}
-
-.pricing-program-name {
-  font-family: 'Baloo 2', cursive;
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--text-body, #1A1A1A);
-  line-height: 1.3;
-}
-
-.pricing-program-type {
-  font-family: 'DM Sans', sans-serif;
   font-size: 14px;
-  font-weight: 500;
-  color: var(--text-muted, #666);
-  margin-top: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Price Row */
-.pricing-price-row {
+/* Main Content Wrapper */
+.pc-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 28px;
-  padding-bottom: 28px;
-  border-bottom: 1px solid var(--border-light, #F0F0F0);
+  gap: 20px;
 }
 
-.pricing-price-left {
+/* Left Section */
+.pc-left {
+  flex: 1;
+  color: #FFF;
+  max-width: 580px;
+}
+
+.pc-title {
+  font-family: 'Baloo 2', cursive;
+  font-size: 42px;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.pc-calculation-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Calc Boxes */
+.pc-calc-box {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px 20px;
+  min-width: 130px;
+  text-align: center;
 }
 
-.pricing-old-price {
+.pc-box-solid {
+  background: #FFA726; /* Slightly lighter orange/yellowish depending on image, using pure orange fill */
+  background: linear-gradient(180deg, #FF9E22, #FF8D00);
+  border-color: #FFF;
+  min-width: 150px;
+}
+
+.pc-box-label {
   font-family: 'DM Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--text-muted, #999);
-  text-decoration: line-through;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  color: #FFF;
+  margin-bottom: 6px;
 }
 
-.pricing-new-price {
+.pc-box-value {
   font-family: 'Baloo 2', cursive;
-  font-size: 48px;
+  font-size: 28px;
   font-weight: 800;
-  color: #FF5A00;
+  color: #FFF8E1; /* Slight yellow tint */
+  line-height: 1;
+}
+
+.pc-box-value-large {
+  font-family: 'Baloo 2', cursive;
+  font-size: 32px;
+  font-weight: 800;
+  color: #FFF;
   line-height: 1.1;
 }
 
-.pricing-price-sub {
+.pc-box-sub-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFF;
+  margin-top: 4px;
+}
+
+.pc-math-sign {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Features Text */
+.pc-features {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   font-weight: 600;
-  color: var(--text-muted, #777);
+  color: #FFF;
+  opacity: 0.9;
 }
 
-.pricing-discount-badge {
-  background: linear-gradient(135deg, #FF5A00, #FF8844);
+/* Middle Graphics (Worksheets + Tag) */
+.pc-middle-graphics {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* "Best Value" Red Tag using Pure CSS */
+.pc-tag-graphic {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  background: #E53935;
   color: #FFF;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 15px;
+  font-family: 'Baloo 2', cursive;
+  font-size: 16px;
   font-weight: 800;
-  padding: 10px 20px;
-  border-radius: 12px;
-  letter-spacing: 0.5px;
+  text-align: center;
+  line-height: 1.1;
+  padding: 12px 16px;
+  border-radius: 6px;
+  transform: rotate(15deg);
+  z-index: 20;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+  border: 2px solid #FFF;
+}
+.pc-tag-graphic::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background: #FFF;
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Worksheet stack */
+.pc-worksheets {
+  position: relative;
+  width: 180px;
+  height: 220px;
+}
+
+.pc-sheet {
+  position: absolute;
+  width: 140px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border: 4px solid #FFF;
+  background: #FFF;
+  transition: transform 0.3s;
+}
+
+.pc-sheet-left {
+  left: -20px;
+  top: 30px;
+  transform: rotate(-8deg) scale(0.9);
+  z-index: 1;
+}
+
+.pc-sheet-right {
+  right: -20px;
+  top: 40px;
+  transform: rotate(12deg) scale(0.9);
+  z-index: 2;
+}
+
+.pc-sheet-center {
+  left: 20px;
+  top: 10px;
+  transform: rotate(2deg);
+  z-index: 3;
+  width: 150px;
+}
+
+.pc-worksheets:hover .pc-sheet-left { transform: rotate(-12deg) scale(0.95) translateX(-10px); }
+.pc-worksheets:hover .pc-sheet-right { transform: rotate(16deg) scale(0.95) translateX(10px); }
+.pc-worksheets:hover .pc-sheet-center { transform: rotate(0deg) scale(1.05) translateY(-5px); }
+
+/* Right Section (White Card) */
+.pc-right-card {
+  background: #FFF;
+  border-radius: 16px;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  min-width: 260px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.pc-total-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #666;
+  letter-spacing: 1px;
+}
+
+.pc-total-price {
+  font-family: 'Baloo 2', cursive;
+  font-size: 54px;
+  font-weight: 800;
+  color: #1A1A1A;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.pc-seats-pill {
+  display: flex;
+  align-items: center;
+  background: #6D4C13; /* Brown pill color from design */
+  color: #FFF;
+  padding: 8px 16px;
+  border-radius: 50px;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.pc-seats-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pc-seats-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.pc-enroll-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 24px;
+  background: var(--primary-orange, #FF5A00);
+  color: #FFF;
+  border-radius: 50px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s;
   box-shadow: 0 4px 15px rgba(255, 90, 0, 0.3);
 }
 
-/* Features */
-.pricing-features {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-bottom: 32px;
+.pc-enroll-btn:hover {
+  background: #E85000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 90, 0, 0.4);
 }
 
-.pricing-feature-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-body, #333);
-}
-
-.pricing-feature-icon {
-  width: 28px;
-  height: 28px;
-  background: rgba(255, 90, 0, 0.08);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-/* Enroll Button */
-.pricing-enroll-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  padding: 18px 32px;
-  background: linear-gradient(135deg, #FF5A00, #FF7A2E);
-  color: #FFF;
-  border: none;
-  border-radius: 16px;
-  font-family: 'Baloo 2', cursive;
-  font-size: 20px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  box-shadow: 0 6px 24px rgba(255, 90, 0, 0.35);
-  position: relative;
-  overflow: hidden;
-}
-
-.pricing-enroll-btn::before {
-  content: '';
+/* Bottom Guarantee Bar */
+.pc-bottom-guarantee {
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-  transition: left 0.6s ease;
-}
-
-.pricing-enroll-btn:hover::before {
-  left: 100%;
-}
-
-.pricing-enroll-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 32px rgba(255, 90, 0, 0.45);
-  background: linear-gradient(135deg, #E85000, #FF6B1A);
-}
-
-.pricing-enroll-btn:active {
-  transform: translateY(-1px);
-}
-
-/* Guarantee */
-.pricing-guarantee {
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #FFF;
+  padding: 12px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 20px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-muted, #777);
+  border: 1px solid #F0F0F0;
+  min-width: 400px;
+  text-align: center;
 }
 
-.pricing-guarantee svg {
-  flex-shrink: 0;
-}
-
-/* Trust Row */
-.pricing-trust-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-
-.pricing-trust-item {
+.pc-guarantee-main {
   display: flex;
   align-items: center;
   gap: 8px;
+  color: #333;
   font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.pc-guarantee-main svg {
+  width: 20px;
+  height: 20px;
+}
+
+.pc-guarantee-sub {
+  color: #777;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.85);
+  margin-top: 4px;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .pricing-banner {
-    padding: 60px 0 80px;
+
+/* ===== Mobile & Tablet Responsiveness ===== */
+@media (max-width: 1040px) {
+  .pc-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .pricing-banner-bg {
-    height: 45%;
+  .pc-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .pricing-title {
-    font-size: 28px;
+  .pc-features {
+    justify-content: center;
   }
 
-  .pricing-card-main {
-    padding: 28px 24px;
+  .pc-middle-graphics {
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .pc-container {
+    padding: 40px 20px 60px;
   }
 
-  .pricing-new-price {
-    font-size: 40px;
+  .pc-top-badge {
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    top: -15px;
   }
 
-  .pricing-features {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .pricing-enroll-btn {
-    font-size: 18px;
-    padding: 16px 24px;
-  }
-
-  .pricing-trust-row {
+  .pc-calculation-row {
+    flex-direction: column;
     gap: 16px;
   }
 
-  .pricing-guarantee {
-    font-size: 12px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .pricing-title {
-    font-size: 24px;
+  .pc-calc-box {
+    width: 100%;
   }
 
-  .pricing-card-main {
-    padding: 24px 20px;
+  .pc-math-sign {
+    transform: rotate(90deg);
   }
 
-  .pricing-price-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+  .pc-bottom-guarantee {
+    min-width: 90%;
+    bottom: -45px;
+    padding: 12px 16px;
   }
 
-  .pricing-new-price {
-    font-size: 36px;
+  .pc-guarantee-main {
+    font-size: 13px;
   }
 
-  .pricing-trust-row {
-    flex-direction: column;
-    gap: 10px;
+  .pc-guarantee-sub {
+    font-size: 11px;
   }
 }

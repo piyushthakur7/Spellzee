@@ -6,116 +6,101 @@ import './PricingCard.css';
 
 export default function PricingCard() {
   return (
-    <section className="pricing-banner" id="pricing">
-      {/* Orange gradient background */}
-      <div className="pricing-banner-bg">
-        {/* Decorative floating elements */}
-        <div className="pricing-float pricing-float-1">✦</div>
-        <div className="pricing-float pricing-float-2">◆</div>
-        <div className="pricing-float pricing-float-3">★</div>
-        <div className="pricing-float pricing-float-4">●</div>
-      </div>
-
-      <div className="pricing-banner-content">
-        <div className="pricing-tag">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-          </svg>
-          Limited Time Offer
+    <div className="pc-wrapper">
+      <section className="pc-container" id="pricing">
+        {/* Top Absolute Badge */}
+        <div className="pc-top-badge">
+          SUMMER SPECIAL OFFER
         </div>
 
-        <h2 className="pricing-title">
-          Start Your Child's <span className="pricing-title-highlight">Reading Journey</span> Today
-        </h2>
+        {/* Main Content Area */}
+        <div className="pc-content">
+          
+          {/* Left Section (Title + Calculation + Features) */}
+          <div className="pc-left">
+            <h2 className="pc-title">Simple & Affordable</h2>
+            
+            <div className="pc-calculation-row">
+              <div className="pc-calc-box">
+                <span className="pc-box-label">PER<br/>CLASS</span>
+                <span className="pc-box-value">₹100</span>
+              </div>
+              
+              <div className="pc-math-sign">×</div>
+              
+              <div className="pc-calc-box">
+                <span className="pc-box-label">LIVE<br/>CLASSES</span>
+                <span className="pc-box-value">45</span>
+              </div>
+              
+              <div className="pc-math-sign">=</div>
+              
+              <div className="pc-calc-box pc-box-solid">
+                <span className="pc-box-value-large">₹4,500</span>
+                <span className="pc-box-sub-label">45 Sessions</span>
+              </div>
+            </div>
 
-        {/* Price card overlapping the banner */}
-        <div className="pricing-card-main">
-          <div className="pricing-card-header">
-            <div className="pricing-program-name">45 Days Reading Challenge</div>
-            <div className="pricing-program-type">Group Program • Live Classes</div>
-          </div>
-
-          <div className="pricing-price-row">
-            <div className="pricing-price-left">
-              <span className="pricing-old-price">₹9,999</span>
-              <span className="pricing-new-price">₹4,500</span>
-              <span className="pricing-price-sub">Just ₹100 per class</span>
-            </div>
-            <div className="pricing-discount-badge">55% OFF</div>
-          </div>
-
-          <div className="pricing-features">
-            <div className="pricing-feature-item">
-              <div className="pricing-feature-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF5A00" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
-              </div>
-              <span>45 Live Interactive Classes</span>
-            </div>
-            <div className="pricing-feature-item">
-              <div className="pricing-feature-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF5A00" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
-              </div>
-              <span>250+ Worksheets & Activities</span>
-            </div>
-            <div className="pricing-feature-item">
-              <div className="pricing-feature-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF5A00" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
-              </div>
-              <span>25+ Storybooks Included</span>
-            </div>
-            <div className="pricing-feature-item">
-              <div className="pricing-feature-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF5A00" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
-              </div>
-              <span>Dedicated Progress Tracking</span>
+            <div className="pc-features">
+              <span>• 45 Live Classes</span>
+              <span>• Phonics Based</span>
+              <span>• ACTD+ Certified Teachers</span>
             </div>
           </div>
 
-          <Link href="/payment" className="pricing-enroll-btn" id="pricing-enroll-btn">
-            <span>Enroll Now — ₹4,500</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </Link>
+          {/* Middle Section (Worksheet graphics + Tag) */}
+          <div className="pc-middle-graphics">
+            <div className="pc-tag-graphic">
+              <span>Best<br/>Value</span>
+            </div>
+            
+            <div className="pc-worksheets">
+              <img src="/images/pricing/41-bed_page-00012.png" className="pc-sheet pc-sheet-left" alt="Worksheet 1" onError={(e) => { e.target.style.display = 'none'; }} />
+              <img src="/images/pricing/45-kx_page-00013.png" className="pc-sheet pc-sheet-right" alt="Worksheet 2" onError={(e) => { e.target.style.display = 'none'; }} />
+              <img src="/images/pricing/48-at-an-et-en_page-00012.png" className="pc-sheet pc-sheet-center" alt="Worksheet 3" onError={(e) => { e.target.style.display = 'none'; }} />
+            </div>
+          </div>
 
-          <div className="pricing-guarantee">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          {/* Right Section (White Card) */}
+          <div className="pc-right-card">
+            <div className="pc-total-label">TOTAL</div>
+            <div className="pc-total-price">₹4,500</div>
+            
+            <div className="pc-seats-pill">
+              <div className="pc-seats-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <polyline points="16 11 18 13 22 9" />
+                </svg>
+              </div>
+              <div className="pc-seats-text">
+                Limited Seats<br/>Available
+              </div>
+            </div>
+
+            <Link href="/payment" className="pc-enroll-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              Enroll Now
+            </Link>
+          </div>
+        </div>
+
+        {/* Bottom Absolute Guarantee Bar */}
+        <div className="pc-bottom-guarantee">
+          <div className="pc-guarantee-main">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="2.5">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
-            <span>100% Refund Guarantee — No questions asked after first 2 classes</span>
+            2-Class Risk-free | 100% Refund Guaranteed
+          </div>
+          <div className="pc-guarantee-sub">
+            • 100% Refund if you're not satisfied after 2 classes
           </div>
         </div>
-
-        {/* Trust badges below the card */}
-        <div className="pricing-trust-row">
-          <div className="pricing-trust-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
-              <line x1="1" y1="10" x2="23" y2="10"/>
-            </svg>
-            <span>Secure Payment</span>
-          </div>
-          <div className="pricing-trust-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-            <span>SSL Encrypted</span>
-          </div>
-          <div className="pricing-trust-item">
-            <img src="https://razorpay.com/build/browser/static/razorpay-logo-white.svg" alt="Razorpay" style={{height: '18px', filter: 'brightness(10)'}} onError={(e) => { e.target.style.display = 'none'; }} />
-            <span>Powered by Razorpay</span>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
