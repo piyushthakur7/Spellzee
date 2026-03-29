@@ -589,11 +589,10 @@ export default function Home() {
               Best Value
             </div>
             <div className="pricing-header">
-              <span className="pricing-offer-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="#fff" stroke="none"><circle cx="12" cy="12" r="10"/></svg>
+              <span className="pricing-offer-badge" style={{background: "#FFF", color: "var(--primary-orange)", padding: "10px 24px", boxShadow: "0 4px 15px rgba(0,0,0,0.1)"}}>
                 SUMMER SPECIAL OFFER
               </span>
-              <h2 className="pricing-title">Simple &amp; Affordable</h2>
+              <h2 className="pricing-title" style={{marginTop: "8px"}}>Simple &amp; Affordable</h2>
             </div>
             <div className="pricing-math-row">
               <div className="pricing-math-card">
@@ -619,37 +618,45 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            {/* Visual Assets placeholder & CTA Card Row */}
-            <div className="pricing-cta-container" style={{display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "24px", marginTop: "32px"}}>
+            {/* Visual Assets & CTA Card Row */}
+            <div className="pricing-cta-container" style={{display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: "48px", marginTop: "16px"}}>
               
-              {/* Educational Cards Visual Placeholder */}
-              <div className="pricing-visuals" style={{flex: "1", minWidth: "280px", display: "flex", gap: "12px", justifyContent: "center", alignItems: "center"}}>
-                <img src="/images/worksheet-sample.png" alt="Educational Materials" style={{width: "140px", height: "auto", borderRadius: "8px", boxShadow: "0 8px 16px rgba(0,0,0,0.1)", transform: "rotate(-5deg)"}} />
-                <img src="/images/hero-girl.png" alt="Happy Student" style={{width: "140px", height: "140px", objectFit: "cover", borderRadius: "8px", boxShadow: "0 8px 16px rgba(0,0,0,0.1)", transform: "rotate(3deg)"}} />
+              {/* Educational Cards Visuals */}
+              <div className="pricing-visuals" style={{flex: "1", minWidth: "300px", display: "flex", gap: "20px", justifyContent: "center", alignItems: "center", position: "relative"}}>
+                <img src="/images/worksheet-sample.png" alt="Educational Materials" style={{width: "200px", height: "auto", borderRadius: "12px", boxShadow: "0 15px 30px rgba(0,0,0,0.2)", transform: "rotate(-8deg)", zIndex: "2"}} />
+                <img src="/images/hero-girl.png" alt="Happy Student" style={{width: "220px", height: "220px", objectFit: "cover", borderRadius: "12px", boxShadow: "0 15px 30px rgba(0,0,0,0.2)", transform: "rotate(5deg)", marginLeft: "-60px", border: "4px solid #FFF"}} />
               </div>
 
               {/* Final CTA Card */}
-              <div className="pricing-final-cta-card" style={{background: "var(--card-bg)", borderRadius: "24px", padding: "32px", display: "flex", flexDirection: "column", alignItems: "center", gap: "16px", minWidth: "320px", boxShadow: "var(--card-shadow)"}}>
-                <div style={{display: "flex", alignItems: "center", gap: "8px", background: "var(--bg-peach)", color: "var(--primary-orange)", padding: "6px 16px", borderRadius: "50px", fontSize: "14px", fontWeight: "700"}}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <div className="pricing-final-cta-card" style={{background: "#FFF", borderRadius: "32px", padding: "40px 32px", display: "flex", flexDirection: "column", alignItems: "center", gap: "24px", minWidth: "340px", boxShadow: "0 25px 50px rgba(0,0,0,0.15)", border: "1px solid #EEE"}}>
+                <div style={{display: "flex", alignItems: "center", gap: "8px", background: "#4A1A00", color: "#FFF", padding: "12px 28px", borderRadius: "100px", fontSize: "14px", fontWeight: "800", textTransform: "uppercase", letterSpacing: "1px"}}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                   Limited Seats Available
                 </div>
                 
-                <div style={{textAlign: "center"}}>
-                  <div style={{fontSize: "14px", color: "var(--text-muted)", fontWeight: "700", textTransform: "uppercase"}}>TOTAL</div>
-                  <div style={{fontSize: "48px", fontWeight: "800", color: "var(--text-body)", fontFamily: "'Baloo 2', cursive", lineHeight: "1"}}>₹4,500</div>
+                <div style={{textAlign: "center", display: "flex", flexDirection: "column", gap: "4px"}}>
+                  <div style={{fontSize: "16px", color: "#666", fontWeight: "700", textTransform: "uppercase", letterSpacing: "1.5px"}}>TOTAL</div>
+                  <div style={{fontSize: "64px", fontWeight: "800", color: "#000", fontFamily: "'Baloo 2', cursive", lineHeight: "1"}}>₹4,500</div>
                 </div>
 
-                <a href="/payment" className="btn pricing-cta-btn" style={{width: "100%", background: "#FF5A00", color: "#FFF", boxShadow: "0 8px 20px rgba(255, 90, 0, 0.3)"}}>Enroll Now &rarr;</a>
-                
-                <div className="pricing-guarantee-pill" style={{boxShadow: "none", background: "transparent", padding: "0"}}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366" stroke="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 15l-4-4 1.41-1.41L11 13.17l5.59-5.59L18 9l-7 7z"/></svg>
-                  <div className="guarantee-text" style={{textAlign: "left"}}>
-                    <span className="guarantee-bold" style={{fontSize: "13px"}}>2-Class Risk-free</span>
-                    <span className="guarantee-light" style={{fontSize: "11px"}}>100% Refund Guaranteed</span>
-                  </div>
-                </div>
+                <a href="/payment" className="btn pricing-cta-btn" style={{width: "100%", background: "#FF5A00", color: "#FFF", padding: "20px 32px", fontSize: "22px", borderRadius: "100px", display: "flex", justifyContent: "center", alignItems: "center", gap: "12px", boxShadow: "0 12px 24px rgba(255, 90, 0, 0.4)", fontWeight: "800"}}>
+                  Enroll Now
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
               </div>
+            </div>
+
+            {/* Bottom Guarantee Bar */}
+            <div className="pricing-guarantee-bar" style={{background: "#FFF", margin: "0 -48px -60px", padding: "20px 48px", borderTop: "1px solid #EEE", display: "flex", justifyContent: "center", alignItems: "center", gap: "12px"}}>
+              <div style={{background: "#E8F9EE", padding: "4px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", border: "1.5px solid #25D366"}}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" stroke="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 15l-4-4 1.41-1.41L11 13.17l5.59-5.59L18 9l-7 7z"/></svg>
+              </div>
+              <p style={{margin: 0, fontWeight: "800", fontSize: "16px", color: "#111"}}>
+                <span style={{color: "#25D366"}}>2-Class Risk-free</span> | 100% Refund Guaranteed
+              </p>
+              <p style={{margin: 0, fontSize: "14px", color: "#666", fontWeight: "600", marginLeft: "10px"}}>
+                • 100% Refund if you're not satisfied after 2 classes
+              </p>
             </div>
           </div>
           <div className="faq-container">
