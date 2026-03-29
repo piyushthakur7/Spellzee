@@ -13,13 +13,13 @@ export default function ReviewsSection() {
         <h2 className="section-heading results-heading" style={{marginBottom: "8px", color: "white", fontSize: "36px", fontWeight: "700", lineHeight: "1.2"}}>Trusted by <span className="text-orange">1000+ Parents</span></h2>
         <p className="results-subtext" style={{color: "rgba(255,255,255,0.7)", fontSize: "14px", fontWeight: "400", marginBottom: "48px", lineHeight: "1.5"}}>Real parents. Real reading progress. Across Globe.</p>
         
-        <div className="rating-breakdown" style={{background: "#1F150D", borderRadius: "16px", padding: "40px", display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "48px"}}>
+        <div className="rating-breakdown" style={{background: "#1F150D", borderRadius: "16px", padding: "40px", display: "flex", alignItems: "center", justifyContent: "center", gap: "80px", marginBottom: "48px"}}>
           <div className="rating-left" style={{textAlign: "center", width: "160px"}}>
             <div className="rating-big" style={{fontSize: "72px", fontWeight: "800", color: "var(--primary-orange)", lineHeight: "1"}}>4.9</div>
             <div className="rating-stars" style={{color: "#FFA500", fontSize: "24px", margin: "8px 0 4px", letterSpacing: "2px"}}>★★★★★</div>
             <div className="rating-count" style={{fontSize: "14px", fontWeight: "500", color: "rgba(255,255,255,0.7)"}}>512 reviews</div>
           </div>
-          <div className="rating-bars" style={{flexGrow: 1, margin: "0 48px", maxWidth: "400px"}}>
+          <div className="rating-bars" style={{width: "100%", maxWidth: "400px"}}>
             {[91, 7, 2, 0, 0].map((p, i) => (
               <div key={i} className="bar-row" style={{display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px", fontSize: "13px", fontWeight: "500", color: "rgba(255,255,255,0.6)"}}>
                 <span style={{width: "10px", textAlign: "right"}}>{5-i}</span><span style={{color: "#FFA500", fontSize: "14px"}}>★</span>
