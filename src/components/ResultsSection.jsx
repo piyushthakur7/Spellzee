@@ -7,7 +7,7 @@ export default function ResultsSection() {
           Real Results
         </span>
         <h2 className="section-heading results-heading" style={{marginBottom: "8px", fontSize: "36px", fontWeight: "700", lineHeight: "1.2"}}>What Children <span className="text-orange">Achieve</span> in 45 Days</h2>
-        <p className="results-subtext" style={{color: "rgba(255,255,255,0.7)", fontSize: "14px", fontWeight: "400", marginBottom: "48px", lineHeight: "1.5"}}>Measurable outcomes every parent can see — tracked and verified across 1000+ students.</p>
+        <p className="results-subtext" style={{color: "#FFFFFF", fontSize: "16px", fontWeight: "400", marginBottom: "48px", lineHeight: "1.5"}}>Measurable outcomes every parent can see — tracked and verified across 1000+ students.</p>
         <div className="results-grid">
           {[
             { n: "97%", h: "Reads 3-letter words by Day 20" },
