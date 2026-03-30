@@ -12,15 +12,26 @@ export default function ActivitiesSection() {
         <div className="worksheet-carousel" style={{marginBottom: "64px"}}>
           <div className="worksheet-track" style={{display: "flex", gap: "24px", overflowX: "auto", paddingBottom: "24px", paddingRight: "40px", paddingLeft: "16px"}}>
             {[
-              { file: "worksheet-1.png", color: "#EF5B9E" },
-              { file: "worksheet-2.png", color: "#54C670" },
-              { file: "worksheet-3.png", color: "#E53E5C" },
-              { file: "worksheet-4.png", color: "#F7BE54" },
-              { file: "worksheet-5.png", color: "#EF5B9E" },
-              { file: "worksheet-6.png", color: "#E53E5C" },
+              { file: "dee6127591958678e6b512005d4140b936f8be16%20(1).jpg", color: "#54C670" }, // Discriminating Ending Sounds (Green)
+              { file: "a28db87413ddd304eeeb00240bd8891eee97e2cc%20(1).jpg", color: "#EF5B9E" }, // Word Building a (Pink)
+              { file: "82ebec403ae49d8c748cd1ea82e3b520b537282d%20(1).jpg", color: "#F7BE54" }, // Word Building e (Yellow)
+              { file: "d5f07e4b71102d3b1cc6d6d9819581b023ae0c38%20(1).jpg", color: "#9E35F4" }, // Word Family at (Purple) 
+              { file: "dbb1003161785361306184568bdae4fcffc425dd%20(1).jpg", color: "#E53E5C" }, // at, an, et, en (Red)
+              { file: "0076cd1b38cf547cb69bd7db6a7aa73c52af3892%20(1).jpg", color: "#54C670" }, // Extra (Green)
             ].map((w, i) => (
-              <div key={i} className="worksheet-card" style={{minWidth: "280px", height: "380px", borderRadius: "16px", border: `1.5px solid ${w.color}`, background: "var(--card-bg)", display: "flex", overflow: "hidden", flexShrink: 0, boxShadow: "var(--card-shadow)"}}>
-                <img src={`/images/${w.file}`} alt="Worksheet Sample" style={{width: "100%", height: "100%", objectFit: "cover"}} />
+              <div key={i} className="worksheet-card" style={{
+                minWidth: "260px", 
+                aspectRatio: "1 / 1.41", 
+                borderRadius: "12px", 
+                border: `2px solid ${w.color}`, 
+                background: "#FFFFFF", 
+                display: "flex", 
+                padding: "8px",
+                overflow: "hidden", 
+                flexShrink: 0, 
+                boxShadow: "0 10px 30px rgba(0,0,0,0.12)"
+              }}>
+                <img src={`/images/${w.file}`} alt="Worksheet Sample" style={{width: "100%", height: "100%", objectFit: "contain", borderRadius: "8px"}} />
               </div>
             ))}
           </div>
