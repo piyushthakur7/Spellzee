@@ -33,7 +33,7 @@ export default function CurriculumSection() {
           ))}
         </div>
         <div className="note-curriculum-container">
-          <img src="/images/pin-icon.png" alt="Note" className="note-pin-icon" />
+          <img src="/images/push-pin%201.png" alt="Note" className="note-pin-icon" />
           <p>
             Note for Parents: This is a <span className="text-orange">Phonics Basics program</span>, not a complete advanced phonics course. Children master the core foundations — short vowels, CVC words, word families, and sentence writing. Advanced topics (blends, digraphs, long vowels) are in our next-level programs.
           </p>
