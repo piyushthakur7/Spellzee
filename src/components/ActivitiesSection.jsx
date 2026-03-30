@@ -31,7 +31,13 @@ export default function ActivitiesSection() {
       </div>
       <div className="word-ribbon" style={{background: "var(--bg-body)", padding: "48px 0", borderTop: "1px solid var(--border-light)"}}>
         <div className="word-ribbon-track" style={{display: "flex", gap: "32px", animation: "scrollLeft 30s linear infinite", padding: "0 24px", paddingBottom: "32px"}}>
-          {["GO", "GOT", "GOAT", "FLOAT", "FLOATING"].map((w, i) => (
+          {[
+            "37f97db9857e1ea15c4028d630a0f5a1395f9317.png",
+            "46ed6cbb9ba872c459554f301e4ae156ec555599.png",
+            "1940c0196421ec00a1a00d047b1ca38516c213c0.png",
+            "ade51aa81de0f8c850570baf0102e686ca1886bc.png",
+            "8f2e79fde4ac69619a56f741003cd18f33c647be.png"
+          ].map((img, i) => (
             <div key={i} className="word-flashcard" style={{
               background: "#fff",
               borderRadius: "16px",
@@ -53,16 +59,19 @@ export default function ActivitiesSection() {
                 alignItems: "center",
                 justifyContent: "center",
                 height: "100px",
-                fontSize: "44px",
-                fontWeight: "600",
-                color: "var(--text-body)",
-                letterSpacing: "1px"
+                overflow: "hidden"
               }}>
-                {w}
+                <img src={`/images/${img}`} alt="Word Flashcard" style={{width: "100%", height: "100%", objectFit: "contain"}} />
               </div>
             </div>
           ))}
-          {["GO", "GOT", "GOAT", "FLOAT", "FLOATING"].map((w, i) => (
+          {[
+            "37f97db9857e1ea15c4028d630a0f5a1395f9317.png",
+            "46ed6cbb9ba872c459554f301e4ae156ec555599.png",
+            "1940c0196421ec00a1a00d047b1ca38516c213c0.png",
+            "ade51aa81de0f8c850570baf0102e686ca1886bc.png",
+            "8f2e79fde4ac69619a56f741003cd18f33c647be.png"
+          ].map((img, i) => (
              <div key={i+"-dup"} className="word-flashcard" style={{
               background: "#fff",
               borderRadius: "16px",
@@ -84,12 +93,9 @@ export default function ActivitiesSection() {
                 alignItems: "center",
                 justifyContent: "center",
                 height: "100px",
-                fontSize: "44px",
-                fontWeight: "600",
-                color: "var(--text-body)",
-                letterSpacing: "1px"
+                overflow: "hidden"
               }}>
-                {w}
+                <img src={`/images/${img}`} alt="Word Flashcard" style={{width: "100%", height: "100%", objectFit: "contain"}} />
               </div>
             </div>
           ))}
