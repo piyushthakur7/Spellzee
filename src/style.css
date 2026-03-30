@@ -735,25 +735,27 @@ header {
 
 /* ===== Difference Section ===== */
 .difference-section {
-  background-color: var(--bg-body);
+  background-color: #0F0F0F; /* Ultra-dark background for immersion */
+  color: #FFF;
 }
 
 .difference-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  display: flex;
+  flex-direction: column; /* Stacked horizontally wide cards as seen in target */
+  gap: 24px;
 }
 
 .diff-card {
-  background: var(--card-bg);
-  padding: 40px 30px 48px;
-  border-radius: var(--border-radius-lg);
+  background: #1A1A1A; /* Dark background as seen in target */
+  padding: 36px 30px;
+  border-radius: 20px;
   border: 1px solid #FF8844;
-  text-align: center;
+  text-align: left;
   transition: var(--transition);
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 32px;
+  height: 100%;
 }
 
 .diff-card:hover {
@@ -762,31 +764,36 @@ header {
 }
 
 .diff-icon {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   background: #FFE6D5;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(255, 230, 213, 0.2);
 }
 
 .diff-card h3 {
   font-family: 'Baloo 2', cursive;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 800;
-  line-height: 1.2;
-  color: var(--text-body);
+  line-height: 1.1;
+  color: #FFF;
   margin-bottom: 0;
+  width: 120px; /* Force stacking as seen in target */
+  flex-shrink: 0;
 }
 
 .diff-card p {
   font-family: 'DM Sans', sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1.6;
-  color: var(--text-body);
+  line-height: 1.5;
+  color: #DDD;
+  margin: 0;
+  flex: 1;
 }
 
 /* ===== Curriculum Section ===== */
