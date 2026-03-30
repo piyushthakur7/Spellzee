@@ -112,7 +112,7 @@ ul {
   cursor: pointer;
   transition: var(--transition);
   border: none;
-  font-size: 16px;
+  font-size: 18px;
   gap: 10px;
   font-family: inherit;
 }
@@ -373,7 +373,7 @@ header {
 }
 
 .hero-desc {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 30px;
   max-width: 420px;
   line-height: 1.7;
@@ -539,17 +539,18 @@ header {
 
 .trust-card-wrapper {
   display: flex;
-  padding: 56px 48px;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  padding: 48px 60px;
   border-radius: 23px;
   background: var(--card-bg);
   box-shadow: var(--card-shadow);
   margin: 60px auto 0;
   position: relative;
   z-index: 20;
-  max-width: 1200px;
+  width: 1278px;
+  height: 411px;
+  max-width: 100%; /* For responsiveness */
 }
 
 .trust-heading {
@@ -557,7 +558,7 @@ header {
   font-size: 32px;
   font-weight: 700;
   color: var(--text-body);
-  margin-bottom: 0;
+  margin-bottom: 40px;
 }
 
 .trust-grid {
@@ -565,7 +566,7 @@ header {
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  gap: 74px;
+  gap: 40px;
 }
 
 .trust-item {
@@ -574,7 +575,32 @@ header {
   align-items: center;
   text-align: center;
   flex: 1;
-  gap: 4px; /* Reduced gap to allow more vertical flow */
+  gap: 12px;
+}
+
+.trust-item-logo {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.trust-logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.logo-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card-bg);
 }
 
 .trust-item-label {
@@ -583,23 +609,23 @@ header {
   font-family: "Baloo 2", cursive;
   font-size: 24px;
   font-weight: 700;
-  line-height: 160%;
-  margin-bottom: 2px;
-  align-self: stretch;
-}
-
-.trust-item h4 {
-  font-size: 18px;
-  font-weight: 800;
-  margin: 0;
-  color: var(--text-body);
   line-height: 1.2;
 }
 
-.trust-item p {
-  font-size: 14px;
-  margin: 0;
+.trust-item-heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-body);
+  margin: 4px 0;
+  line-height: 1.2;
+  font-family: "Baloo 2", cursive;
+}
+
+.trust-subtext {
+  font-size: 16px;
   color: var(--text-muted);
+  margin: 0;
+  font-weight: 500;
 }
 
 .trust-badge-pill {
@@ -615,14 +641,14 @@ header {
   font-size: 14px;
   font-weight: 700;
   text-transform: capitalize;
-  margin-top: 12px;
+  margin-top: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border: none;
 }
 
 .badge-icon-rosette {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -631,14 +657,33 @@ header {
 }
 
 .trust-badge-pill svg {
-  width: 12px;
-  height: 12px;
+  width: 24px;
+  height: 24px;
 }
 
 .trust-badge-pill.approved { background: #FF5A00; }
 .trust-badge-pill.verified { background: #FF5A00; }
 .trust-badge-pill.rated { background: #FF5A00; }
 .trust-badge-pill.accredited { background: #FF5A00; }
+
+.stat-row {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.star-inline {
+  font-size: 24px;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
 
 
 
@@ -746,15 +791,15 @@ header {
 
 .diff-card {
   background: var(--card-bg);
-  padding: 40px 30px 48px;
-  border-radius: var(--border-radius-lg);
+  padding: 40px 32px;
+  border-radius: 16px;
   border: 1px solid #FF8844;
   text-align: center;
   transition: var(--transition);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .diff-card:hover {
@@ -772,6 +817,7 @@ header {
   justify-content: center;
   flex-shrink: 0;
   box-shadow: 0 4px 20px rgba(255, 230, 213, 0.2);
+  color: #FF5A00;
 }
 
 .diff-card h3 {
@@ -785,7 +831,7 @@ header {
 
 .diff-card p {
   font-family: 'DM Sans', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.6;
   color: var(--text-muted);
@@ -2376,26 +2422,42 @@ footer {
 
 .hero-info-card {
   flex: 1;
-  background-color: var(--card-bg);
-  padding: 16px 24px;
+  background-color: #111111; /* Dark background as per design */
+  padding: 24px;
   border-radius: 12px;
-  border: 1px solid var(--border-light);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .hero-info-card .card-icon {
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.hero-info-card .people-icon {
+  background-color: #6366F1; /* Purple background */
+  color: #FFFFFF;
 }
 
 .hero-info-card .card-text h4 {
-  font-size: 16px;
+  font-size: 24px;
+  font-weight: 700;
   margin-bottom: 2px;
+  color: #FFFFFF;
+  font-family: 'Baloo 2', cursive;
 }
 
 .hero-info-card .card-text p {
-  font-size: 12px;
-  color: #ccc;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
 }
 
 @media (max-width: 600px) {

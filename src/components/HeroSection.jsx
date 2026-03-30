@@ -45,7 +45,14 @@ export default function HeroSection() {
           
           <div className="hero-info-cards">
             <div className="info-card hero-info-card">
-              <div className="card-icon">👥</div>
+              <div className="card-icon people-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="9" cy="7" r="4" fill="currentColor"/>
+                  <path d="M15 7C15 8.10457 14.1046 9 13 9C11.8954 9 11 8.10457 11 7C11 5.89543 11.8954 5 13 5C14.1046 5 15 5.89543 15 7Z" fill="currentColor" fillOpacity="0.6"/>
+                  <path d="M2 17C2 14.2386 4.23858 12 7 12H11C13.7614 12 16 14.2386 16 17V19H2V17Z" fill="currentColor"/>
+                  <path d="M16 12C18.2091 12 20 13.7909 20 16V19H17V17.5C17 15.6591 16.3284 14 15 12.8944C15.3129 12.8333 15.6515 12.8 16 12Z" fill="currentColor" fillOpacity="0.6"/>
+                </svg>
+              </div>
               <div className="card-text">
                 <h4>Group Program</h4>
                 <p>Interactive • Peer Learning • More Fun!</p>
@@ -53,7 +60,7 @@ export default function HeroSection() {
             </div>
             <div className="info-card hero-info-card" style={{ display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
               <div className="card-text">
-                <h4 style={{fontSize: '24px'}}>₹4,500</h4>
+                <h4>₹4,500</h4>
                 <p>Just ₹100 / class</p>
               </div>
             </div>
