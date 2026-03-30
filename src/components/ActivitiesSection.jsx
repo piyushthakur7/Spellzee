@@ -2,7 +2,10 @@ export default function ActivitiesSection() {
   return (
     <section className="activities-section section-padding">
       <div className="container">
-        <span className="section-badge section-badge-orange">Sample Activities</span>
+        <span className="section-badge section-badge-orange" style={{display: "inline-flex", alignItems: "center", gap: "8px"}}>
+          <img src="/images/document_2783285%201%20%5BVectorized%5D%20(1).svg" alt="Activities" style={{width: '18px', height: '18px'}} />
+          Sample Activities
+        </span>
         <h2 className="section-heading" style={{marginBottom: "8px", fontSize: "36px", fontWeight: "700", lineHeight: "1.2"}}>What Your Child Will <span className="text-orange">Read & Write</span></h2>
         <p className="section-subtext" style={{color: "var(--text-body)", fontSize: "16px", fontWeight: "400", marginBottom: "24px", maxWidth: "100%", lineHeight: "1.5"}}>Hands-on worksheets used in every group session — phonics made playful.</p>
         <div className="pdf-badge" style={{display: "inline-flex", alignItems: "center", gap: "8px", padding: "8px 20px", borderRadius: "20px", background: "rgba(255,102,17,0.1)", color: "var(--primary-orange)", fontWeight: "600", fontSize: "14px", marginBottom: "40px", cursor: "pointer"}}>
@@ -19,19 +22,8 @@ export default function ActivitiesSection() {
               { file: "dbb1003161785361306184568bdae4fcffc425dd%20(1).jpg", color: "#E53E5C" }, // at, an, et, en (Red)
               { file: "0076cd1b38cf547cb69bd7db6a7aa73c52af3892%20(1).jpg", color: "#54C670" }, // Extra (Green)
             ].map((w, i) => (
-              <div key={i} className="worksheet-card" style={{
-                minWidth: "260px", 
-                aspectRatio: "1 / 1.41", 
-                borderRadius: "12px", 
-                border: `2px solid ${w.color}`, 
-                background: "#FFFFFF", 
-                display: "flex", 
-                padding: "8px",
-                overflow: "hidden", 
-                flexShrink: 0, 
-                boxShadow: "0 10px 30px rgba(0,0,0,0.12)"
-              }}>
-                <img src={`/images/${w.file}`} alt="Worksheet Sample" style={{width: "100%", height: "100%", objectFit: "contain", borderRadius: "8px"}} />
+              <div key={i} className="worksheet-card" style={{minWidth: "280px", height: "380px", borderRadius: "16px", border: `1.5px solid ${w.color}`, background: "var(--card-bg)", display: "flex", overflow: "hidden", flexShrink: 0, boxShadow: "var(--card-shadow)"}}>
+                <img src={`/images/${w.file}`} alt="Worksheet Sample" style={{width: "100%", height: "100%", objectFit: "cover"}} />
               </div>
             ))}
           </div>
