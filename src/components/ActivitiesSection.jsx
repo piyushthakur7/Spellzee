@@ -12,8 +12,14 @@ export default function ActivitiesSection() {
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
           Printable PDFs
         </div>
-        <div className="worksheet-carousel" style={{marginBottom: "64px"}}>
-          <div className="worksheet-track" style={{display: "flex", gap: "24px", overflowX: "auto", paddingBottom: "24px", paddingRight: "40px", paddingLeft: "16px"}}>
+        <div className="worksheet-carousel" style={{marginBottom: "64px", overflow: "hidden", position: "relative"}}>
+          <div className="worksheet-track" style={{
+            display: "flex", 
+            gap: "24px", 
+            animation: "scrollLeft 45s linear infinite",
+            width: "max-content",
+            padding: "20px 0"
+          }}>
             {[
               { file: "dee6127591958678e6b512005d4140b936f8be16%20(1).jpg", color: "#54C670" }, // Discriminating Ending Sounds (Green)
               { file: "a28db87413ddd304eeeb00240bd8891eee97e2cc%20(1).jpg", color: "#EF5B9E" }, // Word Building a (Pink)
@@ -21,9 +27,30 @@ export default function ActivitiesSection() {
               { file: "d5f07e4b71102d3b1cc6d6d9819581b023ae0c38%20(1).jpg", color: "#9E35F4" }, // Word Family at (Purple) 
               { file: "dbb1003161785361306184568bdae4fcffc425dd%20(1).jpg", color: "#E53E5C" }, // at, an, et, en (Red)
               { file: "0076cd1b38cf547cb69bd7db6a7aa73c52af3892%20(1).jpg", color: "#54C670" }, // Extra (Green)
+              { file: "dee6127591958678e6b512005d4140b936f8be16%20(1).jpg", color: "#54C670" },
+              { file: "a28db87413ddd304eeeb00240bd8891eee97e2cc%20(1).jpg", color: "#EF5B9E" },
+              { file: "82ebec403ae49d8c748cd1ea82e3b520b537282d%20(1).jpg", color: "#F7BE54" },
+              { file: "d5f07e4b71102d3b1cc6d6d9819581b023ae0c38%20(1).jpg", color: "#9E35F4" },
+              { file: "dbb1003161785361306184568bdae4fcffc425dd%20(1).jpg", color: "#E53E5C" },
+              { file: "0076cd1b38cf547cb69bd7db6a7aa73c52af3892%20(1).jpg", color: "#54C670" },
             ].map((w, i) => (
-              <div key={i} className="worksheet-card" style={{minWidth: "280px", height: "380px", borderRadius: "16px", border: `1.5px solid ${w.color}`, background: "var(--card-bg)", display: "flex", overflow: "hidden", flexShrink: 0, boxShadow: "var(--card-shadow)"}}>
-                <img src={`/images/${w.file}`} alt="Worksheet Sample" style={{width: "100%", height: "100%", objectFit: "cover"}} />
+              <div key={i} className="worksheet-card" style={{
+                minWidth: "280px", 
+                height: "380px", 
+                borderRadius: "16px", 
+                border: `1.5px solid ${w.color}`, 
+                background: "#1A1A1A", /* Dark background for worksheets to stand out */
+                display: "flex", 
+                overflow: "hidden", 
+                flexShrink: 0, 
+                boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+                padding: "8px"
+              }}>
+                <img 
+                  src={`/images/${w.file}`} 
+                  alt="Worksheet Sample" 
+                  style={{width: "100%", height: "100%", objectFit: "contain", borderRadius: "8px"}} 
+                />
               </div>
             ))}
           </div>

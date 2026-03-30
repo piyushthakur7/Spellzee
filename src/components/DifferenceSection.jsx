@@ -9,8 +9,8 @@ export default function DifferenceSection() {
             </svg>
             The Spellzee Difference
           </span>
-          <h2 className="section-heading" style={{margin: 0, color: '#FFF'}}>Why 1000+ Parents <span className="text-orange">Choose Spellzee</span></h2>
-          <p className="section-subtext" style={{margin: 0, color: '#DDD'}}>Not just another English class. A structured phonics system that actually works — in 45 days.</p>
+          <h2 className="section-heading" style={{margin: 0}}>Why 1000+ Parents <span className="text-orange">Choose Spellzee</span></h2>
+          <p className="section-subtext" style={{margin: 0}}>Not just another English class. A structured phonics system that actually works — in 45 days.</p>
         </div>
         <div className="difference-grid">
           <div className="diff-card">
