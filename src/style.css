@@ -749,11 +749,11 @@ header {
   padding: 40px 30px 48px;
   border-radius: var(--border-radius-lg);
   border: 1px solid #FF8844;
-  text-align: left;
+  text-align: center;
   transition: var(--transition);
   display: flex;
-  flex-direction: column;
-  gap: 24px;
+  align-items: center;
+  gap: 20px;
 }
 
 .diff-card:hover {
@@ -762,14 +762,14 @@ header {
 }
 
 .diff-icon {
-  width: 56px;
-  height: 56px;
-  background: rgba(255, 102, 17, 0.1);
+  width: 64px;
+  height: 64px;
+  background: #FFE6D5;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
+  flex-shrink: 0;
 }
 
 .diff-card h3 {

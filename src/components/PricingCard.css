@@ -1,429 +1,381 @@
-/* ===== Pricing Component Redesign ===== */
+/* ===== Pricing Component Redesign (Strict Layered Version) ===== */
 .pc-wrapper {
-  padding: 60px 20px 80px;
+  position: relative;
+  padding: 100px 0 160px; /* Extra padding for floating elements and ground strip */
   background-color: var(--bg-body, #fff);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
 }
 
+/* 1. LAYER 1: Full-width Ground Strip (Bottom Anchor) */
+.pc-anchoring-strip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background-color: #F97316; /* Deep marketing orange */
+  z-index: 1;
+}
+
+/* 2. LAYER 2: Main Floating Card */
 .pc-container {
   position: relative;
-  background: #FF781E;
-  background: linear-gradient(135deg, #FF781E 0%, #FF8533 100%);
-  border-radius: 20px;
-  max-width: 1080px;
-  width: 100%;
-  padding: 45px 35px 50px 45px;
-  box-shadow: 0 15px 40px rgba(255, 120, 30, 0.15);
+  background: linear-gradient(90deg, #FF6611 0%, #FF8844 100%);
+  border-radius: 24px;
+  max-width: 1100px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 50px 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  margin-bottom: -80px; /* Crucial overlap with the ground strip */
 }
 
-/* Background decorative circles */
-.pc-container::before {
-  content: '';
-  position: absolute;
-  top: -40px;
-  right: 25%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-/* Top Badge */
-.pc-top-badge {
-  position: absolute;
-  top: -18px;
-  left: 45px;
-  background-color: #FF781E;
-  color: #FFF;
-  border: 2px solid #FFF;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  z-index: 10;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Main Content Wrapper */
+/* Internal Content Layout */
 .pc-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 30px;
 }
 
-/* Left Section */
+/* Left Section Styles */
 .pc-left {
-  flex: 1;
+  flex: 1.2;
   color: #FFF;
-  max-width: 580px;
+}
+
+.pc-top-badge {
+  position: absolute;
+  top: -16px;
+  left: 40px;
+  background-color: #CC4E00; /* Contrast Darker Orange */
+  color: #FFF;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .pc-title {
   font-family: 'Baloo 2', cursive;
-  font-size: 42px;
+  font-size: 48px;
   font-weight: 800;
   color: #FFF;
-  margin-bottom: 25px;
-  line-height: 1.2;
+  margin-bottom: 30px;
+  line-height: 1.1;
 }
 
 .pc-calculation-row {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-/* Calc Boxes */
 .pc-calc-box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  border: 2px solid rgba(255, 255, 255, 0.4);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 16px 20px;
-  min-width: 130px;
+  border-radius: 14px;
+  padding: 14px 18px;
+  min-width: 125px;
   text-align: center;
 }
 
-.pc-box-solid {
-  background: #FFA726; /* Slightly lighter orange/yellowish depending on image, using pure orange fill */
-  background: linear-gradient(180deg, #FF9E22, #FF8D00);
-  border-color: #FFF;
-  min-width: 150px;
+.pc-box-highlight {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid #FFF;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .pc-box-label {
   font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: 0.5px;
-  color: #FFF;
-  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 4px;
 }
 
-.pc-box-value {
+.pc-box-value, .pc-box-highlight-value {
   font-family: 'Baloo 2', cursive;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 800;
-  color: #FFF8E1; /* Slight yellow tint */
+  color: #FFF;
   line-height: 1;
 }
 
-.pc-box-value-large {
-  font-family: 'Baloo 2', cursive;
-  font-size: 32px;
-  font-weight: 800;
-  color: #FFF;
-  line-height: 1.1;
+.pc-box-highlight-sub {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 2px;
 }
 
-.pc-box-sub-label {
+.pc-math-sign {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.6);
+}
+
+.pc-features-inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: 'DM Sans', sans-serif;
   font-size: 15px;
   font-weight: 700;
   color: #FFF;
-  margin-top: 4px;
+  opacity: 0.95;
 }
 
-.pc-math-sign {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.7);
+.pc-dot {
+  font-size: 20px;
+  opacity: 0.6;
 }
 
-/* Features Text */
-.pc-features {
+/* Middle Visual Styles */
+.pc-middle {
+  flex: 0.8;
+  position: relative;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: #FFF;
-  opacity: 0.9;
+  justify-content: center;
+  height: 260px;
 }
 
-/* Middle Graphics (Worksheets + Tag) */
-.pc-middle-graphics {
+.pc-best-value-badge {
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  background: #E11D48; /* Premium Rose Red */
+  color: #FFF;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 800;
+  font-size: 18px;
+  transform: rotate(15deg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border: 2px solid #FFF;
+  z-index: 10;
+}
+
+.pc-visual-stack {
   position: relative;
   width: 200px;
-  height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
 }
 
-/* "Best Value" Red Tag using Pure CSS */
-.pc-tag-graphic {
+.pc-visual-card {
   position: absolute;
-  top: -30px;
-  right: -30px;
-  background: #E53935;
-  color: #FFF;
-  font-family: 'Baloo 2', cursive;
-  font-size: 16px;
-  font-weight: 800;
-  text-align: center;
-  line-height: 1.1;
-  padding: 12px 16px;
-  border-radius: 6px;
-  transform: rotate(15deg);
-  z-index: 20;
-  box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
-  border: 2px solid #FFF;
-}
-.pc-tag-graphic::before {
-  content: '';
-  position: absolute;
-  top: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 8px;
-  height: 8px;
-  background: #FFF;
-  border-radius: 50%;
-  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.4);
-}
-
-/* Worksheet stack */
-.pc-worksheets {
-  position: relative;
-  width: 180px;
-  height: 220px;
-}
-
-.pc-sheet {
-  position: absolute;
-  width: 140px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  border: 4px solid #FFF;
-  background: #FFF;
-  transition: transform 0.3s;
-}
-
-.pc-sheet-left {
-  left: -20px;
-  top: 30px;
-  transform: rotate(-8deg) scale(0.9);
-  z-index: 1;
-}
-
-.pc-sheet-right {
-  right: -20px;
-  top: 40px;
-  transform: rotate(12deg) scale(0.9);
-  z-index: 2;
-}
-
-.pc-sheet-center {
-  left: 20px;
-  top: 10px;
-  transform: rotate(2deg);
-  z-index: 3;
   width: 150px;
+  border-radius: 12px;
+  background: #FFF;
+  padding: 4px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border: 4px solid #FFF;
 }
 
-.pc-worksheets:hover .pc-sheet-left { transform: rotate(-12deg) scale(0.95) translateX(-10px); }
-.pc-worksheets:hover .pc-sheet-right { transform: rotate(16deg) scale(0.95) translateX(10px); }
-.pc-worksheets:hover .pc-sheet-center { transform: rotate(0deg) scale(1.05) translateY(-5px); }
+.card-left {
+  left: -30px;
+  top: 30px;
+  transform: rotate(-5deg);
+  z-index: 5;
+}
 
-/* Right Section (White Card) */
-.pc-right-card {
+.card-right {
+  right: -30px;
+  top: 40px;
+  transform: rotate(3deg);
+  z-index: 6;
+}
+
+.card-center {
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%) rotate(0deg);
+  z-index: 7;
+  width: 170px;
+}
+
+/* Right Section Styles */
+.pc-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pc-cta-card {
   background: #FFF;
   border-radius: 16px;
-  padding: 30px 40px;
+  padding: 30px;
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  min-width: 260px;
-  flex-shrink: 0;
-  text-align: center;
+  gap: 20px;
 }
 
-.pc-total-label {
+.pc-cta-label {
   font-family: 'DM Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #666;
-  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #888;
+  letter-spacing: 1.2px;
 }
 
-.pc-total-price {
+.pc-cta-price {
   font-family: 'Baloo 2', cursive;
   font-size: 54px;
   font-weight: 800;
   color: #1A1A1A;
   line-height: 1;
-  margin-bottom: 20px;
 }
 
-.pc-seats-pill {
-  display: flex;
-  align-items: center;
-  background: #6D4C13; /* Brown pill color from design */
-  color: #FFF;
-  padding: 8px 16px;
-  border-radius: 50px;
-  gap: 10px;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.pc-seats-icon {
-  display: flex;
+.pc-seats-status {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-}
-
-.pc-seats-text {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.2;
-  text-align: left;
-}
-
-.pc-enroll-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  padding: 14px 24px;
-  background: var(--primary-orange, #FF5A00);
-  color: #FFF;
-  border-radius: 50px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.3s;
-  box-shadow: 0 4px 15px rgba(255, 90, 0, 0.3);
-}
-
-.pc-enroll-btn:hover {
-  background: #E85000;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 90, 0, 0.4);
-}
-
-/* Bottom Guarantee Bar */
-.pc-bottom-guarantee {
-  position: absolute;
-  bottom: -35px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #FFF;
-  padding: 12px 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #F0F0F0;
-  min-width: 400px;
-  text-align: center;
-}
-
-.pc-guarantee-main {
-  display: flex;
-  align-items: center;
   gap: 8px;
-  color: #333;
+  background: #FEF3C7;
+  color: #B45309;
+  padding: 8px 14px;
+  border-radius: 50px;
   font-family: 'DM Sans', sans-serif;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 800;
 }
 
-.pc-guarantee-main svg {
-  width: 20px;
-  height: 20px;
+.pc-enroll-button {
+  width: 100%;
+  padding: 16px;
+  background: #F97316;
+  color: #FFF;
+  border: none;
+  border-radius: 50px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pc-enroll-button:hover {
+  background: #EA580C;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
+}
+
+/* 3. LAYER 3: Floating Guarantee Bar */
+.pc-floating-guarantee {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: auto;
+  min-width: 480px;
+}
+
+.pc-guarantee-inner {
+  background: #FFF;
+  padding: 14px 30px;
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #F0F0F0;
+}
+
+.pc-shield-icon {
+  width: 32px;
+  height: 32px;
+  color: #22C55E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pc-guarantee-info {
+  text-align: left;
+}
+
+.pc-guarantee-title {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #333;
 }
 
 .pc-guarantee-sub {
-  color: #777;
   font-family: 'DM Sans', sans-serif;
   font-size: 12px;
   font-weight: 600;
-  margin-top: 4px;
+  color: #666;
+  margin: 0;
 }
 
-
-/* ===== Mobile & Tablet Responsiveness ===== */
-@media (max-width: 1040px) {
+/* Responsiveness */
+@media (max-width: 992px) {
   .pc-content {
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
-
-  .pc-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .pc-features {
+  .pc-features-inline {
     justify-content: center;
+    flex-wrap: wrap;
   }
-
-  .pc-middle-graphics {
-    margin: 30px 0;
+  .pc-right {
+    justify-content: center;
+    width: 100%;
+  }
+  .pc-cta-card {
+    max-width: 100%;
+  }
+  .pc-floating-guarantee {
+    width: 90%;
+    min-width: auto;
+  }
+  .pc-guarantee-inner {
+    padding: 12px 20px;
   }
 }
 
-@media (max-width: 650px) {
-  .pc-container {
-    padding: 40px 20px 60px;
-  }
-
-  .pc-top-badge {
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    top: -15px;
-  }
-
+@media (max-width: 640px) {
   .pc-calculation-row {
     flex-direction: column;
-    gap: 16px;
-  }
-
-  .pc-calc-box {
     width: 100%;
   }
-
   .pc-math-sign {
     transform: rotate(90deg);
   }
-
-  .pc-bottom-guarantee {
-    min-width: 90%;
-    bottom: -45px;
-    padding: 12px 16px;
+  .pc-calc-box {
+    width: 100%;
   }
-
-  .pc-guarantee-main {
-    font-size: 13px;
+  .pc-title {
+    font-size: 36px;
   }
-
-  .pc-guarantee-sub {
-    font-size: 11px;
+  .pc-guarantee-inner {
+    flex-direction: column;
+    border-radius: 20px;
+    text-align: center;
+  }
+  .pc-guarantee-info {
+    text-align: center;
   }
 }

@@ -14,14 +14,23 @@ export default function DifferenceSection() {
         </div>
         <div className="difference-grid">
           <div className="diff-card">
+            <div className="diff-icon">
+              <img src="/images/sad_4309111%201%20%5BVectorized%5D%20(2).svg" alt="Support" style={{width: '32px', height: '32px'}} />
+            </div>
             <h3>Why Most Kids Struggle</h3>
             <p>It's not about intelligence. It's about a missing step — <strong className="text-orange">no one taught them the sounds behind the words.</strong> Without phonics, reading feels like guesswork.</p>
           </div>
           <div className="diff-card">
+            <div className="diff-icon">
+              <img src="/images/app_16075986%201%20%5BVectorized%5D%20(1).svg" alt="Phonics First" style={{width: '32px', height: '32px'}} />
+            </div>
             <h3>Sounds First. Always.</h3>
             <p>We don't start with letters — we start with sounds. Our phonics-first method turns every word into something a child can decode, read, and write on their own.</p>
           </div>
           <div className="diff-card">
+            <div className="diff-icon">
+              <img src="/images/growth_4315362%201%20%5BVectorized%5D%20(1).svg" alt="Progress Tracking" style={{width: '32px', height: '32px'}} />
+            </div>
             <h3>You'll See It. Every Week.</h3>
             <p>No vague promises. Every child gets a <strong className="text-orange">Progress Tracking Card</strong> — updated each session so parents know exactly what was mastered and how far their child has come.</p>
           </div>
