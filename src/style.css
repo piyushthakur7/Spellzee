@@ -542,7 +542,7 @@ header {
   margin: 60px auto 0;
   position: relative;
   z-index: 20;
-  width: 1278px;
+  width: 100%;
   height: auto;
   max-width: 100%; /* For responsiveness */
 }
@@ -567,7 +567,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 74px;
+  padding: 0 40px;
 }
 
 .trust-item {
