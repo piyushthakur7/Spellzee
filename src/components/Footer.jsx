@@ -6,8 +6,8 @@ export default function Footer() {
           <div className="logo-group footer-logo" style={{ marginBottom: '20px' }}>
             <img src="/images/logo.png" alt="Spellzee Logo" className="logo-img" />
           </div>
-          <p style={{ color: '#fff', fontSize: '14px', lineHeight: '1.6', marginBottom: '24px', maxWidth: '300px' }}>
-            Spellzee is an IIT Madras Incubated Edtech Company dedicated to enhancing learning for students. We bridge the gap between traditional and modern education, creating an inclusive, engaging, and effective learning experience.
+          <p style={{ color: '#fff', fontFamily: '"DM Sans", sans-serif', fontSize: '16px', fontWeight: '500', lineHeight: '160%', marginBottom: '24px', maxWidth: '300px', alignSelf: 'stretch' }}>
+            <span style={{ color: '#FF5A00', fontWeight: '600' }}>Spellzee</span> is an <span style={{ color: '#FF5A00', fontWeight: '600' }}>IIT Madras Incubated</span> Edtech Company dedicated to enhancing learning for students. We bridge the gap between traditional and modern education, creating an inclusive, engaging, and effective learning experience.
           </p>
           <div className="social-icons" style={{ display: 'flex', gap: '12px' }}>
             <a href="https://www.instagram.com/spellzee.in/" target="_blank" rel="noopener noreferrer" style={{ background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)', width: '32px', height: '32px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-links">
-          <h4 style={{ fontFamily: "'Baloo 2', cursive", fontSize: '20px', marginBottom: '16px', color: '#fff' }}>Program</h4>
+          <h4 style={{ alignSelf: 'stretch', color: '#FF5A00', fontFamily: '"DM Sans", sans-serif', fontSize: '24px', fontStyle: 'normal', fontWeight: '700', lineHeight: 'normal', marginBottom: '16px' }}>Program</h4>
           <ul style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <li><a href="#" style={{ color: '#fff', fontSize: '14px', transition: '0.3s' }}>45 Days Reading Challenge</a></li>
             <li><a href="#" style={{ color: '#fff', fontSize: '14px', transition: '0.3s' }}>Curriculum Overview</a></li>
@@ -32,7 +32,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className="footer-links">
-          <h4 style={{ fontFamily: "'Baloo 2', cursive", fontSize: '20px', marginBottom: '16px', color: '#fff' }}>Get in Touch</h4>
+          <h4 style={{ alignSelf: 'stretch', color: '#FF5A00', fontFamily: '"DM Sans", sans-serif', fontSize: '24px', fontStyle: 'normal', fontWeight: '700', lineHeight: 'normal', marginBottom: '16px' }}>Get in Touch</h4>
           <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <li style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#fff', fontSize: '14px' }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>

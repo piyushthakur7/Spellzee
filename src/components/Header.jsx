@@ -8,7 +8,7 @@ export default function Header() {
     <header>
       <div className="container nav">
         <div className="logo-group">
-          <img src="/images/logo.png" alt="Spellzee Logo" className="logo-img" />
+          <img src="/images/spellzee-logo-sprite.png" alt="Spellzee Logo" className="logo-img" />
         </div>
         <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
           <a href="#about" className="active" onClick={() => setMobileMenuOpen(false)}>About</a>

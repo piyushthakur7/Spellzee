@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
   /* Brand Colors */
@@ -1925,15 +1925,19 @@ header {
 
 .pricing-best-value-tag {
   position: absolute;
-  top: -16px;
-  right: -24px;
-  background: #A92C1D; /* Deep red matching Figma */
-  color: #FFF;
-  padding: 6px;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transform: rotate(15deg);
-  z-index: 11;
+top: -16px;
+right: -24px;
+background: #A92C1D;
+color: #FFF;
+padding: 6px;
+border-radius: 4px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+width: 53.929px;
+height: 108.033px;
+
+transform: rotate(45.217deg);
+z-index: 11;
 }
 
 .tag-inner-border {
@@ -2089,19 +2093,44 @@ header {
   padding-top: 40px;
 }
 
+.faq-section-new .section-badge {
+  color: #FF5A00;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 19.2px */
+  border: 1px solid #FF5A00;
+  background: var(--section-badge-bg);
+}
+
 .faq-heading-new {
-  font-size: 42px;
-  font-family: 'Baloo 2', cursive;
-  font-weight: 800;
-  margin-bottom: 8px;
+  align-self: stretch;
   color: var(--text-body);
-  line-height: 1.2;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 57.6px */
+  margin-bottom: 8px;
+}
+
+.faq-heading-new .text-orange {
+  color: #FF5A00;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
 }
 
 .faq-subtext {
+  color: var(--text-body);
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
-  color: var(--text-muted);
-  font-weight: 500;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 25.6px */
   margin-bottom: 32px;
 }
 
@@ -2166,19 +2195,26 @@ header {
 
 .faq-item {
   background: var(--card-bg);
-  border: 1px solid var(--border-light);
-  border-radius: var(--border-radius-md);
+  border: none; /* Removing border as user specified box-shadow instead */
+  border-radius: 10px;
   overflow: hidden;
   transition: var(--transition);
+  box-shadow: 0 0 13.7px 0 rgba(255, 90, 0, 0.25);
+  color: var(--text-body);
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 25.6px */
 }
 
 .faq-question {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 24px;
+  padding: 32px;
+  min-height: 90px;
   cursor: pointer;
-  font-weight: 700;
 }
 
 .faq-toggle {
@@ -2205,8 +2241,8 @@ header {
 }
 
 .faq-answer p {
-  font-size: 14px;
-  line-height: 1.7;
+  margin: 0;
+  padding-bottom: 32px; /* Pad inside to fix visuals since padding removed from .faq-question on bottom */
 }
 
 /* ===== Footer ===== */
@@ -2229,7 +2265,6 @@ footer {
 
 .footer-logo img {
   height: 45px;
-  filter: brightness(0) invert(1);
 }
 
 .footer-links h4 {
