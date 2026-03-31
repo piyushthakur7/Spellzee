@@ -93,13 +93,13 @@ export default function ReviewsSection() {
               
               {!r.v ? (
                 <div className="reviewer" style={{marginTop: "auto", display: "flex", alignItems: "center", gap: "12px"}}>
-                  <img src={`/images/reviews/${r.n.split(" ")[0].toLowerCase()}.png`} onError={(e) => { e.target.src = `https://ui-avatars.com/api/?name=${r.n.replace(" ","+")}&background=FF6611&color=fff&rounded=true&size=40`; }} alt={r.n} style={{width: "40px", height: "40px", borderRadius: "20px", objectFit: "cover"}} />
+                  <img src="/images/Ellipse%2021919.svg" alt={r.n} style={{width: "40px", height: "40px", borderRadius: "20px", objectFit: "cover"}} />
                   <div style={{display: "flex", flexDirection: "column", gap: "2px"}}>
                     <strong style={{color: "#fff", fontSize: "14px", fontWeight: "600"}}>{r.n}</strong>
                     <span style={{fontSize: "12px", color: "rgba(255,255,255,0.6)", fontWeight: "400"}}>{r.loc}</span>
                   </div>
                   <div className="verified-badge" style={{display: "flex", alignItems: "center", gap: "6px", marginLeft: "auto", background: "white", color: "#25D366", padding: "6px 12px", borderRadius: "20px", fontSize: "11px", fontWeight: "700", textTransform: "capitalize"}}>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="#25D366"/><path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    <img src="/images/2937a9142b1cbb864d2486138ca59483281e4290%20(1).png" alt="Verified Link" style={{width: "24px", height: "22.852px", aspectRatio: "24.00/22.85", objectFit: "contain"}} />
                     Verified
                   </div>
                 </div>
@@ -107,7 +107,7 @@ export default function ReviewsSection() {
                 <div style={{marginTop: "auto", display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "0"}}>
                   <div className="review-stars" style={{color: "#FFA500", margin: 0, fontSize: "14px", letterSpacing: "1px"}}>★★★★★</div>
                   <div className="verified-badge" style={{display: "flex", alignItems: "center", gap: "6px", background: "white", color: "#25D366", padding: "6px 12px", borderRadius: "20px", fontSize: "11px", fontWeight: "700", textTransform: "capitalize", margin: 0}}>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="#25D366"/><path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    <img src="/images/2937a9142b1cbb864d2486138ca59483281e4290%20(1).png" alt="Verified Link" style={{width: "24px", height: "22.852px", aspectRatio: "24.00/22.85", objectFit: "contain"}} />
                     Verified
                   </div>
                 </div>
