@@ -773,6 +773,12 @@ header {
   margin-bottom: 24px;
 }
 
+.badge-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
 .section-badge-orange {
   background: rgba(255, 102, 17, 0.1);
   color: var(--primary-orange);
