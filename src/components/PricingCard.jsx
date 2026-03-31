@@ -44,19 +44,16 @@ export default function PricingCard() {
               </div>
 
               <div className="pc-features-inline">
-                <span>• 45 Live Classes</span>
+                <span>45 Live Classes</span>
                 <span className="pc-dot">•</span>
                 <span>Phonics Based</span>
                 <span className="pc-dot">•</span>
-                <span>ACTD Certified Teachers</span>
+                <span>ACTD - Certified Teachers</span>
               </div>
             </div>
 
             {/* Middle Section (Visual Stack) */}
             <div className="pc-middle">
-              <div className="pc-best-value-badge">
-                Best Value
-              </div>
               <div className="pc-visual-stack">
                 <img src="/images/pricing/worksheet1.jpg" className="pc-visual-card card-left" alt="Worksheet 1" />
                 <img src="/images/pricing/worksheet2.jpg" className="pc-visual-card card-right" alt="Worksheet 2" />
@@ -67,13 +64,16 @@ export default function PricingCard() {
             {/* Right Section (CTA Panel) */}
             <div className="pc-right">
               <div className="pc-cta-card">
+                <div className="pc-best-value-badge">
+                  Best Value
+                </div>
                 <div className="pc-cta-header">
                   <span className="pc-cta-label">TOTAL</span>
                   <h3 className="pc-cta-price">₹4,500</h3>
                 </div>
                 
                 <div className="pc-seats-status">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                   Limited Seats Available
                 </div>
 
@@ -91,13 +91,11 @@ export default function PricingCard() {
           <div className="pc-floating-guarantee">
             <div className="pc-guarantee-inner">
               <div className="pc-shield-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm1 14.5h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
-                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               </div>
               <div className="pc-guarantee-info">
-                <span className="pc-guarantee-title">2-Class Risk-Free | 100% Refund Guaranteed</span>
-                <p className="pc-guarantee-sub">100% Refund if you're not satisfied after 2 classes</p>
+                <span className="pc-guarantee-title">2 - Class Risk-free  |  100% Refund Guaranteed</span>
+                <p className="pc-guarantee-sub">• 100% Refund if you're not satisfied after 2 classes</p>
               </div>
             </div>
           </div>
