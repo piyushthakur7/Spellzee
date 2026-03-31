@@ -808,6 +808,14 @@ header {
   max-width: 713px;
 }
 
+.section-heading-white {
+  color: #FFFFFF !important;
+}
+
+.section-subtext-white {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
 /* ===== Difference Section ===== */
 .difference-section {
   background-color: var(--bg-body);
@@ -1159,8 +1167,21 @@ header {
 
 /* ===== Results Section ===== */
 .results-section {
-  background: var(--bg-body);
-  color: var(--text-body);
+  background: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+.results-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 102, 17, 0.15) !important;
+  color: #FF5A00 !important;
+  padding: 8px 16px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 24px;
 }
 
 .results-grid {
@@ -1170,20 +1191,36 @@ header {
   margin-bottom: 32px;
 }
 
+.achieve-text-wrapper {
+  position: relative;
+  display: inline-block;
+  color: var(--primary-orange);
+}
+
+.achieve-underline {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-0.771deg);
+  width: 146px;
+  height: 4.252px;
+  pointer-events: none;
+}
+
 .result-stat-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--card-bg);
-  border: 1px solid var(--border-light);
+  background: #241C15;
+  border: 1px solid rgba(255, 90, 0, 0.1);
   border-radius: 12px;
   padding: 32px;
   transition: var(--transition);
 }
 
 .result-stat-card:hover {
-  background: var(--bg-peach-light);
+  background: #2a201a;
   border-color: var(--primary-orange);
   transform: translateY(-5px);
 }
@@ -1191,7 +1228,7 @@ header {
 .result-stat-number {
   font-size: 32px;
   font-weight: 700;
-  color: var(--primary-orange);
+  color: #FF5A00;
   margin-bottom: 30px;
   line-height: 1;
 }
@@ -1199,13 +1236,13 @@ header {
 .result-stat-icon {
   width: 48px;
   height: 48px;
-  background: var(--primary-orange);
+  background: #FF5A00;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-  color: white;
+  color: #FFFFFF;
 }
 
 .result-stat-card h4 {
@@ -1213,7 +1250,7 @@ header {
   font-size: 14px;
   font-weight: 600;
   text-align: center;
-  color: var(--text-body);
+  color: #FFFFFF;
   margin: 0;
   line-height: 1.4;
 }
@@ -1226,8 +1263,8 @@ header {
 }
 
 .ba-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-light);
+  background: #241C15;
+  border: 1px solid rgba(255, 90, 0, 0.1);
   border-radius: 12px;
   padding: 40px 46px;
   display: flex;
@@ -1237,7 +1274,7 @@ header {
 }
 
 .ba-card:hover {
-  background: var(--bg-peach-light);
+  background: #2a201a;
   border-color: var(--primary-orange);
 }
 
@@ -1264,7 +1301,7 @@ header {
 .ba-card h4 {
   font-family: 'Baloo 2', cursive;
   font-size: 18px;
-  color: var(--text-body);
+  color: #FFFFFF;
   font-weight: 700;
   text-align: center;
   margin-bottom: 40px;
@@ -1275,7 +1312,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 15px;
   font-weight: 600;
   list-style: disc;
@@ -1377,6 +1414,7 @@ header {
 .ba-list li {
   font-weight: 600;
   font-size: 16px;
+  color: #FFFFFF;
 }
 
 /* ===== Sample Activities ===== */
