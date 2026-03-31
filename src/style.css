@@ -1199,7 +1199,7 @@ header {
 
 .achieve-underline {
   position: absolute;
-  bottom: -4px;
+  bottom: 2px;
   left: 50%;
   transform: translateX(-50%) rotate(-0.771deg);
   width: 146px;
