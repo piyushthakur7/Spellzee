@@ -28,10 +28,6 @@ export default function TrustSection() {
               </div>
             </div>
 
-            <div className="trust-divider">
-              <img src="/images/Vector 3630 (1).svg" alt="divider" />
-            </div>
-
             {/* ACTD */}
             <div className="trust-item">
               <div className="trust-item-logo">
@@ -47,10 +43,6 @@ export default function TrustSection() {
               </div>
             </div>
 
-            <div className="trust-divider">
-              <img src="/images/Vector 3630 (1).svg" alt="divider" />
-            </div>
-
             {/* Happy Parents */}
             <div className="trust-item">
               <div className="trust-item-logo stat-row">
@@ -64,10 +56,6 @@ export default function TrustSection() {
                 </div>
                 Approved
               </div>
-            </div>
-
-            <div className="trust-divider">
-              <img src="/images/Vector 3630 (1).svg" alt="divider" />
             </div>
 
             {/* Rating */}
