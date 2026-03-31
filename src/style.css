@@ -23,6 +23,7 @@
   --bg-peach: #FFF5EC;
   --bg-peach-light: #FFF8F2;
   --section-badge-bg: #FFF0E6;
+  --curriculum-subtitle-color: #101010;
   --footer-bg: #000000;
   --footer-text: #FFFFFF;
   
@@ -47,6 +48,7 @@
     --bg-peach: #1F150D;
     --bg-peach-light: #1A1512;
     --section-badge-bg: #2A180D;
+    --curriculum-subtitle-color: #FFFFFF;
     /* Footer & Ribbon stay dark in both modes usually */
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   }
@@ -863,6 +865,18 @@ header {
 /* ===== Curriculum Section ===== */
 .curriculum-section {
   background-color: var(--bg-body);
+}
+
+.curriculum-subtitle {
+  align-self: stretch;
+  color: var(--curriculum-subtitle-color);
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  margin-bottom: 40px;
+  text-align: left;
 }
 
 .curriculum-grid {

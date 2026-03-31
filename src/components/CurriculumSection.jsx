@@ -4,6 +4,7 @@ export default function CurriculumSection() {
       <div className="container">
         <span className="section-badge section-badge-orange">CURRICULUM OVERVIEW</span>
         <h2 className="section-heading">What Your Child Learns - <span className="text-orange">5 Phases</span></h2>
+        <p className="curriculum-subtitle">45 classes - 5 days a week. 9 weeks. Every week your child reads and writes - building <br /> skill progressively from day one.</p>
         <div className="curriculum-grid">
           {[
             { title: "3-Letter Words", desc: "Short vowel sounds – Read 3-letter words Write from dictation Spelling confidence", phase: "Phase 1", icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> },
