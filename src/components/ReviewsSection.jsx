@@ -98,7 +98,7 @@ export default function ReviewsSection() {
                     <strong style={{color: "#fff", fontSize: "14px", fontWeight: "600"}}>{r.n}</strong>
                     <span style={{fontSize: "12px", color: "rgba(255,255,255,0.6)", fontWeight: "400"}}>{r.loc}</span>
                   </div>
-                  <div className="verified-badge" style={{display: "flex", alignItems: "center", gap: "6px", marginLeft: "auto", background: "white", color: "#25D366", padding: "6px 12px", borderRadius: "20px", fontSize: "11px", fontWeight: "700", textTransform: "capitalize"}}>
+                  <div className="verified-badge" style={{display: "flex", alignItems: "center", gap: "6px", marginLeft: "auto", background: "white", padding: "6px 12px", borderRadius: "20px", color: "#79C68E", textAlign: "center", fontFamily: '"DM Sans", sans-serif', fontSize: "12px", fontStyle: "normal", fontWeight: "700", lineHeight: "160%", textTransform: "capitalize"}}>
                     <img src="/images/2937a9142b1cbb864d2486138ca59483281e4290%20(1).png" alt="Verified Link" style={{width: "24px", height: "22.852px", aspectRatio: "24.00/22.85", objectFit: "contain"}} />
                     Verified
                   </div>
@@ -106,7 +106,7 @@ export default function ReviewsSection() {
               ) : (
                 <div style={{marginTop: "auto", display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "0"}}>
                   <div className="review-stars" style={{color: "#FFA500", margin: 0, fontSize: "14px", letterSpacing: "1px"}}>★★★★★</div>
-                  <div className="verified-badge" style={{display: "flex", alignItems: "center", gap: "6px", background: "white", color: "#25D366", padding: "6px 12px", borderRadius: "20px", fontSize: "11px", fontWeight: "700", textTransform: "capitalize", margin: 0}}>
+                  <div className="verified-badge" style={{display: "flex", alignItems: "center", gap: "6px", background: "white", margin: 0, padding: "6px 12px", borderRadius: "20px", color: "#79C68E", textAlign: "center", fontFamily: '"DM Sans", sans-serif', fontSize: "12px", fontStyle: "normal", fontWeight: "700", lineHeight: "160%", textTransform: "capitalize"}}>
                     <img src="/images/2937a9142b1cbb864d2486138ca59483281e4290%20(1).png" alt="Verified Link" style={{width: "24px", height: "22.852px", aspectRatio: "24.00/22.85", objectFit: "contain"}} />
                     Verified
                   </div>
