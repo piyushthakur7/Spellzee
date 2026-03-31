@@ -54,6 +54,11 @@ export default function PricingCard() {
 
             {/* Middle Section (Visual Stack) */}
             <div className="pc-middle">
+              <div className="pc-ellipse-wrapper">
+                <svg className="pc-bg-ellipse pc-ellipse-1" width="152" height="152" viewBox="0 0 152 152" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M151.044 75.5222C151.044 117.232 117.232 151.044 75.5222 151.044C33.8124 151.044 0 117.232 0 75.5222C0 33.8124 33.8124 0 75.5222 0C117.232 0 151.044 33.8124 151.044 75.5222ZM27.3879 75.5222C27.3879 102.106 48.9383 123.656 75.5222 123.656C102.106 123.656 123.656 102.106 123.656 75.5222C123.656 48.9383 102.106 27.3879 75.5222 27.3879C48.9383 27.3879 27.3879 48.9383 27.3879 75.5222Z" fill="white" fillOpacity="0.6"/></svg>
+                <svg className="pc-bg-ellipse pc-ellipse-2" width="152" height="152" viewBox="0 0 152 152" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M151.044 75.5222C151.044 117.232 117.232 151.044 75.5222 151.044C33.8124 151.044 0 117.232 0 75.5222C0 33.8124 33.8124 0 75.5222 0C117.232 0 151.044 33.8124 151.044 75.5222ZM27.3879 75.5222C27.3879 102.106 48.9383 123.656 75.5222 123.656C102.106 123.656 123.656 102.106 123.656 75.5222C123.656 48.9383 102.106 27.3879 75.5222 27.3879C48.9383 27.3879 27.3879 48.9383 27.3879 75.5222Z" fill="white" fillOpacity="0.6"/></svg>
+                <svg className="pc-bg-ellipse pc-ellipse-3" width="152" height="152" viewBox="0 0 152 152" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M151.044 75.5222C151.044 117.232 117.232 151.044 75.5222 151.044C33.8124 151.044 0 117.232 0 75.5222C0 33.8124 33.8124 0 75.5222 0C117.232 0 151.044 33.8124 151.044 75.5222ZM27.3879 75.5222C27.3879 102.106 48.9383 123.656 75.5222 123.656C102.106 123.656 123.656 102.106 123.656 75.5222C123.656 48.9383 102.106 27.3879 75.5222 27.3879C48.9383 27.3879 27.3879 48.9383 27.3879 75.5222Z" fill="white" fillOpacity="0.6"/></svg>
+              </div>
               <div className="pc-visual-stack">
                 <img src="/images/pricing/worksheet1.jpg" className="pc-visual-card card-left" alt="Worksheet 1" />
                 <img src="/images/pricing/worksheet2.jpg" className="pc-visual-card card-right" alt="Worksheet 2" />

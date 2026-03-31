@@ -402,3 +402,37 @@
     text-align: center;
   }
 }
+
+/* Background Decorations */
+.pc-ellipse-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.pc-bg-ellipse {
+  position: absolute;
+  width: 151px;
+  height: 151px;
+  pointer-events: none;
+}
+
+.pc-ellipse-1 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+}
+
+.pc-ellipse-2 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-65%, -40%);
+}
+
+.pc-ellipse-3 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-35%, -40%);
+}
