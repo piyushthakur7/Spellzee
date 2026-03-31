@@ -4,8 +4,7 @@ export default function Footer() {
       <div className="container footer-grid" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr', gap: '40px', marginBottom: '60px' }}>
         <div>
           <div className="logo-group footer-logo" style={{ marginBottom: '20px' }}>
-            <div className="logo-first" aria-label="Spellzee Icon"></div>
-            <div className="logo-second" aria-label="Spellzee Logo"></div>
+            <img src="/images/logo.png" alt="Spellzee Logo" className="logo-img" />
           </div>
           <p style={{ color: '#fff', fontSize: '14px', lineHeight: '1.6', marginBottom: '24px', maxWidth: '300px' }}>
             Spellzee is an IIT Madras Incubated Edtech Company dedicated to enhancing learning for students. We bridge the gap between traditional and modern education, creating an inclusive, engaging, and effective learning experience.

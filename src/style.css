@@ -186,19 +186,13 @@ header {
   flex-shrink: 0;
 }
 
-.logo-first {
-  width: 38.458px;
-  height: 42.982px;
-  aspect-ratio: 17/19;
-  background: url('/images/spellzee-logo-sprite.png') transparent 0px -14.373px / 217.75px auto no-repeat;
+.logo-img {
+  height: 50px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
-.logo-second {
-  width: 176px;
-  height: 62px;
-  aspect-ratio: 88/31;
-  background: url('/images/spellzee-logo-sprite.png') transparent -41.749px -0.05px / 217.75px auto no-repeat;
-}
 
 .nav-links {
   display: flex;
