@@ -14,8 +14,10 @@ export default function CurriculumSection() {
           ].map((item, i) => (
             <div key={i} className="curriculum-card">
               <div className="curriculum-icon-box">
-                {item.icon ? (
+                {typeof item.icon === 'string' ? (
                   <img src={item.icon} alt={item.title} />
+                ) : item.icon ? (
+                  item.icon
                 ) : (
                   <div className="placeholder-icon" style={{width: '32px', height: '32px', border: '2px dashed #FFD700', borderRadius: '4px'}}></div>
                 )}
