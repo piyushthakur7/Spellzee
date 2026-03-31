@@ -37,19 +37,14 @@ export default function ActivitiesSection() {
               <div key={i} className="worksheet-card" style={{
                 minWidth: "280px", 
                 height: "380px", 
-                borderRadius: "16px", 
-                border: `1.5px solid ${w.color}`, 
-                background: "#1A1A1A", /* Dark background for worksheets to stand out */
                 display: "flex", 
                 overflow: "hidden", 
-                flexShrink: 0, 
-                boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
-                padding: "8px"
+                flexShrink: 0
               }}>
                 <img 
                   src={`/images/${w.file}`} 
                   alt="Worksheet Sample" 
-                  style={{width: "100%", height: "100%", objectFit: "contain", borderRadius: "8px"}} 
+                  style={{width: "100%", height: "100%", objectFit: "contain"}} 
                 />
               </div>
             ))}
