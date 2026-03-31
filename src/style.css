@@ -927,7 +927,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8px;
+  margin-bottom: 32px;
   flex-shrink: 0;
 }
 
@@ -1101,7 +1101,7 @@ header {
 .teaching-card h4 {
   color: var(--text-body);
   font-family: "Baloo 2", cursive;
-  font-size: 22px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 800;
   line-height: 130%;
@@ -1111,7 +1111,7 @@ header {
 .teaching-card p {
   color: var(--text-muted);
   font-family: "DM Sans", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 160%;
@@ -1124,7 +1124,7 @@ header {
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  background: var(--bg-peach);
+  background: #FFDAC7;
   color: var(--text-body);
   font-family: "DM Sans", sans-serif;
   font-size: 12px;
@@ -1226,7 +1226,8 @@ header {
 }
 
 .result-stat-number {
-  font-size: 32px;
+  font-family: "Baloo 2", cursive;
+  font-size: 36px;
   font-weight: 700;
   color: #FF5A00;
   margin-bottom: 30px;
@@ -1234,8 +1235,8 @@ header {
 }
 
 .result-stat-icon {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   background: #FF5A00;
   border-radius: 12px;
   display: flex;
@@ -1246,9 +1247,9 @@ header {
 }
 
 .result-stat-card h4 {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
+  font-family: 'Baloo 2', cursive;
+  font-size: 24px;
+  font-weight: 700;
   text-align: center;
   color: #FFFFFF;
   margin: 0;
@@ -1299,8 +1300,8 @@ header {
 }
 
 .ba-card h4 {
-  font-family: 'Baloo 2', cursive;
-  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
   color: #FFFFFF;
   font-weight: 700;
   text-align: center;
@@ -1313,7 +1314,8 @@ header {
   flex-direction: column;
   gap: 16px;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 15px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
   font-weight: 600;
   list-style: disc;
   padding-left: 20px;
