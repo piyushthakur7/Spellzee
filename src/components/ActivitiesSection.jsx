@@ -61,30 +61,11 @@ export default function ActivitiesSection() {
             "8f2e79fde4ac69619a56f741003cd18f33c647be.png"
           ].map((img, i) => (
             <div key={i} className="word-flashcard" style={{
-              background: "#fff",
-              borderRadius: "16px",
-              padding: "20px",
-              paddingTop: "24px",
-              boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
               display: "flex",
-              flexDirection: "column",
-              minWidth: "240px",
+              height: "220px",
               flexShrink: 0
             }}>
-              <div style={{display: "flex", justifyContent: "flex-end", marginBottom: "8px", paddingRight: "4px"}}>
-                <img src="/images/spellzee-logo.png" alt="Spellzee" style={{height: "16px", opacity: 0.9}} />
-              </div>
-              <div style={{
-                border: "2.5px solid #DE3163",
-                borderRadius: "8px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "100px",
-                overflow: "hidden"
-              }}>
-                <img src={`/images/${img}`} alt="Word Flashcard" style={{width: "100%", height: "100%", objectFit: "contain"}} />
-              </div>
+              <img src={`/images/${img}`} alt="Word Flashcard" style={{height: "100%", width: "auto", objectFit: "contain"}} />
             </div>
           ))}
           {[
@@ -95,30 +76,11 @@ export default function ActivitiesSection() {
             "8f2e79fde4ac69619a56f741003cd18f33c647be.png"
           ].map((img, i) => (
              <div key={i+"-dup"} className="word-flashcard" style={{
-              background: "#fff",
-              borderRadius: "16px",
-              padding: "20px",
-              paddingTop: "24px",
-              boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
               display: "flex",
-              flexDirection: "column",
-              minWidth: "240px",
+              height: "220px",
               flexShrink: 0
             }}>
-              <div style={{display: "flex", justifyContent: "flex-end", marginBottom: "8px", paddingRight: "4px"}}>
-                <img src="/images/spellzee-logo.png" alt="Spellzee" style={{height: "16px", opacity: 0.9}} />
-              </div>
-              <div style={{
-                border: "2.5px solid #DE3163",
-                borderRadius: "8px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "100px",
-                overflow: "hidden"
-              }}>
-                <img src={`/images/${img}`} alt="Word Flashcard" style={{width: "100%", height: "100%", objectFit: "contain"}} />
-              </div>
+              <img src={`/images/${img}`} alt="Word Flashcard" style={{height: "100%", width: "auto", objectFit: "contain"}} />
             </div>
           ))}
         </div>
