@@ -58,9 +58,9 @@ export default function PricingCard() {
                 Best Value
               </div>
               <div className="pc-visual-stack">
-                <img src="/images/pricing/41-bed_page-00012.png" className="pc-visual-card card-left" alt="Worksheet 1" />
-                <img src="/images/pricing/45-kx_page-00013.png" className="pc-visual-card card-right" alt="Worksheet 2" />
-                <img src="/images/pricing/48-at-an-et-en_page-00012.png" className="pc-visual-card card-center" alt="Worksheet 3" />
+                <img src="/images/pricing/worksheet1.jpg" className="pc-visual-card card-left" alt="Worksheet 1" />
+                <img src="/images/pricing/worksheet2.jpg" className="pc-visual-card card-right" alt="Worksheet 2" />
+                <img src="/images/pricing/worksheet3.jpg" className="pc-visual-card card-center" alt="Worksheet 3" />
               </div>
             </div>
 

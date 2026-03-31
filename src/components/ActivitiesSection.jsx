@@ -23,16 +23,16 @@ export default function ActivitiesSection() {
             {[
               { file: "dee6127591958678e6b512005d4140b936f8be16%20(1).jpg", color: "#54C670" }, // Discriminating Ending Sounds (Green)
               { file: "a28db87413ddd304eeeb00240bd8891eee97e2cc%20(1).jpg", color: "#EF5B9E" }, // Word Building a (Pink)
-              { file: "82ebec403ae49d8c748cd1ea82e3b520b537282d%20(1).jpg", color: "#F7BE54" }, // Word Building e (Yellow)
+              { file: "pricing/worksheet1.jpg", color: "#F7BE54" }, // Word Building e (Yellow)
               { file: "d5f07e4b71102d3b1cc6d6d9819581b023ae0c38%20(1).jpg", color: "#9E35F4" }, // Word Family at (Purple) 
-              { file: "dbb1003161785361306184568bdae4fcffc425dd%20(1).jpg", color: "#E53E5C" }, // at, an, et, en (Red)
-              { file: "0076cd1b38cf547cb69bd7db6a7aa73c52af3892%20(1).jpg", color: "#54C670" }, // Extra (Green)
+              { file: "pricing/worksheet3.jpg", color: "#E53E5C" }, // at, an, et, en (Red)
+              { file: "pricing/worksheet2.jpg", color: "#54C670" }, // Extra (Green)
               { file: "dee6127591958678e6b512005d4140b936f8be16%20(1).jpg", color: "#54C670" },
               { file: "a28db87413ddd304eeeb00240bd8891eee97e2cc%20(1).jpg", color: "#EF5B9E" },
-              { file: "82ebec403ae49d8c748cd1ea82e3b520b537282d%20(1).jpg", color: "#F7BE54" },
+              { file: "pricing/worksheet1.jpg", color: "#F7BE54" },
               { file: "d5f07e4b71102d3b1cc6d6d9819581b023ae0c38%20(1).jpg", color: "#9E35F4" },
-              { file: "dbb1003161785361306184568bdae4fcffc425dd%20(1).jpg", color: "#E53E5C" },
-              { file: "0076cd1b38cf547cb69bd7db6a7aa73c52af3892%20(1).jpg", color: "#54C670" },
+              { file: "pricing/worksheet3.jpg", color: "#E53E5C" },
+              { file: "pricing/worksheet2.jpg", color: "#54C670" },
             ].map((w, i) => (
               <div key={i} className="worksheet-card" style={{
                 minWidth: "280px", 
