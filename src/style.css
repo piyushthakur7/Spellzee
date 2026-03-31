@@ -557,10 +557,17 @@ header {
 
 .trust-grid {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: space-between;
   width: 100%;
-  gap: 40px;
+  gap: 0;
+}
+
+.trust-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 74px;
 }
 
 .trust-item {
@@ -635,7 +642,7 @@ header {
   font-size: 14px;
   font-weight: 700;
   text-transform: capitalize;
-  margin-top: 8px;
+  margin-top: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border: none;
 }
