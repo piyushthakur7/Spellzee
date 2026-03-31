@@ -2,12 +2,12 @@ export default function ResultsSection() {
   return (
     <section className="results-section section-padding" id="results">
       <div className="container">
-        <span className="section-badge section-badge-dark" style={{display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "16px", padding: "8px 16px", borderRadius: "16px", fontSize: "12px", fontWeight: "700", background: "rgba(255, 102, 17, 0.15)", color: "var(--primary-orange)"}}>
+        <span className="section-badge section-badge-orange">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10"/><path d="M5 4c0 3 3 7 7 7s7-4 7-7"/><path d="M5 4h14"/></svg>
           Real Results
         </span>
-        <h2 className="section-heading results-heading" style={{marginBottom: "8px", fontSize: "36px", fontWeight: "700", lineHeight: "1.2"}}>What Children <span className="text-orange">Achieve</span> in 45 Days</h2>
-        <p className="results-subtext" style={{color: "#FFFFFF", fontSize: "16px", fontWeight: "400", marginBottom: "48px", lineHeight: "1.5"}}>Measurable outcomes every parent can see — tracked and verified across 1000+ students.</p>
+        <h2 className="section-heading">What Children <span className="text-orange">Achieve</span> in 45 Days</h2>
+        <p className="section-subtext">Measurable outcomes every parent can see — tracked and verified across 1000+ students.</p>
         <div className="results-grid">
           {[
             { n: "97%", h: "Reads 3-letter words by Day 20" },

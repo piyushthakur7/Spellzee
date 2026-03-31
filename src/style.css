@@ -895,7 +895,7 @@ header {
   background: var(--card-bg);
   border: 1px solid var(--border-light);
   border-radius: 12px;
-  padding: 32px 20px;
+  padding: 24px;
   text-align: center;
   transition: var(--transition);
   display: flex;
@@ -940,7 +940,7 @@ header {
 
 .curriculum-card p {
   font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   color: var(--text-muted);
@@ -983,8 +983,8 @@ header {
 
 .note-curriculum-container {
   display: flex;
-  padding: 16px 24px;
-  align-items: flex-start;
+  padding: 20px;
+  align-items: center;
   gap: 16px;
   border-radius: 8px;
   background: var(--bg-peach);
@@ -996,9 +996,9 @@ header {
 
 .note-pin-icon {
   flex-shrink: 0;
-  width: 20px;
+  width: 24px;
   color: var(--text-body);
-  margin-top: 4px;
+  margin-top: 0;
 }
 
 .note-curriculum-container p {
@@ -1159,8 +1159,8 @@ header {
 
 /* ===== Results Section ===== */
 .results-section {
-  background: #111111;
-  color: #FFFFFF;
+  background: var(--bg-body);
+  color: var(--text-body);
 }
 
 .results-grid {
@@ -1175,14 +1175,16 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #241C15;
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
   border-radius: 12px;
   padding: 32px;
   transition: var(--transition);
 }
 
 .result-stat-card:hover {
-  background: #2A221A;
+  background: var(--bg-peach-light);
+  border-color: var(--primary-orange);
   transform: translateY(-5px);
 }
 
@@ -1209,9 +1211,9 @@ header {
 .result-stat-card h4 {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
-  color: #fff;
+  color: var(--text-body);
   margin: 0;
   line-height: 1.4;
 }
@@ -1224,7 +1226,8 @@ header {
 }
 
 .ba-card {
-  background: #241C15;
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
   border-radius: 12px;
   padding: 40px 46px;
   display: flex;
@@ -1234,7 +1237,8 @@ header {
 }
 
 .ba-card:hover {
-  background: #2A221A;
+  background: var(--bg-peach-light);
+  border-color: var(--primary-orange);
 }
 
 .ba-icon-bg {
@@ -1260,7 +1264,7 @@ header {
 .ba-card h4 {
   font-family: 'Baloo 2', cursive;
   font-size: 18px;
-  color: #fff;
+  color: var(--text-body);
   font-weight: 700;
   text-align: center;
   margin-bottom: 40px;
@@ -1271,9 +1275,9 @@ header {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-muted);
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   list-style: disc;
   padding-left: 20px;
   margin: 0;
