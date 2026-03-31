@@ -43,14 +43,14 @@
 }
 .em-header {
   text-align: center;
-  padding: 40px 20px 20px;
+  padding: 24px 20px 12px;
 }
 .em-header h2 {
   font-family: 'Baloo 2', cursive;
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 800;
   color: #1a1a1a;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 .em-header p {
   font-size: 15px;
@@ -60,8 +60,8 @@
 }
 .em-body {
   display: flex;
-  padding: 0 40px 40px;
-  gap: 40px;
+  padding: 0 32px 32px;
+  gap: 24px;
 }
 
 /* Left Panel */
@@ -73,7 +73,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .em-badge-item {
   display: flex;
@@ -98,7 +98,7 @@
   background: #FFF;
   border: 1px solid #EBEBEB;
   border-radius: 12px;
-  padding: 32px;
+  padding: 24px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.02);
 }
 .em-summary-header {
@@ -106,10 +106,10 @@
   align-items: center;
   gap: 12px;
   font-family: 'Baloo 2', cursive;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   color: #1a1a1a;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 .em-summary-header svg {
   color: #FF5A00;
@@ -121,10 +121,10 @@
 }
 .em-summary-item {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   align-items: flex-start;
   border-bottom: 1px solid #F5F5F5;
-  padding: 24px 0;
+  padding: 12px 0;
 }
 .em-summary-item:first-child {
   padding-top: 0;
@@ -134,8 +134,8 @@
   padding-bottom: 0;
 }
 .em-icon-box {
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   background: #FF5A00;
   border-radius: 8px;
   display: flex;
@@ -150,7 +150,7 @@
   gap: 6px;
 }
 .em-item-label {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.5px;
   color: #1a1a1a;
@@ -158,7 +158,7 @@
   line-height: 1;
 }
 .em-item-value {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 800;
   color: #FF5A00;
 }
@@ -167,8 +167,8 @@
   background: #000;
   color: #FFF;
   border-radius: 12px;
-  padding: 24px;
-  margin-top: 32px;
+  padding: 16px;
+  margin-top: 20px;
   text-align: center;
 }
 .em-guarantee-title {
@@ -196,20 +196,20 @@
   background: #FFF;
   border: 1px solid rgba(255,90,0,0.1);
   border-radius: 12px;
-  padding: 32px;
+  padding: 24px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.04);
 }
 .em-right h3 {
   font-family: 'Baloo 2', cursive;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 800;
   color: #FF5A00;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   margin-top: 0;
 }
 
 .em-form-group {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .em-label {
   display: block;
@@ -223,7 +223,7 @@
 }
 .em-input {
   width: 100%;
-  padding: 14px 16px;
+  padding: 12px 14px;
   border: 1px solid #E0E0E0;
   border-radius: 8px;
   font-family: 'DM Sans', sans-serif;
@@ -246,7 +246,7 @@
 }
 .em-age-btn {
   flex: 1;
-  padding: 12px 0;
+  padding: 10px 0;
   background: #FFF;
   border: 1px solid #E0E0E0;
   border-radius: 8px;
@@ -269,12 +269,12 @@
 .em-batch-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 .em-batch-card {
   display: flex;
   align-items: center;
-  padding: 16px;
+  padding: 12px 16px;
   border: 1px solid #E0E0E0;
   border-radius: 8px;
   cursor: pointer;
@@ -345,7 +345,7 @@
   background: #F5F5F5;
   border: 1px solid #E0E0E0;
   border-right: none;
-  padding: 14px 16px;
+  padding: 12px 14px;
   border-radius: 8px 0 0 8px;
   font-weight: 800;
   color: #1a1a1a;
@@ -365,9 +365,9 @@
   color: white;
   border: none;
   border-radius: 8px;
-  padding: 18px;
+  padding: 16px;
   font-family: 'DM Sans', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
   cursor: pointer;
   transition: all 0.3s;

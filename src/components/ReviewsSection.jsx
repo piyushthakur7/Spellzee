@@ -1,6 +1,9 @@
 "use client";
 
+import { useState } from 'react';
+
 export default function ReviewsSection() {
+  const [playingVideo, setPlayingVideo] = useState(null);
   return (
     <section className="reviews-section section-padding" id="review">
       <div className="container">
@@ -49,27 +52,38 @@ export default function ReviewsSection() {
             { n: "Priya Sharma", loc: "Mother - Chennai", t: "My daughter could barely read 3-letter words. After 3 weeks of Spellzee group classes she reads full sentences. The phonics method is magical!", v: false, d: null },
             { n: "Muthu Anushya", loc: "Mother - Qatar", t: "My daughter enjoys the English classes and her skills have improved a lot. She is doing very well now, and we can see her making steady progress in her writing.", v: false, d: null },
             { n: "Vanmathi Raja", loc: "Mother - Coimbatore", t: "After trying so many options, Spellzee was my last hope, and it worked. My son struggled with reading and never wanted to attend classes, but now he never gets bored.", v: false, d: null },
-            { n: "Meera Krishnan", loc: "Mother - Madurai", t: "My son went from refusing to read to reading full sentences in just 3 weeks — and now he actually enjoys picking up books on his own!", v: true, d: "1:14" },
-            { n: "Sunita Menon", loc: "Mother - Madurai", t: "Badge rewards kept my son going. He never missed a class and even reads restaurant menus now — all from the group program!", v: true, d: "1:14" },
-            { n: "Kavitha Nair", loc: "Mother of twins - Trichy", t: "Enrolled both twins in the same group batch — both can now read & write independently. School teachers noticed the improvement!", v: true, d: "1:14" },
+            { n: "Azrah", loc: "Mother - Madurai", t: "My son went from refusing to read to reading full sentences in just 3 weeks — and now he actually enjoys picking up books on his own!", v: true, d: "1:14" },
+            { n: "Harvin kumar", loc: "Mother - Madurai", t: "Badge rewards kept my son going. He never missed a class and even reads restaurant menus now — all from the group program!", v: true, d: "1:14" },
+            { n: "Sameena", loc: "Mother of twins - Trichy", t: "Enrolled both twins in the same group batch — both can now read & write independently. School teachers noticed the improvement!", v: true, d: "1:14" },
           ].map((r, i) => (
             <div key={i} className="review-card" style={{background: "#1F150D", padding: "24px", borderRadius: "16px", display: "flex", flexDirection: "column"}}>
               {r.v ? (
-                <div className="video-thumbnail" style={{position: "relative", width: "100%", height: "200px", background: "linear-gradient(180deg, #512003 0%, #2A0F00 100%)", borderRadius: "12px", marginBottom: "24px", display: "flex", flexDirection: "column", overflow: "hidden"}}>
-                  <div style={{flexGrow: 1, display: "flex", alignItems: "center", justifyContent: "center"}}>
-                    <div style={{width: "48px", height: "48px", background: "var(--primary-orange)", borderRadius: "24px", display: "flex", alignItems: "center", justifyContent: "center", color: "white", cursor: "pointer", boxShadow: "0 0 0 6px rgba(255,102,17,0.2)"}}>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" style={{marginLeft: "4px"}}><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                  </div>
-                  <div style={{display: "flex", justifyContent: "space-between", alignItems: "flex-end", padding: "16px", paddingTop: "32px", background: "linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%)"}}>
-                    <div className="reviewer" style={{display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "2px", textAlign: "left"}}>
-                      <strong style={{fontSize: "14px", color: "#fff", fontWeight: "600"}}>{r.n}</strong>
-                      <span style={{fontSize: "12px", color: "rgba(255,255,255,0.8)", fontWeight: "400"}}>{r.loc}</span>
-                    </div>
-                    {r.d && (
-                      <div style={{fontSize: "12px", color: "rgba(255,255,255,0.8)", fontWeight: "500", marginBottom: "2px"}}>{r.d}</div>
-                    )}
-                  </div>
+                <div className="video-thumbnail" style={{position: "relative", width: "100%", aspectRatio: "16/9", background: "linear-gradient(180deg, #512003 0%, #2A0F00 100%)", borderRadius: "12px", marginBottom: "24px", display: "flex", flexDirection: "column", overflow: "hidden"}}>
+                  {playingVideo === i ? (
+                    <video 
+                      src={`/video/${r.n}.mp4`} 
+                      controls 
+                      autoPlay 
+                      style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: "12px", background: "#000" }}
+                    />
+                  ) : (
+                    <>
+                      <div style={{flexGrow: 1, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer"}} onClick={() => setPlayingVideo(i)}>
+                        <div style={{width: "48px", height: "48px", background: "var(--primary-orange)", borderRadius: "24px", display: "flex", alignItems: "center", justifyContent: "center", color: "white", boxShadow: "0 0 0 6px rgba(255,102,17,0.2)"}}>
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" style={{marginLeft: "4px"}}><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                      </div>
+                      <div style={{display: "flex", justifyContent: "space-between", alignItems: "flex-end", padding: "16px", paddingTop: "32px", background: "linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%)", pointerEvents: "none"}}>
+                        <div className="reviewer" style={{display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "2px", textAlign: "left"}}>
+                          <strong style={{fontSize: "14px", color: "#fff", fontWeight: "600"}}>{r.n}</strong>
+                          <span style={{fontSize: "12px", color: "rgba(255,255,255,0.8)", fontWeight: "400"}}>{r.loc}</span>
+                        </div>
+                        {r.d && (
+                          <div style={{fontSize: "12px", color: "rgba(255,255,255,0.8)", fontWeight: "500", marginBottom: "2px"}}>{r.d}</div>
+                        )}
+                      </div>
+                    </>
+                  )}
                 </div>
               ) : (
                 <div className="review-stars" style={{color: "#FFA500", fontSize: "16px", marginBottom: "24px", letterSpacing: "1px"}}>★★★★★</div>
